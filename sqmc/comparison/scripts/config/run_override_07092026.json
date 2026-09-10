@@ -1,0 +1,8 @@
+{
+  "gpu": "A100",
+  "colab_timeout": 3600,
+  "setup_timeout": 900,
+  "transfer_timeout": 600,
+  "repo_branch": "codex/colab-comparison-07092026",
+  "source_commit": "308348a726dbdb67a97a445732b1cbbf2072c92f"
+}

@@ -1,0 +1,34 @@
+{
+  "description": "Small subset of 24 key national teams spanning the major regions (Europe, South America, North/Central America, Africa, Asia, Oceania) for faster, lighter experiments.",
+  "teams": [
+    "Argentina",
+    "Australia",
+    "Belgium",
+    "Brazil",
+    "Canada",
+    "Colombia",
+    "Egypt",
+    "England",
+    "France",
+    "Germany",
+    "Iran",
+    "Japan",
+    "Mexico",
+    "Morocco",
+    "Netherlands",
+    "New Zealand",
+    "Portugal",
+    "Qatar",
+    "Saudi Arabia",
+    "Senegal",
+    "South Korea",
+    "Spain",
+    "United States",
+    "Uruguay"
+  ],
+  "correlation": {
+    "state_standard_deviation": 1.5,
+    "within_region": 0.5,
+    "between_regions": 0.03
+  }
+}

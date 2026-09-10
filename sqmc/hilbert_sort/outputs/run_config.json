@@ -1,0 +1,65 @@
+{
+  "config": {
+    "gpu_type": "A100",
+    "colab_timeout": 1800,
+    "session": "hilbert_sort_benchmark_gpu",
+    "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+    "repo_branch": "main",
+    "remote_output_dir": "sqmc/hilbert_sort/outputs",
+    "hilbert_sort": {
+      "dimensions": [
+        2,
+        5,
+        10,
+        30,
+        60
+      ],
+      "n_values": [
+        100,
+        300,
+        1000,
+        3000,
+        10000,
+        30000,
+        100000
+      ],
+      "repeats": 7,
+      "warmups": 1,
+      "seed": 0
+    },
+    "qmc": {
+      "dimensions": [
+        2
+      ],
+      "n_values": [
+        128
+      ],
+      "repeats": 2,
+      "warmups": 1,
+      "seed": 0,
+      "scramble": true
+    }
+  },
+  "modules": [
+    "hilbert_sort"
+  ],
+  "hardware": {
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "cpu_model": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+    "cpu_count": 12,
+    "node": "084fad26ddaf",
+    "memory_bytes": 89629196288,
+    "gpu_devices": [
+      "cuda:0"
+    ],
+    "gpu_specs": [
+      {
+        "name": "NVIDIA A100-SXM4-40GB",
+        "memory_mib": "40960",
+        "driver": "580.82.07"
+      }
+    ]
+  }
+}

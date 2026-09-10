@@ -1,0 +1,16 @@
+[project]
+name = "rbsqmc-rbpf"
+version = "0.1.0"
+description = "Rao-Blackwellized Particle Filter for football match modelling"
+requires-python = ">=3.10"
+dependencies = [
+    "jax[cuda12]==0.11.0",
+    "cuthbert==0.0.14",
+    "optax==0.2.8",
+    "numpy>=2.0",
+    "scipy>=1.15",
+    "pandas",
+    "pyarrow",
+    "matplotlib",
+    "tqdm",
+]

@@ -1,0 +1,19 @@
+{
+  "training_start_date": "1980-01-01",
+  "test_start_date": "2024-01-01",
+  "prediction_start_date": "2025-06-01",
+  "n_particles": 64,
+  "max_goals": 8,
+  "seed": 0,
+  "n_epochs": 3,
+  "learning_rate": 0.05,
+  "n_reps": 2,
+  "include_friendly": true,
+  "teams": "worldcup2026",
+  "match_scale": 1,
+  "gauss_hermite_degree": 32,
+  "gpu_type": "A100",
+  "colab_timeout": 14400,
+  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "smoke": true
+}

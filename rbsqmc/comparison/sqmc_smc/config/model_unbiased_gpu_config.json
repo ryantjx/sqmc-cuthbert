@@ -1,0 +1,22 @@
+{
+  "training_start_date": "1980-01-01",
+  "test_start_date": "2024-01-01",
+  "prediction_start_date": "2026-06-11",
+  "n_particles": 512,
+  "max_goals": 8,
+  "seed": 0,
+  "n_epochs": 100,
+  "learning_rate": 0.05,
+  "n_reps": 25,
+  "include_friendly": true,
+  "teams": "worldcup2026",
+  "output_dir": "rbsqmc/outputs/train_model_gpu",
+  "gpu_type": "A100",
+  "colab_timeout": 14400,
+  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "gamma_0_prior_params": {
+    "scale": 1.0,
+    "dof": 5.0,
+    "strength": 1.0
+  }
+}

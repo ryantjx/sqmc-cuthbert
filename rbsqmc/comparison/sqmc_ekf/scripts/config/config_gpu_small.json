@@ -1,0 +1,22 @@
+{
+  "training_start_date": "1980-01-01",
+  "test_start_date": "2024-01-01",
+  "prediction_start_date": "2026-06-11",
+  "n_particles": 64,
+  "max_goals": 8,
+  "seed": 0,
+  "n_epochs": 3,
+  "learning_rate": 0.05,
+  "n_reps": 2,
+  "include_friendly": true,
+  "teams": "worldcup2026",
+  "match_scale": 1,
+  "gauss_hermite_degree": 16,
+  "gpu": "T4",
+  "colab_timeout": 14400,
+  "setup_timeout": 900,
+  "transfer_timeout": 600,
+  "session": "sqmc_ekf",
+  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "repo_branch": "main"
+}
