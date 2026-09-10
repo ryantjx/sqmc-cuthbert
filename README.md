@@ -14,6 +14,38 @@ match modelling* (ST980). It is organised as two Python packages:
 `rbsqmc/` imports `sqmc.qmc` and `sqmc.hilbert_sort` at runtime, so both
 packages must be importable from the repository root.
 
+## The `sqmc` package and `cuthbert`
+
+The `sqmc` package is a JAX implementation of sequential quasi-Monte Carlo
+(SQMC) that is designed to be incorporated into the `cuthbert` library
+(`state-space-models/cuthbert`). All three components — the SQMC filter, the
+low-discrepancy sequence generators (`qmc`) and the Hilbert space-filling-curve
+sorting (`hilbert_sort`) — are intended to be upstreamed into `cuthbert`.
+
+- **`sqmc/sqmc/sqmc.py`** — the SQMC filter. `build_filter(...)` assembles a
+  `cuthbert.inference.Filter` from `init_transform`, `propagate_transform`,
+  `log_potential`, the particle count and a QMC engine. The three filter steps
+  (`init_prepare`, `filter_prepare`, `filter_combine`) implement SQMC's
+  deterministic resampling and propagation: generate `N` RQMC points of
+  dimension `1 + d`, Hilbert-sort the previous particles, sort the RQMC points
+  by their first coordinate, select ancestors by inverse-CDF, propagate
+  deterministically, reweight and update the log-normalising constant. It is
+  implemented as a `cuthbert.inference.Filter` and mirrors the interface of
+  `cuthbert.smc.particle_filter`, so it can be dropped into any pipeline that
+  already uses `cuthbert`'s filtering API.
+- **`sqmc/sqmc/smc.py`** — a thin wrapper around
+  `cuthbert.smc.particle_filter` (stochastic propagation, systematic
+  resampling) that mirrors the SQMC interface, providing the SMC baseline for
+  benchmarking.
+- **`sqmc/qmc/`** — the low-discrepancy sequence generators (Sobol', Halton,
+  scrambling) that SQMC relies on. See `sqmc/qmc/QMC.md` for the theory notes.
+- **`sqmc/hilbert_sort/`** — Hilbert space-filling-curve index computation and
+  sorting. See `sqmc/hilbert_sort/HILBERT_SORT.md` for references.
+
+The SQMC filter is a work in progress towards being implemented as a
+`cuthbert.inference.Filter`; the current `build_filter` already returns a
+`Filter` and is exercised by the unit tests in `sqmc/tests/`.
+
 ## Repository structure
 
 ```
