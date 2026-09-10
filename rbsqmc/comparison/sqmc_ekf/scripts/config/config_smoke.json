@@ -14,6 +14,6 @@
   "gauss_hermite_degree": 32,
   "gpu_type": "A100",
   "colab_timeout": 14400,
-  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "repo_url": "https://github.com/ryantjx/sqmc-cuthbert.git",
   "smoke": true
 }

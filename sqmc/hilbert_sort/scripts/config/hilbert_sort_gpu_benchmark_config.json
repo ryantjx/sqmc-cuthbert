@@ -2,7 +2,7 @@
   "gpu_type": "A100",
   "colab_timeout": 1800,
   "session": "hilbert_sort_benchmark_gpu",
-  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "repo_url": "https://github.com/ryantjx/sqmc-cuthbert.git",
   "repo_branch": "main",
   "remote_output_dir": "sqmc/hilbert_sort/outputs",
   "hilbert_sort": {

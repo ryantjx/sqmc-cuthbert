@@ -32,7 +32,7 @@ from pathlib import Path
 
 
 REPO_DIR = Path("/content/rbsqmc")
-REPO_URL = "https://github.com/ryantjx/rbsqmc.git"
+REPO_URL = "https://github.com/ryantjx/sqmc-cuthbert.git"
 
 # Packages the pipeline needs at runtime, mapped to their pip package names
 # (module -> package). We only ever install a package if its module is NOT

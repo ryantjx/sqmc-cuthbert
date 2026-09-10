@@ -22,7 +22,7 @@ from pathlib import Path
 
 
 REPO_DIR = Path("/content/rbsqmc")
-REPO_URL = "https://github.com/ryantjx/rbsqmc.git"
+REPO_URL = "https://github.com/ryantjx/sqmc-cuthbert.git"
 DEFAULT_CONFIG_NAME = "qmc_gpu_benchmark_config.json"
 REQUIRED_PACKAGES = {
     "numpy": "numpy",

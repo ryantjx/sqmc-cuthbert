@@ -34,9 +34,10 @@ from sqmc.hilbert_sort.hilbert_sort import (
 @pytest.fixture(scope="module", autouse=True)
 def config():
     """Enable double precision for the module and restore it on teardown."""
+    _previous = jax.config.jax_enable_x64
     jax.config.update("jax_enable_x64", True)
     yield
-    jax.config.update("jax_enable_x64", False)
+    jax.config.update("jax_enable_x64", _previous)
 
 
 class GrayCodeTest(chex.TestCase):

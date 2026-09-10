@@ -13,7 +13,7 @@
   "output_dir": "rbsqmc/outputs/train_model_gpu",
   "gpu_type": "A100",
   "colab_timeout": 14400,
-  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "repo_url": "https://github.com/ryantjx/sqmc-cuthbert.git",
   "gamma_0_prior_params": {
     "scale": 1.0,
     "dof": 5.0,

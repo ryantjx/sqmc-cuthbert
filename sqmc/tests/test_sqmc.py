@@ -40,9 +40,10 @@ from sqmc.sqmc.sqmc import (
 @pytest.fixture(scope="module", autouse=True)
 def config():
     """Enable double precision for the module and restore it on teardown."""
+    _previous = jax.config.jax_enable_x64
     jax.config.update("jax_enable_x64", True)
     yield
-    jax.config.update("jax_enable_x64", False)
+    jax.config.update("jax_enable_x64", _previous)
 
 
 def _scalar_kalman_loglikelihood(observations, sigma_x, sigma_y):

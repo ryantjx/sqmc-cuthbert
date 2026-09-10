@@ -6,6 +6,7 @@ run under an outputs directory when invoked as a CLI.
 """
 
 import csv
+import sys
 from datetime import date, datetime
 import hashlib
 import json
@@ -13,8 +14,14 @@ import math
 import re
 from pathlib import Path
 import struct
-import sys
 import zlib
+
+# Allow running as a plain script from anywhere: put the repo root (four
+# levels above this scripts/ directory) on sys.path so the ``rbsqmc``
+# package resolves without requiring PYTHONPATH to be set.
+_REPO_ROOT = Path(__file__).resolve().parents[4]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 import jax.numpy as jnp
 import numpy as np
@@ -566,11 +573,18 @@ def _validate_final_npz(path, cfg, records=None, team_id_to_name=None, final_sca
                 _require(team_id_to_name.get(str(away_id)) == final_record["away"],
                          "Final NPZ away_id does not resolve to the final record's away team")
             # Full-grid replay: every cell must match the saved score grid.
+            # Cross-platform replay: the NPZ was written by the GPU worker but
+            # this replay runs on the local CPU, so float32 noise of ~1e-8
+            # absolute / ~1e-6 relative is expected (same rationale as the
+            # constrained-params check above).
             saved_cells = final_record["score_probabilities"]
             for cell in saved_cells:
                 h, a = cell["home"], cell["away"]
-                _close(cell["probability"], float(grid[h, a]),
-                       f"Final NPZ grid cell ({h},{a}) vs prediction")
+                np.testing.assert_allclose(
+                    cell["probability"], float(grid[h, a]),
+                    rtol=1e-4, atol=1e-6,
+                    err_msg=f"Final NPZ grid cell ({h},{a}) vs prediction",
+                )
 
 
 def _validate_scalar_params(results, cfg, metadata=None, methods=METHODS):

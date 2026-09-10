@@ -15,5 +15,5 @@
   "gpu_type": "cpu",
   "diagnostics_scope": "all",
   "colab_timeout": 14400,
-  "repo_url": "https://github.com/ryantjx/rbsqmc.git"
+  "repo_url": "https://github.com/ryantjx/sqmc-cuthbert.git"
 }

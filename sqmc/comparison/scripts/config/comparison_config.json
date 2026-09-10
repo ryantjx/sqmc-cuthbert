@@ -4,7 +4,7 @@
   "setup_timeout": 900,
   "transfer_timeout": 600,
   "session": "comparison",
-  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "repo_url": "https://github.com/ryantjx/sqmc-cuthbert.git",
   "qmc": {
     "platforms": [
       "cpu",
