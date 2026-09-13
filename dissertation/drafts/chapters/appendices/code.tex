@@ -20,14 +20,14 @@ Table~\ref{tab:replication} maps each empirical chapter to the entry point that 
 \toprule
 Result & Entry point & Output \\
 \midrule
-QMC generation (Sec.~\ref{sec:qmc-benchmark}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_qmc}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline sqmc/comparison/outputs/}} \\
-Hilbert sorting (Sec.~\ref{sec:hilbert-benchmark}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_hilbert\_sort}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline sqmc/comparison/outputs/}} \\
-SQMC CPU/GPU (Sec.~\ref{sec:sqmc-cpu-gpu}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_sqmc}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline sqmc/comparison/outputs/}} \\
-RB-SQMC vs EKF (Sec.~\ref{sec:performance-comparison}) & \texttt{\seqsplit{rbsqmc.comparison.\newline sqmc\_ekf.run}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline rbsqmc/comparison/\newline sqmc\_ekf/outputs/}} \\
+QMC generation (Sec.~\ref{sec:qmc-benchmark}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_qmc}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline results/qmc\_hilbert\_sqmc/}} \\
+Hilbert sorting (Sec.~\ref{sec:hilbert-benchmark}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_hilbert\_sort}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline results/qmc\_hilbert\_sqmc/}} \\
+SQMC CPU/GPU (Sec.~\ref{sec:sqmc-cpu-gpu}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_sqmc}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline results/qmc\_hilbert\_sqmc/}} \\
+RB-SQMC vs EKF (Sec.~\ref{sec:performance-comparison}) & \texttt{\seqsplit{rbsqmc.comparison.\newline sqmc\_ekf.run}} & \texttt{\seqsplit{ryantjx/sqmc-cuthbert/\newline results/sqmc\_ekf/}} \\
 \bottomrule
 \end{tabularx}
-\caption{Entry points reproducing the empirical results. Each writes a timestamped directory with configuration, provenance metadata and results.}
+\caption{Entry points reproducing the empirical results. Each benchmark writes a timestamped directory under its \texttt{outputs/} tree; the consolidated results committed with this dissertation are collected at the repository root under the \texttt{results/} paths listed.}
 \label{tab:replication}
 \end{table}
 
-The authoritative football run is \texttt{09092026\_1431} at on an NVIDIA A100, as recorded in Appendix~\ref{app:config}. The benchmark suite records the same provenance metadata (device descriptions, software versions, git commit and hashes of the benchmark sources and the Sobol' direction data) in every run directory. Timed measurements use ten repetitions after two warm-up calls, with compilation and input transfers excluded from the reported runtimes; the SQMC accuracy comparison selects particle counts under a per-trajectory runtime budget using selection randomisations and reports accuracy from separate validation randomisations, as described in Section~\ref{sec:empirical-design}.
+The authoritative football run is \texttt{09092026\_1431} on an NVIDIA A100, as recorded in Appendix~\ref{app:config}. The benchmark suite records the same provenance metadata (device descriptions, software versions, git commit and hashes of the benchmark sources and the Sobol' direction data) in every run directory. Timed measurements use ten repetitions after two warm-up calls, with compilation and input transfers excluded from the reported runtimes; the SQMC accuracy comparison selects particle counts under a per-trajectory runtime budget using selection randomisations and reports accuracy from separate validation randomisations, as described in Section~\ref{sec:empirical-design}.
