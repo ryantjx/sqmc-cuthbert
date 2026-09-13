@@ -99,7 +99,7 @@ where $V(f)$ is the variation of $f$ in the sense of Hardy and Krause and $D^*$ 
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/2_high_performance_sqmc/qmc_vs_mc.png}
+\includegraphics[width=0.9\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_high_performance_sqmc/qmc_vs_mc.png}
 \caption{Two-dimensional point sets of size $N=256$: independent uniform random points (left) and the first 256 non-origin points of the Sobol' sequence (right).}
 \label{fig:qmc-vs-mc}
 \end{figure}
@@ -157,7 +157,7 @@ The sorting method depends on the dimension of the state.\footnote{In \texttt{ja
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/2_high_performance_sqmc/hilbert_curve.png}
+\includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_high_performance_sqmc/hilbert_curve.png}
 \caption{First six iterates $H_1, \ldots, H_6$ of the two-dimensional Hilbert space-filling curve, showing the curve filling the unit square at increasing resolution. Start and end points are marked in blue and red.}
 \label{fig:hilbert-curve}
 \end{figure}
@@ -243,7 +243,7 @@ Figure~\ref{fig:comparison-qmc} reports the median runtime of the matched fresh-
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{qmc_hilbert_sqmc/comparison_qmc_13092026_1304.pdf}
+    \includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_qmc_13092026_1304.pdf}
     \caption{Median runtime in milliseconds for fresh scrambling and sampling of the Sobol' (left) and Halton (right) sequences, for the shared \texttt{jax} implementation on CPU (dashed) and GPU (solid). Colours identify dimensions.}
     \label{fig:comparison-qmc}
 \end{figure}
@@ -261,7 +261,7 @@ Input generation is excluded from sorting time. Figure~\ref{fig:comparison-hilbe
 % The timed sort includes standardisation, coordinate transformation, quantisation, Hilbert-index construction and the final ordering.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf}
+    \includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf}
     \caption{\texttt{jax} CPU/\texttt{jax} GPU median-runtime ratios for shared Hilbert sorting. Left: normal-transformed scrambled Sobol' inputs; right: normal-transformed scrambled Halton inputs. Colours identify dimensions. Point generation and input transfer are excluded from sorting time; the horizontal line marks equal runtime. Points above the horizontal line favour the GPU.}
     \label{fig:comparison-hilbert}
 \end{figure}
@@ -284,7 +284,7 @@ We compare SQMC on GPU and CPU from two perspectives: how much faster the GPU ex
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\textwidth]{qmc_hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf}
+    \includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf}
     \caption{Median runtime of a complete 100-observation SQMC trajectory on CPU and GPU, at matched particle counts, with shaded bands showing the interquartile range. The same shared SQMC implementation is used in every panel.}
     \label{fig:comparison-sqmc-runtime}
 \end{figure}
@@ -303,7 +303,7 @@ and Figure~\ref{fig:comparison-sqmc-budget} reports this RMSE for the configurat
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\textwidth]{qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf}
+    \includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf}
     \caption{Filtering RMSE of the SQMC configuration selected under each median-runtime budget, evaluated on the same sixteen randomisations used for selection. Error bars are 95\% bootstrap intervals from sixteen randomisations and 500 resamples, conditional on one dataset per dimension; they represent Monte Carlo randomisation variability only, not variability across observation datasets or hardware sessions. CPU has no eligible configuration at $d=60$ under 50\,ms. Neither backend has an eligible configuration under 10\,ms.}
     \label{fig:comparison-sqmc-budget}
 \end{figure}

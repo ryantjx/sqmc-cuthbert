@@ -40,19 +40,19 @@
 \contentsline {section}{\numberline {A.2}The deterministic inverse-CDF transform in RB-SQMC}{44}{section.A.2}%
 \contentsline {chapter}{\numberline {B}Code}{47}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Replication}{47}{section.B.1}%
-\contentsline {chapter}{\numberline {C}Configuration}{49}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Data and split}{49}{section.C.1}%
-\contentsline {section}{\numberline {C.2}Model parameters}{50}{section.C.2}%
-\contentsline {section}{\numberline {C.3}Optimisation}{50}{section.C.3}%
-\contentsline {section}{\numberline {C.4}Software environment}{50}{section.C.4}%
-\contentsline {section}{\numberline {C.5}Full configuration}{50}{section.C.5}%
-\contentsline {chapter}{\numberline {D}Prediction}{52}{appendix.D}%
-\contentsline {section}{\numberline {D.1}Round of 32}{53}{section.D.1}%
-\contentsline {section}{\numberline {D.2}Round of 16}{54}{section.D.2}%
-\contentsline {section}{\numberline {D.3}Quarter-finals}{54}{section.D.3}%
-\contentsline {section}{\numberline {D.4}Semi-finals}{54}{section.D.4}%
-\contentsline {section}{\numberline {D.5}3rd place}{55}{section.D.5}%
-\contentsline {section}{\numberline {D.6}Final}{55}{section.D.6}%
-\contentsline {chapter}{\numberline {E}Rankings}{56}{appendix.E}%
-\contentsline {section}{\numberline {E.1}Pre-tournament rankings}{56}{section.E.1}%
-\contentsline {section}{\numberline {E.2}Post-tournament rankings}{57}{section.E.2}%
+\contentsline {chapter}{\numberline {C}Configuration}{50}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Data and split}{50}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Model parameters}{51}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Optimisation}{51}{section.C.3}%
+\contentsline {section}{\numberline {C.4}Software environment}{51}{section.C.4}%
+\contentsline {section}{\numberline {C.5}Full configuration}{51}{section.C.5}%
+\contentsline {chapter}{\numberline {D}Prediction}{53}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Round of 32}{54}{section.D.1}%
+\contentsline {section}{\numberline {D.2}Round of 16}{55}{section.D.2}%
+\contentsline {section}{\numberline {D.3}Quarter-finals}{55}{section.D.3}%
+\contentsline {section}{\numberline {D.4}Semi-finals}{55}{section.D.4}%
+\contentsline {section}{\numberline {D.5}3rd place}{56}{section.D.5}%
+\contentsline {section}{\numberline {D.6}Final}{56}{section.D.6}%
+\contentsline {chapter}{\numberline {E}Rankings}{57}{appendix.E}%
+\contentsline {section}{\numberline {E.1}Pre-tournament rankings}{57}{section.E.1}%
+\contentsline {section}{\numberline {E.2}Post-tournament rankings}{58}{section.E.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  14 SEP 2026 02:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  14 SEP 2026 02:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -813,15 +813,19 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 44.
 
 [4] [5]
-<figures/2_high_performance_sqmc/qmc_vs_mc.png, id=376, 578.16pt x 289.08pt>
-File: figures/2_high_performance_sqmc/qmc_vs_mc.png Graphic file (type png)
-<use figures/2_high_performance_sqmc/qmc_vs_mc.png>
-Package pdftex.def Info: figures/2_high_performance_sqmc/qmc_vs_mc.png  used on
- input line 102.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_high_p
+erformance_sqmc/qmc_vs_mc.png, id=376, 578.16pt x 289.08pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_h
+igh_performance_sqmc/qmc_vs_mc.png Graphic file (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_hi
+gh_performance_sqmc/qmc_vs_mc.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation
+/drafts/figures/2_high_performance_sqmc/qmc_vs_mc.png  used on input line 102.
 (pdftex.def)             Requested size: 384.1096pt x 192.05493pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 103.
- [6] [7 <./figures/2_high_performance_sqmc/qmc_vs_mc.png>]
+ [6] [7 </Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/
+2_high_performance_sqmc/qmc_vs_mc.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -829,57 +833,65 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 133.
  [8]
-<figures/2_high_performance_sqmc/hilbert_curve.png, id=447, 794.97pt x 542.025p
-t>
-File: figures/2_high_performance_sqmc/hilbert_curve.png Graphic file (type png)
-
-<use figures/2_high_performance_sqmc/hilbert_curve.png>
-Package pdftex.def Info: figures/2_high_performance_sqmc/hilbert_curve.png  use
-d on input line 160.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_high_p
+erformance_sqmc/hilbert_curve.png, id=447, 794.97pt x 542.025pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_h
+igh_performance_sqmc/hilbert_curve.png Graphic file (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_hi
+gh_performance_sqmc/hilbert_curve.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation
+/drafts/figures/2_high_performance_sqmc/hilbert_curve.png  used on input line 1
+60.
 (pdftex.def)             Requested size: 426.79135pt x 291.00192pt.
- [9 <./figures/2_high_performance_sqmc/hilbert_curve.png>] [10] [11]
-<../../results/qmc_hilbert_sqmc/comparison_qmc_13092026_1304.pdf, id=507, 528.7
-75pt x 210.28539pt>
-File: ../../results/qmc_hilbert_sqmc/comparison_qmc_13092026_1304.pdf Graphic f
-ile (type pdf)
-<use ../../results/qmc_hilbert_sqmc/comparison_qmc_13092026_1304.pdf>
-Package pdftex.def Info: ../../results/qmc_hilbert_sqmc/comparison_qmc_13092026
-_1304.pdf  used on input line 246.
+ [9 </Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/2_hi
+gh_performance_sqmc/hilbert_curve.png>] [10] [11]
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_
+qmc_13092026_1304.pdf, id=507, 528.775pt x 210.28539pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compar
+ison_qmc_13092026_1304.pdf Graphic file (type pdf)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compari
+son_qmc_13092026_1304.pdf>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_
+hilbert_sqmc/comparison_qmc_13092026_1304.pdf  used on input line 246.
 (pdftex.def)             Requested size: 426.79135pt x 169.7334pt.
  [12]
-<../../results/qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf, id=517, 5
-28.775pt x 210.28539pt>
-File: ../../results/qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf Graph
-ic file (type pdf)
-<use ../../results/qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf>
-Package pdftex.def Info: ../../results/qmc_hilbert_sqmc/comparison_hilbert_1309
-2026_1304.pdf  used on input line 264.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_
+hilbert_13092026_1304.pdf, id=517, 528.775pt x 210.28539pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compar
+ison_hilbert_13092026_1304.pdf Graphic file (type pdf)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compari
+son_hilbert_13092026_1304.pdf>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_
+hilbert_sqmc/comparison_hilbert_13092026_1304.pdf  used on input line 264.
 (pdftex.def)             Requested size: 426.79135pt x 169.7334pt.
- [13 <../../results/qmc_hilbert_sqmc/comparison_qmc_13092026_1304.pdf>] [14 <..
-/../results/qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf>]
-<../../results/qmc_hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf, id=5
-63, 528.74307pt x 188.10251pt>
-File: ../../results/qmc_hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf 
-Graphic file (type pdf)
-<use ../../results/qmc_hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf>
-Package pdftex.def Info: ../../results/qmc_hilbert_sqmc/comparison_sqmc_runtime
-_13092026_1304.pdf  used on input line 287.
+ [13 </Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compar
+ison_qmc_13092026_1304.pdf>] [14 </Users/ryant/Github/ryantjx/sqmc-cuthbert/res
+ults/qmc_hilbert_sqmc/comparison_hilbert_13092026_1304.pdf>]
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_
+sqmc_runtime_13092026_1304.pdf, id=563, 528.74307pt x 188.10251pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compar
+ison_sqmc_runtime_13092026_1304.pdf Graphic file (type pdf)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compari
+son_sqmc_runtime_13092026_1304.pdf>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_
+hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf  used on input line 287.
+
 (pdftex.def)             Requested size: 426.79135pt x 151.83693pt.
-<../../results/qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf, id=56
-5, 528.775pt x 224.23752pt>
-File: ../../results/qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf G
-raphic file (type pdf)
-<use ../../results/qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf>
-Package pdftex.def Info: ../../results/qmc_hilbert_sqmc/comparison_sqmc_budget_
-13092026_1304.pdf  used on input line 306.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/comparison_
+sqmc_budget_13092026_1304.pdf, id=565, 528.775pt x 224.23752pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compar
+ison_sqmc_budget_13092026_1304.pdf Graphic file (type pdf)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compari
+son_sqmc_budget_13092026_1304.pdf>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_
+hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf  used on input line 306.
 (pdftex.def)             Requested size: 426.79135pt x 180.99496pt.
-) [15 <../../results/qmc_hilbert_sqmc/comparison_sqmc_runtime_13092026_1304.pdf
->] [16 <../../results/qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf
->]
+) [15 </Users/ryant/Github/ryantjx/sqmc-cuthbert/results/qmc_hilbert_sqmc/compa
+rison_sqmc_runtime_13092026_1304.pdf>] [16 </Users/ryant/Github/ryantjx/sqmc-cu
+thbert/results/qmc_hilbert_sqmc/comparison_sqmc_budget_13092026_1304.pdf>]
 \openout2 = `chapters/3_football_model_with_sqmc.aux'.
 
-
-(./chapters/3_football_model_with_sqmc.tex
+ (./chapters/3_football_model_with_sqmc.tex
 Chapter 3.
 [17
 
@@ -887,75 +899,93 @@ Chapter 3.
 
 
 ] [18]
-<figures/3_football_model_with_sqmc/m_qlae035f1.jpeg, id=642, 62.634pt x 19.633
-35pt>
-File: figures/3_football_model_with_sqmc/m_qlae035f1.jpeg Graphic file (type jp
-g)
-<use figures/3_football_model_with_sqmc/m_qlae035f1.jpeg>
-Package pdftex.def Info: figures/3_football_model_with_sqmc/m_qlae035f1.jpeg  u
-sed on input line 46.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/3_footba
+ll_model_with_sqmc/m_qlae035f1.jpeg, id=642, 62.634pt x 19.63335pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/3_f
+ootball_model_with_sqmc/m_qlae035f1.jpeg Graphic file (type jpg)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/3_fo
+otball_model_with_sqmc/m_qlae035f1.jpeg>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation
+/drafts/figures/3_football_model_with_sqmc/m_qlae035f1.jpeg  used on input line
+ 46.
 (pdftex.def)             Requested size: 384.1096pt x 120.42043pt.
- [19 <./figures/3_football_model_with_sqmc/m_qlae035f1.jpeg>] [20]
-[21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32]
-<../../results/sqmc_ekf/combined/images/logz_overlay_train_test.png, id=789, 10
-03.1076pt x 425.9112pt>
-File: ../../results/sqmc_ekf/combined/images/logz_overlay_train_test.png Graphi
-c file (type png)
-<use ../../results/sqmc_ekf/combined/images/logz_overlay_train_test.png>
-Package pdftex.def Info: ../../results/sqmc_ekf/combined/images/logz_overlay_tr
-ain_test.png  used on input line 410.
+ [19 </Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/3_f
+ootball_model_with_sqmc/m_qlae035f1.jpeg>] [20] [21] [22] [23]
+[24] [25] [26] [27] [28] [29] [30] [31] [32]
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/log
+z_overlay_train_test.png, id=789, 1003.1076pt x 425.9112pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/logz_overlay_train_test.png Graphic file (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images
+/logz_overlay_train_test.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc
+_ekf/combined/images/logz_overlay_train_test.png  used on input line 410.
 (pdftex.def)             Requested size: 384.1096pt x 163.0892pt.
- [33 <../../results/sqmc_ekf/combined/images/logz_overlay_train_test.png>] [34]
-<../../results/sqmc_ekf/combined/images/ekf_predictions/prediction_plots/2026-0
-7-19_Spain_vs_Argentina.png, id=807, 852.786pt x 392.667pt>
-File: ../../results/sqmc_ekf/combined/images/ekf_predictions/prediction_plots/2
-026-07-19_Spain_vs_Argentina.png Graphic file (type png)
-<use ../../results/sqmc_ekf/combined/images/ekf_predictions/prediction_plots/20
-26-07-19_Spain_vs_Argentina.png>
-Package pdftex.def Info: ../../results/sqmc_ekf/combined/images/ekf_predictions
-/prediction_plots/2026-07-19_Spain_vs_Argentina.png  used on input line 458.
+ [33 </Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/logz_overlay_train_test.png>]
+[34]
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/ekf
+_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png, id=807, 852.78
+6pt x 392.667pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png Graphic fi
+le (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images
+/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc
+_ekf/combined/images/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argen
+tina.png  used on input line 458.
 (pdftex.def)             Requested size: 426.79135pt x 196.51276pt.
-<../../results/sqmc_ekf/combined/images/sqmc_predictions/prediction_plots/2026-
-07-19_Spain_vs_Argentina.png, id=808, 853.2678pt x 392.1852pt>
-File: ../../results/sqmc_ekf/combined/images/sqmc_predictions/prediction_plots/
-2026-07-19_Spain_vs_Argentina.png Graphic file (type png)
-<use ../../results/sqmc_ekf/combined/images/sqmc_predictions/prediction_plots/2
-026-07-19_Spain_vs_Argentina.png>
-Package pdftex.def Info: ../../results/sqmc_ekf/combined/images/sqmc_prediction
-s/prediction_plots/2026-07-19_Spain_vs_Argentina.png  used on input line 463.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqm
+c_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png, id=808, 853.2
+678pt x 392.1852pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png Graphic f
+ile (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images
+/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc
+_ekf/combined/images/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Arge
+ntina.png  used on input line 463.
 (pdftex.def)             Requested size: 426.79135pt x 196.16393pt.
  [35]
-<../../results/sqmc_ekf/combined/images/ekf_timeseries_states.png, id=815, 1002
-.6258pt x 642.7212pt>
-File: ../../results/sqmc_ekf/combined/images/ekf_timeseries_states.png Graphic 
-file (type png)
-<use ../../results/sqmc_ekf/combined/images/ekf_timeseries_states.png>
-Package pdftex.def Info: ../../results/sqmc_ekf/combined/images/ekf_timeseries_
-states.png  used on input line 478.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/ekf
+_timeseries_states.png, id=815, 1002.6258pt x 642.7212pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/ekf_timeseries_states.png Graphic file (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images
+/ekf_timeseries_states.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc
+_ekf/combined/images/ekf_timeseries_states.png  used on input line 478.
 (pdftex.def)             Requested size: 426.79135pt x 273.58931pt.
-<../../results/sqmc_ekf/combined/images/sqmc_timeseries_states.png, id=816, 100
-2.6258pt x 641.2758pt>
-File: ../../results/sqmc_ekf/combined/images/sqmc_timeseries_states.png Graphic
- file (type png)
-<use ../../results/sqmc_ekf/combined/images/sqmc_timeseries_states.png>
-Package pdftex.def Info: ../../results/sqmc_ekf/combined/images/sqmc_timeseries
-_states.png  used on input line 483.
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqm
+c_timeseries_states.png, id=816, 1002.6258pt x 641.2758pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/sqmc_timeseries_states.png Graphic file (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images
+/sqmc_timeseries_states.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc
+_ekf/combined/images/sqmc_timeseries_states.png  used on input line 483.
 (pdftex.def)             Requested size: 426.79135pt x 272.97404pt.
- [36 <../../results/sqmc_ekf/combined/images/ekf_predictions/prediction_plots/2
-026-07-19_Spain_vs_Argentina.png> <../../results/sqmc_ekf/combined/images/sqmc_
-predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png>] [37 <../../res
-ults/sqmc_ekf/combined/images/ekf_timeseries_states.png> <../../results/sqmc_ek
-f/combined/images/sqmc_timeseries_states.png>]
-<../../results/sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png, id=833, 
-1147.6476pt x 425.9112pt>
-File: ../../results/sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png Grap
-hic file (type png)
-<use ../../results/sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png>
-Package pdftex.def Info: ../../results/sqmc_ekf/combined/images/sqmc_correlatio
-n_topn_bar.png  used on input line 497.
+ [36 </Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png> </Users/r
+yant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqmc_predict
+ions/prediction_plots/2026-07-19_Spain_vs_Argentina.png>] [37 </Users/ryant/Git
+hub/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/ekf_timeseries_state
+s.png> </Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/ima
+ges/sqmc_timeseries_states.png>]
+</Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqm
+c_correlation_topn_bar.png, id=833, 1147.6476pt x 425.9112pt>
+File: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/sqmc_correlation_topn_bar.png Graphic file (type png)
+<use /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images
+/sqmc_correlation_topn_bar.png>
+Package pdftex.def Info: /Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc
+_ekf/combined/images/sqmc_correlation_topn_bar.png  used on input line 497.
 (pdftex.def)             Requested size: 426.79135pt x 158.39052pt.
- [38 <../../results/sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png>] [3
-9]) [40]
+ [38 </Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/image
+s/sqmc_correlation_topn_bar.png>]
+[39]) [40]
 \openout2 = `chapters/4_discussion.aux'.
 
  (./chapters/4_discussion.tex
@@ -990,42 +1020,42 @@ Appendix B.
 
 
 
-]) [48]
+]) [48] [49]
 \openout2 = `chapters/appendices/config.aux'.
 
  (./chapters/appendices/config.tex
 Appendix C.
-[49
+[50
 
 
 
 
-]) [50] [51]
+]) [51] [52]
 \openout2 = `chapters/appendices/prediction.aux'.
 
  (./chapters/appendices/prediction.tex
 Appendix D.
-[52
+[53
 
 
 
 
-] [53] [54]) [55]
+] [54] [55]) [56]
 \openout2 = `chapters/appendices/rankings.aux'.
 
  (./chapters/appendices/rankings.tex
 Appendix E.
-[56
+[57
 
 
 
 
-]) [57] [58] (./ST980_5754603.bbl [59
+]) [58] [59] (./ST980_5754603.bbl [60
 
 
 
 
-] [60] [61] [62]) [63]
+] [61] [62] [63]) [64]
 (./ST980_5754603.aux (./chapters/abstract.aux) (./chapters/acknowledgements.aux
 ) (./chapters/1_introduction.aux) (./chapters/2_high_performance_sqmc.aux)
 (./chapters/3_football_model_with_sqmc.aux) (./chapters/4_discussion.aux)
@@ -1040,10 +1070,10 @@ Package rerunfilecheck Info: File `ST980_5754603.out' has not changed.
 (rerunfilecheck)             Checksum: 7D1C3E1D363B2295618DC3C32868DCB9;10015.
  ) 
 Here is how much of TeX's memory you used:
- 19596 strings out of 467525
- 326034 string characters out of 5418983
- 770788 words of memory out of 5000000
- 47522 multiletter control sequences out of 15000+600000
+ 19577 strings out of 467525
+ 328529 string characters out of 5418983
+ 770949 words of memory out of 5000000
+ 47502 multiletter control sequences out of 15000+600000
  752864 words of font info for 302 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,14n,87p,1615b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1063,10 +1093,10 @@ msy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><
 /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local
 /texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2
 026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ST980_5754603.pdf (69 pages, 2355102 bytes).
+Output written on ST980_5754603.pdf (70 pages, 2355330 bytes).
 PDF statistics:
- 1190 PDF objects out of 1200 (max. 8388607)
- 990 compressed objects within 10 object streams
- 231 named destinations out of 1000 (max. 500000)
+ 1194 PDF objects out of 1200 (max. 8388607)
+ 993 compressed objects within 10 object streams
+ 232 named destinations out of 1000 (max. 500000)
  70626 words of extra memory for PDF output out of 74296 (max. 10000000)
 

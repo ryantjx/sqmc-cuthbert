@@ -43,7 +43,7 @@ and we obtain the filtering distribution in the factorial form of Equation~\eqre
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/3_football_model_with_sqmc/m_qlae035f1.jpeg}
+\includegraphics[width=0.9\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/dissertation/drafts/figures/3_football_model_with_sqmc/m_qlae035f1.jpeg}
 \caption{Conditional independence structure of a general state-space model (left) and of a factorial state-space model with a pairwise observation model (right), reproduced from \citet{duffieldpowerrimella2024factorialssm}. In the fSSM, each component evolves independently and the observation at time $t$ couples only the components in $\mathcal{O}_t$.}
 \label{fig:fssm-independence}
 \end{figure}
@@ -407,7 +407,7 @@ RB-SQMC attained a higher final train log-likelihood than the EKF ($-14649.74$ v
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{sqmc_ekf/combined/images/logz_overlay_train_test.png}
+\includegraphics[width=0.9\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/logz_overlay_train_test.png}
 \caption{Training and test log-likelihood against epoch for the EKF and RB-SQMC. The EKF value is a Gaussian-approximate normalising constant; the SQMC value is a particle estimate.}
 \label{fig:logz-overlay}
 \end{figure}
@@ -455,12 +455,12 @@ As an illustration of a forecast, we review the final of the 2026 World Cup, Spa
 \begin{figure}[H]
 \centering
 \begin{subfigure}{\textwidth}
-\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png}
+\includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png}
 \caption{EKF predicted score grid.}
 \label{fig:prediction-final-ekf}
 \end{subfigure}
 \begin{subfigure}{\textwidth}
-\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png}
+\includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png}
 \caption{RB-SQMC predicted score grid.}
 \label{fig:prediction-final-sqmc}
 \end{subfigure}
@@ -475,12 +475,12 @@ The EKF produces a single deterministic trajectory, thus the filtering states ar
 \begin{figure}[htbp]
 \centering
 \begin{subfigure}{\textwidth}
-\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/ekf_timeseries_states.png}
+\includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/ekf_timeseries_states.png}
 \caption{EKF filtered states.}
 \label{fig:timeseries-ekf}
 \end{subfigure}
 \begin{subfigure}{\textwidth}
-\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/sqmc_timeseries_states.png}
+\includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqmc_timeseries_states.png}
 \caption{RB-SQMC filtered states.}
 \label{fig:timeseries-sqmc}
 \end{subfigure}
@@ -494,7 +494,7 @@ The difference between EKF and RB-SQMC is that RB-SQMC retains the cross-team co
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png}
+\includegraphics[width=\textwidth]{/Users/ryant/Github/ryantjx/sqmc-cuthbert/results/sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png}
 \caption{Strongest positive and negative between-team correlations carried by the prior filter covariance $\Gamma_0$ under RB-SQMC.}
 \label{fig:topn-correlation}
 \end{figure}
