@@ -146,7 +146,7 @@ python -m sqmc.comparison.benchmark_sqmc \
   --budget-seconds 0.000000001 1 --repeats 2 --warmups 0
 ```
 
-The full chapter profile (dimensions 2–60, counts up to 131072, seven timed
+The full chapter profile (dimensions 2–60, counts up to 32768, ten timed
 repetitions, both backends) is defined in
 `sqmc/comparison/scripts/config/comparison_config.json` and is executed
 through the Colab launcher, which provisions an A100 session, runs the three
