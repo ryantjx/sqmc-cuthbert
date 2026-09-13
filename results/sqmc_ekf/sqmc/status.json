@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "run_id": "09092026_1431",
+  "source_commit": "336842f0e8739071141928486f54db1d08175f0c",
+  "config_sha256": "2b2c1daf7f1ee43366ba09e66596600d05227074e8a9bd174f20f03a46907b43",
+  "started_utc": "2026-09-09T14:31:39.289377+00:00",
+  "session": "sqmc_ekf_09092026_1431_f4321a23cb",
+  "shutdown": "verified_stopped",
+  "secondary_errors": [],
+  "methods": [
+    "sqmc"
+  ],
+  "run": {
+    "execution": "complete",
+    "download": "complete",
+    "started_utc": "2026-09-09T14:32:20.781664+00:00",
+    "finished_utc": "2026-09-09T16:07:39.641179+00:00",
+    "archive_ready": true,
+    "downloaded_utc": "2026-09-09T16:07:51.013192+00:00"
+  },
+  "log_offset": 9665,
+  "worker_dispatched": true,
+  "endpoint": "gpu-a100-s-kkb-ass1c1-m942l3mq8xts",
+  "shutdown_utc": "2026-09-09T16:07:56.938050+00:00",
+  "monitor_finished_utc": "2026-09-09T16:07:56.938692+00:00",
+  "exit_code": 0,
+  "finished_utc": "2026-09-09T16:07:56.938696+00:00"
+}

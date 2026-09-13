@@ -1,0 +1,33 @@
+\chapter{Code}
+\label{app:code}
+
+This appendix records how the results in this dissertation can be reproduced. The implementation lives in the public repository \texttt{ryantjx/sqmc-cuthbert}; it is part of the process of being integrated into \texttt{\seqsplit{state-space-models/cuthbert}} under issue \href{https://github.com/state-space-models/cuthbert/issues/255}{\#255}. The repository is organised as two packages: \texttt{sqmc/}, containing the shared SQMC library (QMC point generation, the SQMC filter and Hilbert sorting) together with its CPU/GPU benchmark suite, and \texttt{rbsqmc/}, containing the football application (data preparation, the RB-SMC, RB-SQMC and factorial EKF filters, and the comparison pipelines). The football package imports the QMC generation and Hilbert-sorting modules from the SQMC package at runtime. The numerical results reported in this dissertation are committed at the repository root under \texttt{results/}: \texttt{results/qmc\_hilbert\_sqmc/} holds the Chapter~\ref{ch:sqmc} accelerator benchmarks and \texttt{results/sqmc\_ekf/} the Chapter~\ref{ch:model} football comparison. These are the latest results from the authoritative runs described in Appendix~\ref{app:config}.
+
+% \section{Environment}
+
+% The experiments require Python~3.10 or later with the dependencies listed in the repository's \texttt{requirements.txt}. GPU runs use the CUDA~12 build of \texttt{jax}; the football code selects its platform through the \texttt{RBSQMC\_PLATFORM} environment variable. Two data files are generated on a fresh clone: the Sobol' direction-number table, built from the committed Joe--Kuo source table by \texttt{\_generate\_sobol\_data.py}, and the parquet cache of the international football results, downloaded from the \texttt{martj42/international-results} source. All commands are run from the repository root.
+
+\section{Replication}
+\label{app:replication}
+
+The experiments require Python 3.13 or later with the dependencies listed in the repository's \texttt{requirements.txt}. GPU runs use the CUDA~12 build of \texttt{jax}; the football code selects its platform through the \texttt{RBSQMC\_PLATFORM} environment variable. Two data files are generated on a fresh clone: the Sobol' direction-number table, built from the committed Joe--Kuo source table by \texttt{\_generate\_sobol\_data.py}, and the parquet cache of the international football results, downloaded from the \texttt{martj42/international-results} source. All commands are run from the repository root.
+
+Table~\ref{tab:replication} maps each empirical chapter to the entry point that reproduces it. The performance comparison of Chapter~\ref{ch:sqmc} is produced by three standalone benchmarks, which can be run directly on a CPU or GPU host or through the Colab launcher, which provisions an A100 session, executes the three stages sequentially and verifies each stage's artefacts before proceeding. The football comparison of Chapter~\ref{ch:model} trains the correlated RB-SQMC model and the factorial EKF baseline on identical data splits and optimiser settings under the configuration recorded in Appendix~\ref{app:config}, and evaluates one-step-ahead predictions on the held-out period. Each run writes a timestamped output directory containing the effective configuration, device and software metadata, the git commit, source hashes, results and figures, so that any reported number can be traced to its generating configuration.
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+Result & Entry point & Output \\
+\midrule
+QMC generation (Sec.~\ref{sec:qmc-benchmark}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_qmc}} & \texttt{\seqsplit{sqmc/comparison/outputs/}} \\
+Hilbert sorting (Sec.~\ref{sec:hilbert-benchmark}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_hilbert\_sort}} & \texttt{\seqsplit{sqmc/comparison/outputs/}} \\
+SQMC CPU/GPU (Sec.~\ref{sec:sqmc-cpu-gpu}) & \texttt{\seqsplit{sqmc.comparison.benchmark\_sqmc}} & \texttt{\seqsplit{sqmc/comparison/outputs/}} \\
+RB-SQMC vs EKF (Sec.~\ref{sec:performance-comparison}) & \texttt{\seqsplit{rbsqmc.comparison.\newline sqmc\_ekf.run}} & \texttt{\seqsplit{rbsqmc/comparison/\newline sqmc\_ekf/outputs/}} \\
+\bottomrule
+\end{tabularx}
+\caption{Entry points reproducing the empirical results. Each writes a timestamped directory with configuration, provenance metadata and results.}
+\label{tab:replication}
+\end{table}
+
+The authoritative football run is \texttt{09092026\_1431} at on an NVIDIA A100, as recorded in Appendix~\ref{app:config}. The benchmark suite records the same provenance metadata (device descriptions, software versions, git commit and hashes of the benchmark sources and the Sobol' direction data) in every run directory. Timed measurements use ten repetitions after two warm-up calls, with compilation and input transfers excluded from the reported runtimes; the SQMC accuracy comparison selects particle counts under a per-trajectory runtime budget using selection randomisations and reports accuracy from separate validation randomisations, as described in Section~\ref{sec:empirical-design}.

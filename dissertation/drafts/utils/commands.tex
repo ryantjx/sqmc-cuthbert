@@ -1,0 +1,33 @@
+% Shared title-page helper and mathematical notation.
+
+\newcommand{\makedissertationtitle}{%
+  \begin{center}
+    \vspace*{0.12\textheight}
+    {\LARGE\bfseries \DissertationTitle\par}
+    \vfill
+    {\large \StudentName\par}
+    \vspace{1em}
+    {\large Student number: \StudentNumber\par}
+    \vspace{1em}
+    {\large Supervisor: \SupervisorName\par}
+    \vspace{1em}
+    {\large \DissertationDate\par}
+    \vfill
+    {\large \Subject\par}
+    \vspace{0.08\textheight}
+  \end{center}
+  \thispagestyle{plain}
+  \clearpage
+}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\trans}{\mathsf{T}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+% Placeholder for values to be filled in once the full run is available.
+\newcommand{\placeholder}[1]{\textcolor{gray}{\texttt{[#1]}}}

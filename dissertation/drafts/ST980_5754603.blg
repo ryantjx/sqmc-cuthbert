@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ST980_5754603.aux
+A level-1 auxiliary file: chapters/abstract.aux
+A level-1 auxiliary file: chapters/acknowledgements.aux
+A level-1 auxiliary file: chapters/1_introduction.aux
+A level-1 auxiliary file: chapters/2_high_performance_sqmc.aux
+A level-1 auxiliary file: chapters/3_football_model_with_sqmc.aux
+A level-1 auxiliary file: chapters/4_discussion.aux
+A level-1 auxiliary file: chapters/appendices/proof.aux
+A level-1 auxiliary file: chapters/appendices/code.aux
+A level-1 auxiliary file: chapters/appendices/config.aux
+A level-1 auxiliary file: chapters/appendices/prediction.aux
+A level-1 auxiliary file: chapters/appendices/rankings.aux
+The style file: plainnat.bst
+Database file #1: chapters/references.bib
+You've used 47 entries,
+            2773 wiz_defined-function locations,
+            896 strings with 14036 characters,
+and the built_in function-call counts, 21171 in all, are:
+= -- 1963
+> -- 1013
+< -- 39
++ -- 347
+- -- 300
+* -- 1629
+:= -- 3182
+add.period$ -- 168
+call.type$ -- 47
+change.case$ -- 233
+chr.to.int$ -- 47
+cite$ -- 94
+duplicate$ -- 1002
+empty$ -- 1868
+format.name$ -- 375
+if$ -- 4510
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 44
+newline$ -- 265
+num.names$ -- 192
+pop$ -- 494
+preamble$ -- 1
+purify$ -- 192
+quote$ -- 0
+skip$ -- 772
+stack$ -- 0
+substring$ -- 911
+swap$ -- 120
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 487
+warning$ -- 0
+while$ -- 210
+width$ -- 0
+write$ -- 655

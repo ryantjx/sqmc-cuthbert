@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "system": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "cpu_count": 12,
+  "versions": {
+    "jax": "0.11.1",
+    "jaxlib": "0.11.1",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "cuthbert": "0.0.15",
+    "cuthbertlib": "0.0.15"
+  },
+  "git_commit": "95f4412d2fe9faba8defec4a330713f61a793511",
+  "git_status": "",
+  "source_sha256": {
+    "sqmc/qmc/qmc.py": "cd17ed28feefb6eba9acc32343b46c312c9797bc9213a9fdbccce362ec359e84",
+    "sqmc/qmc/_sobol_direction_numbers.npz": "38b3383b7e317fe58bafa3e8415a8b1a58b1e4de067b5b18b2e9806298cd5ef3",
+    "sqmc/hilbert_sort/hilbert_sort.py": "699dc819542888b4d2f502292d999aa5ffbabcc7a0b296dc938334eb5c2bdae3",
+    "sqmc/sqmc/sqmc.py": "9937c12f5ac5ec8811714bccb62c4f8345bd2399da5a2208c13285fdea41c84f",
+    "sqmc/comparison/benchmark_hilbert_sort.py": "b04ec6a7f7df69914aea2a7cf0e009493ee1c50941e56f23767b16c03f65d0e9",
+    "sqmc/comparison/plotting.py": "f5763f6778e421477ff67763c2ad5a73a12d3480fbd096c349cb12c2253cb9d1",
+    "sqmc/comparison/benchmark_qmc.py": "b9becfe720c0ec0cfd44f73b24fba567a709fade93397c8bbb17fe413fc4dc34",
+    "sqmc/comparison/common.py": "73867d8e6dcf558f109dd7afc70a768c8320db0143207208b8d16103a24179e7",
+    "sqmc/comparison/benchmark_sqmc.py": "d750e7fc7b32d5cf07674047f6d28c361ec79450fcf77c78c6bf337b65fa7dfe"
+  },
+  "x64": true,
+  "devices": {
+    "cpu": {
+      "kind": "cpu",
+      "id": 0,
+      "platform": "cpu"
+    },
+    "gpu": {
+      "kind": "NVIDIA A100-SXM4-40GB",
+      "id": 0,
+      "platform": "gpu"
+    }
+  },
+  "timing": "device-resident, synchronized outputs; raw steady-state samples; first call includes tracing/compilation/execution",
+  "qmc_contract_version": 2,
+  "scrambling": "fresh on every execution; index zero; Sobol bits=30",
+  "timing_boundaries": {
+    "jax": "compiled scrambling and sampling; compilation and input transfers excluded",
+    "scipy": "RNG and engine construction, scrambling and sampling; Halton workers=1"
+  }
+}

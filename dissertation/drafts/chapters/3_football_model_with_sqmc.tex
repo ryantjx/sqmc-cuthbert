@@ -1,0 +1,541 @@
+\chapter{Rao-Blackwellised SQMC for Football Matches}
+\label{ch:model}
+In this chapter, we develop a correlated Gaussian state-space model for football match outcomes. The observation likelihood depends on only the two playing teams, so the effective dimension is far smaller than the $2K$ -dimensional latent state. We exploit this sparsity through Rao-Blackwellisation, integrating out the non-playing teams analytically and running SQMC on the four playing-team coordinates, overcoming the high-dimensional limitations of SQMC.
+
+\section{Background}
+\label{sec:rb-sqmc-background}
+Football is a high-dimensional problem with sparse pairwise observations. Let each team's latent state be a two-dimensional vector of attacking and defensive strengths, $x_t^k = (x_t^{k, \text{attack}}, x_t^{k, \text{defence}})$ for $k \in \{1, 2, \ldots K\}$. Then, the latent state of all $K$ teams is $x_t \in \mathbb{R}^{2K}$. However, each match involves only the latent states of the two playing teams at time $t$, $x_t^{\mathcal{O}_t} = (x_t^{(i_t)}, x_t^{(j_t)}) \in \mathbb{R}^4$, through the local observation model $G_t(y_t \mid x_t^{\mathcal{O}_t})$, which represents the outcome of a single football match. The general state-space model notation introduced in Section~\ref{sec:background} is inefficient for this problem: it represents the full joint distribution over all teams, even though each likelihood contribution depends on only four coordinates.
+
+The factorial hidden Markov model (fHMM) was introduced by Ghahramani and Jordan \citep{ghahramanijordan1995factorialhmm,ghahramanijordan1997factorialhmm} to tackle problems with structures that can be factorised into individual components. A factorial state-space model (fSSM) is the corresponding state-space construction, extending from the general state-space model defined in Equation~\eqref{eq:state-space-model}. Its state $x$ is naturally partitioned into a collection of components $k$, each of which evolves independently of one another. The observation likelihood $G_t$ may depend jointly on a single component or on a collection of components. Let $\mathcal{O}_t \subseteq \{1,\ldots,K\}$ denote the subset of components involved in the observation at time $t$, and write $x_t^{\mathcal{O}_t} = (x_t^k)_{k \in \mathcal{O}_t}$ for the corresponding collection of components.
+
+The fSSM model makes three assumptions: (1) the initial latent states are \text{a priori} independent (independent given any observations); (2) the evolution $m_t$ of each component $k$ is independent of the other components; (3) given the latent states $x_t^{\mathcal{O}_t}$, the observations $y_t$ are conditionally independent of all other components $-\mathcal{O}_t$. Applying these to the general joint density of Equation~\eqref{eq:state-space-model}, the initial distribution factorises as $\prod_{k=1}^K m_0(x_0^k)$, the transition factor as $\prod_{k=1}^K\prod_{t=1}^T m_t(x_t^k \mid x_{t-1}^k)$, and the observation term depends only on the playing pair, $\prod_{t=1}^T G_t(y_t \mid x_t^{\mathcal{O}_t})$. The joint density of the fSSM therefore factorises as
+\begin{equation}
+\label{eq:factorial-joint}
+p(x_{0:T}^{1:K}, y_{1:T}) = \left[ \prod_{k=1}^K m_0(x_0^k) \prod_{t=1}^T m_t(x_t^k \mid x_{t-1}^k) \right] \prod_{t=1}^T G_t(y_t \mid x_t^{\mathcal{O}_t}).
+\end{equation}
+
+This reduces the computational complexity of the joint distribution from $\mathcal{O}(N \cdot K)$ to $\mathcal{O}(N + K)$ terms, which is a significant improvement for large $K$.
+
+A recent paper by \citet{duffieldpowerrimella2024factorialssm} utilized the fSSM structure and demonstrated its effectiveness in inference tasks for online skill rating and sports. Components can represent either an individual or a team's skill level. Inference then maintains a factorial filtering distribution, which factorises as a product of per-component marginals,
+\begin{equation}
+\label{eq:factorial-filter}
+p(x_t \mid y_{1:t}) = \prod_{k=1}^K p(x_t^k \mid y_{1:t}).
+\end{equation}
+Since the observation at time $t$ involves only the pair $\mathcal{O}_t = \{i_t, j_t\}$, the prediction step propagates each component independently,
+\begin{equation}
+p(x_t^k \mid y_{1:t-1}) = \int m_t(x_t^k \mid x_{t-1}^k) \, p(x_{t-1}^k \mid y_{1:t-1}) \, dx_{t-1}^k,
+\end{equation}
+and the update step assimilates the match result in the joint distribution of the playing pair,
+\begin{equation}
+p(x_t^{\mathcal{O}_t} \mid y_{1:t}) \propto G_t(y_t \mid x_t^{\mathcal{O}_t}) \prod_{k \in \mathcal{O}_t} p(x_t^k \mid y_{1:t-1}).
+\end{equation}
+For each component $k \in \mathcal{O}_t$, the marginal filtering distribution is then recovered by integrating the joint update over the remaining components of the playing pair,
+
+\begin{equation}
+p(x_t^k \mid y_{1:t}) = \int p(x_t^{\mathcal{O}_t} \mid y_{1:t}) \, dx_t^{\mathcal{O}_t \setminus \{k\}}, \qquad k \in \mathcal{O}_t,
+\end{equation}
+
+and we obtain the filtering distribution in the factorial form of Equation~\eqref{eq:factorial-filter}. Figure~\ref{fig:fssm-independence} contrasts the conditional independence structure of a general state-space model with that of a fSSM: in the latter, each component evolves independently and the observation at time $t$ couples only the components in $\mathcal{O}_t$. The main approximation is the repeated projection of the coupled posterior back to a product of component-level marginals, which discards the cross-component covariance after every match. 
+
+% This approximation is computationally attractive because it avoids representing the full joint distribution over all components, which contains $\mathcal{O}(N \cdot K)$ terms, while this new representation only contains $\mathcal{O}(N + K)$ terms.
+
+% and we obtain the filtering distribution in the factorial form of Equation~\eqref{eq:factorial-filter}. Figure~\ref{fig:fssm-independence} contrasts the conditional independence structure of a general state-space model with that of a fSSM: in the latter, each component evolves independently and the observation at time $t$ couples only the components in $\mathcal{O}_t$. The main approximation is the repeated projection of the coupled posterior back to a product of component-level marginals, which discards the cross-component covariance after every match. This approximation is computationally attractive because it avoids representing the full joint distribution over all components: the factorial representation stores $K$ per-component marginals, whereas the joint filtering distribution over all components carries $\mathcal{O}(N \cdot K)$ particle states and an $\mathcal{O}(K^2)$ covariance. We state the time and memory costs of each algorithm separately below rather than counting undefined "terms".
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/3_football_model_with_sqmc/m_qlae035f1.jpeg}
+\caption{Conditional independence structure of a general state-space model (left) and of a factorial state-space model with a pairwise observation model (right), reproduced from \citet{duffieldpowerrimella2024factorialssm}. In the fSSM, each component evolves independently and the observation at time $t$ couples only the components in $\mathcal{O}_t$.}
+\label{fig:fssm-independence}
+\end{figure}
+
+Although efficient, fSSM is a restrictive model for football. Shared players, clubs, leagues and tournaments are potential sources of dependence between national teams that are not represented by a model whose team processes are \textit{a priori} independent (i.e. assumed to be independent without any observations). Furthermore, match outcomes create dependencies that inform us on the strengths and uncertainty of other teams (e.g. if team $A$ beats team $B$, and team $B$ beats team $C$, we can infer that team $A$ is likely stronger than team $C$). This information is discarded in the fSSM by approximating the filtering distribution as a product of independent team marginals as defined in Equation~\eqref{eq:factorial-filter}. 
+
+% Although efficient, fSSM is a restrictive model for football. National teams do not share players, so a literal "shared players" mechanism is not available; however, clubs, leagues and youth-development pathways could generate correlated national-team form through common development environments, and such omitted common factors are a plausible source of prior dependence that a model with \textit{a priori} independent team processes (independent before any observations) cannot represent. Furthermore, match outcomes create posterior dependencies that inform us about the strengths and uncertainty of other teams (e.g.\ if team $A$ beats team $B$, and team $B$ beats team $C$, we can infer that team $A$ is likely stronger than team $C$). This information is discarded in the fSSM by approximating the filtering distribution as a product of independent team marginals as defined in Equation~\eqref{eq:factorial-filter}. We distinguish this posterior dependence, which any sequential inference would create through the likelihood, from dependence imposed in the stationary prior: the former can arise even when team processes are initially independent, and neither observation by itself justifies a freely estimated dense prior covariance, which we treat as a modelling choice whose identification is examined in Section~\ref{sec:model}.
+
+The model introduced in this chapter uses the original state-space model of Equation~\eqref{eq:state-space-model}. Since the full latent state is high-dimensional, a direct particle filter costs $\mathcal{O}(T \cdot N \cdot K)$ per run, where $N$ is the number of particles and $T$ the number of observations. To avoid this, we restrict the transition to linear-Gaussian and apply Rao-Blackwellisation: we sample the four playing-team coordinates of each particle and integrate the non-playing teams out analytically, so that their conditional mean and covariance are updated in closed form by the Kalman filter. This reduces the propagation to a four-dimensional block, and SQMC is then applied to exactly this block: at each match we draw a RQMC point set for the four playing-team coordinates, order the particles along a Hilbert curve and resample, so that the low-discrepancy structure is preserved. The per-observation cost is $\mathcal{O}(4N)$, independent of $K$, and because SQMC now propagates four coordinates rather than $2K$, it can exploit the low-discrepancy properties of quasi-Monte Carlo despite the high nominal state dimension. Section~\ref{sec:rb-sqmc} develops this construction in detail.
+
+%%%%%%%%%%%%%%%%%%%%%% CHECKPOINT FROM HERE %%%%%%%%%%%%%%%%%%%%%%
+
+\section{Model}
+\label{sec:model}
+We represent the latent state of each team as a two-dimensional vector $x = (x^{\text{attack}}, x^{\text{defence}})$, so the full latent state of $K$ teams is $x \in \mathbb{R}^{2K}$, as introduced in Section~\ref{sec:rb-sqmc-background}. A larger attack value represents a stronger attack; likewise a larger defense value represents a stronger defense component. Our initial distribution of latent states is given by
+\begin{equation}
+    x_0 \in \mathbb{R}^{2K}, \qquad x_0 \sim \mathcal{N}_{2K}(\mu_0, \Sigma_0)
+\end{equation}
+
+We make the further assumption that the relationship between attack and defence of all teams is the same, represented by the matrix $B \in \mathbb{R}^{2 \times 2}$. This assumption allows us to simplify the covariance matrix into a Kronecker product of the form $\Sigma_0 = \Gamma_0 \otimes B$, where $\Gamma_0 \in \mathbb{R}^{K \times K}$ is the prior filter covariance that represents the relationship between teams. We require the conditions $\Gamma_0 \succ 0$, $B \succ 0$ and $\det(B) = 1$. The condition $\det(B) = 1$ ensures that the scale of the Kronecker product is identifiable since $(c\Gamma_0) \otimes (B/c) = \Gamma_0 \otimes B$ (i.e. we fix the determinant of $B$ so that $\Gamma_0$ is the free parameter in the Kronecker product). This paramterization is a natural choice for football as we can expect that attack and defence strengths of teams across all teams should share a similar relationship. It also reduces the number of free parameters in the initial covariance matrix from $K(2K+1)$ to $K(K+1)/2 + 2$ as seen in Proposition~\ref{prop:kronecker-dim}, allowing us to efficiently compute the models in the filtering, smoothing and parameter estimation steps. We model the evolution of latent states as an Ornstein-Uhlenbeck process, a mean-reverting stochastic process, given by
+
+\begin{equation}
+    x_t \mid x_{t-1} \sim \mathcal{N}(\mu_0 + \phi_t (x_{t-1} - \mu_0), Q_t)
+\end{equation}
+
+where we define $\phi_t = \exp(-\kappa \Delta t_t)$, $\Delta t_t = t_t - t_{t-1}$ and $Q_t = (1 - \phi_t^2)\Sigma_0$ is the covariance matrix of the process noise. $\kappa$ is the mean-reversion rate and $\Delta t_t$ is the time difference between $t$ and $t-1$, measured in days. This behaviour is desirable in football as we expect average skill levels to revert to a long-run marginal distribution of $\mathcal{N}(\mu_0, \Sigma_0)$ over time without any new observations.
+
+% As mentioned before, each match only involves two teams, so we represent the latent states of the two playing teams as $x_t^{\mathcal{O}_t} = (x_t^{(i_t)}, x_t^{(j_t)})$. Our observation is a bivariate vector of scores for team $i_t$ and team $j_t$, represented as $y_t = (y_t^{(i_t)}, y_t^{(j_t)})$. The likelihood function follows the bivariate Poisson distribution that \citet{karlisntzoufras2003bivariatepoisson} proposed for sports data.
+
+Each match only involves two teams, so we represent the latent states of the two playing teams as $x_t^{\mathcal{O}_t} = (x_t^{(i_t)}, x_t^{(j_t)})$. Our observation is a bivariate vector of scores for team $i_t$ and team $j_t$, represented as $y_t = (y_t^{(i_t)}, y_t^{(j_t)})$. The likelihood function follows the bivariate Poisson distribution that \citet{karlisntzoufras2003bivariatepoisson} proposed for sports data.
+
+\begin{equation}
+\label{eq:likelihood}
+    G_t(y_t \mid x_t^{\mathcal{O}_t}) = e^{-(\lambda_1 + \lambda_2 + \lambda_3)} \frac{\lambda_1^{y_t^{(i_t)}}}{y_t^{(i_t)}!} \frac{\lambda_2^{y_t^{(j_t)}}}{y_t^{(j_t)}!} \sum_{k=0}^{\min(y_t^{(i_t)}, y_t^{(j_t)})} \binom{y_t^{(i_t)}}{k} \binom{y_t^{(j_t)}}{k} k! \left( \frac{\lambda_{3}}{\lambda_1 \lambda_2} \right)^k
+\end{equation}
+
+where $\lambda_1 = \exp(\alpha + x_t^{\text{att}, i_t} - x_t^{\text{def}, j_t})$, $\lambda_2 = \exp(\alpha + x_t^{\text{att}, j_t} - x_t^{\text{def}, i_t})$, $\lambda_3 = \exp(\beta)$. The parameter $\alpha$ and $\beta$ are static parameters of the model. $\alpha$ can be used to model home-team advantage by estimating $\alpha^h$ in $\lambda_1$ and $\alpha^a$ in $\lambda_2$.
+
+% One could also investigate the effect of the home advantage by testing the hypothesis $\alpha^h > \alpha^a$.
+
+\section{Rao-Blackwellised SMC (RB-SMC)}
+\label{sec:rb-smc}
+In our previous Section~\ref{sec:model}, we state that only the latent states of the two playing teams $x_t^{\mathcal{O}_t}$ are relevant to the likelihood function $G_t$. Defining the time-varying non-playing latent states as $x_t^{\mathcal{R}_t} = x_t^{-\mathcal{O}_t}$, the Rao-Blackwellised SMC (RB-SMC) algorithm therefore targets the marginal posterior of the coordinates of the playing teams $p(x_{0:T}^{\mathcal{O}} \mid y_{1:T})$ and recovers the non-playing teams $p(x_{0:T}^{\mathcal{R}} \mid x_{0:T}^{\mathcal{O}}, y_{1:T})$ in closed form. This is similar to the Rao-Blackwellised particle filter construction of \citet{doucetdefreitasmurphyrussell2000rbpf}. We can then factorize the full joint posterior,
+
+\begin{equation}
+    p(x_{0:T} \mid y_{1:T}) = p(x_{0:T}^{\mathcal{O}} \mid y_{1:T}) \cdot p(x_{0:T}^{\mathcal{R}} \mid x_{0:T}^{\mathcal{O}}, y_{1:T})
+\end{equation}
+
+Since the likelihood depends only on the sampled coordinates at each time, the second factor simplifies to
+\begin{equation*}
+    p(x_t^{\mathcal{R}_t} \mid x_{1:t}^{\mathcal{O}_{1:t}}, y_{1:t}) = p(x_t^{\mathcal{R}_t} \mid x_{1:t}^{\mathcal{O}_{1:t}}).
+\end{equation*}
+
+As stated before, our transition model is linear-Gaussian, so the covariance recursions are deterministic and do not depend on the sampled coordinates or the particle paths; hence $\Sigma_t$ is shared across all particles while the means $\mu_t^{(i)}$ carries the particle-specific information. The RB-SMC algorithm has the same steps as the SMC algorithm as defined in Algorithm~\ref{alg:pf}, the only difference is that we only sample the latent state of playing teams $x_t^{\mathcal{O}_t}$ at each time step and compute the marginal posterior for the non-playing teams in closed form. The RB-SMC algorithm is as follows:
+
+% As stated in Section~\ref{sec:model}, our transition model is linear-Gaussian, so the covariance recursions are deterministic and do not depend on the sampled coordinates or the particle paths; hence $\Sigma_t$ is shared across all particles, while the means $\mu_t^{(i)}$ carry the particle-specific information. The RB-SMC algorithm follows the resample\hspace{0pt}--\allowbreak propagate\allowbreak--weight ordering of Algorithm~\ref{alg:pf}: at each step, ancestors are drawn from the previous normalised weights, the playing-team coordinates are propagated from the chosen ancestors, and the weights are then formed from the likelihood and normalised.\   The unnormalised weights follow $\tilde{w}_t^{(i)} = \tilde{w}_{t-1}^{(b_i)} G_t(y_t \mid x_t^{\mathcal{O}_t,(i)})$ with $\tilde{w}_0^{(i)} = G_0(x_0^{\mathcal{O}_0,(i)})$, and the normalising-constant estimate accumulates $\widehat{Z}_t = \widehat{Z}_{t-1} \big[ \frac{1}{N} \sum_{i=1}^N \tilde{w}_t^{(i)} \big]$. The RB-SMC algorithm is as follows: 
+
+\textbf{1 Prediction}: Compute the predictive mean and covariance matrix for the full state:
+
+\begin{equation*}
+    \mu_{t|t-1}^{(i)} = \mu_0 + \phi_t (\mu_{t-1}^{(i)} - \mu_0)
+\end{equation*}
+
+\begin{equation*}
+    \Sigma_{t|t-1} = \phi_t^2 \Sigma_{t-1} + (1 - \phi_t^2) \Sigma_0
+\end{equation*}
+
+\textbf{2 Bootstrap Proposal Sampling}: For particle $i$, the full predictive distribution is
+\begin{equation}
+x_t \mid I_{t-1}=i,y_{1:t-1} \sim \mathcal{N}\left(\mu_{t\mid t-1}^{(i)}, \Sigma_{t\mid t-1} \right) \end{equation}
+
+At each observation, only the two playing teams are sampled. We extract the predictive mean and covariance for the playing teams' coordinates $x_t^{\mathcal{O}_t}$, and the following predictive marginal under the bootstrap proposal is defined as,
+
+\begin{equation*}
+    q_t^{(i)}(x_t^{\mathcal{O}_t}) = p(x_t^{\mathcal{O}_t} \mid I_{t-1} = i, y_{1:t-1}) = \mathcal{N}(\mu_{t|t-1}^{\mathcal{O}_t,(i)}, \Sigma_{t|t-1}^{\mathcal{O}_t\mathcal{O}_t})
+\end{equation*}
+
+\textbf{3 Computing log-weights}: For the propagate-weight-resample ordering, compute the unnormalised log-weights for each particle $i$ using the previous weight and the likelihood function $G_t$,
+
+\begin{equation*}
+    \log \tilde{w}_t^{(i)} = \log w_{t-1}^{(i)} +  \log G_t(y_t \mid x_t^{\mathcal{O}_t, (i)})
+\end{equation*}
+
+and normalise,
+\begin{equation*}
+    w_t^{(i)} = \frac{\tilde{w}_t^{(i)}}{\sum_{n=1}^N \tilde{w}_t^{(n)}}
+\end{equation*}
+
+\textbf{4 Exact Marginalisation of Non-Playing Teams}: Given the predictive joint distribution and conditioning on the playing teams' coordinates $x_t^{\mathcal{O}_t}$, the non-playing coordinates $x_t^{\mathcal{R}_t}$ are Gaussian with a closed-form mean and covariance matrix defined by the Kalman filter equations,
+
+\begin{equation*}
+    x^{\mathcal{R}_t,(i)}_{t \mid t-1} \mid x^{\mathcal{O}_t,(i)}_{t} \sim \mathcal{N}\left( \mu^{\mathcal{R}|\mathcal{O},(i)}_{t \mid t-1}, \Sigma^{\mathcal{R}|\mathcal{O}}_{t \mid t-1} \right)
+\end{equation*}
+
+\begin{align*}
+    \mu^{\mathcal{R}_t|\mathcal{O}_t,(i)}_{t \mid t-1} &= \mu_{t|t-1}^{\mathcal{R}_t} + K_t \left( x_t^{\mathcal{O}_t,(i)} - \mu_{t|t-1}^{\mathcal{O}_t} \right) \\
+    \Sigma^{\mathcal{R}_t|\mathcal{O}_t}_{t \mid t-1} &= \Sigma_{t|t-1}^{\mathcal{R}_t\mathcal{R}_t} - K_t \Sigma_{t|t-1}^{\mathcal{O}_t\mathcal{R}_t} \\
+    K_t &= \Sigma_{t|t-1}^{\mathcal{R}_t\mathcal{O}_t} \left( \Sigma_{t|t-1}^{\mathcal{O}_t\mathcal{O}_t} \right)^{-1}
+\end{align*}
+
+In Section~\ref{sec:smc}, we restrict out our initial covariance to the form of a Kronecker product $\Sigma_0 = \Gamma_0 \otimes B$. Since our transition model is linear-Gaussian, the Kronecker structure is preserved recursively by induction, 
+
+\begin{align*}
+    \Sigma_{t \mid t-1} &= \phi_t^2 \Sigma_{t-1} + (1 - \phi_t^2) \Sigma_0 \\
+    &= \phi_t^2 (\Gamma_{t-1} \otimes B) + (1 - \phi_t^2) (\Gamma_0 \otimes B) \\
+    &= \left( \phi_t^2 \Gamma_{t-1} + (1 - \phi_t^2) \Gamma_0 \right) \otimes B \\
+    &= \Gamma_{t|t-1} \otimes B
+\end{align*}
+
+so that the covariance blocks for the playing and non-playing teams factor as:
+
+\begin{equation*}
+    \Sigma_{t|t-1}^{\mathcal{O}_t\mathcal{O}_t} = \Gamma^{\mathcal{O}_t\mathcal{O}_t}_{t|t-1} \otimes B, \qquad
+    \Sigma_{t|t-1}^{\mathcal{R}_t\mathcal{R}_t} = \Gamma^{\mathcal{R}_t\mathcal{R}_t}_{t|t-1} \otimes B, \qquad
+    \Sigma_{t|t-1}^{\mathcal{O}_t\mathcal{R}_t} = \Gamma^{\mathcal{O}_t\mathcal{R}_t}_{t|t-1} \otimes B
+\end{equation*}
+
+where $\Gamma^{\mathcal{O}_t\mathcal{O}_t}_{t|t-1} \in \mathbb{R}^{2 \times 2}$ is the submatrix of $\Gamma_{t|t-1}$ for the two playing teams and $\Gamma^{\mathcal{R}_t\mathcal{R}_t}_{t|t-1} \in \mathbb{R}^{(K-2) \times (K-2)}$ is the submatrix for the non-playing teams. Using the mixed-product property $(A \otimes B)(C \otimes D) = (AC) \otimes (BD)$ and the inverse property $(A \otimes B)^{-1} = A^{-1} \otimes B^{-1}$, the Kalman gain factorises,
+
+\begin{align*}
+    K_t &= \Sigma_{t|t-1}^{\mathcal{R}_t\mathcal{O}_t} \left( \Sigma_{t|t-1}^{\mathcal{O}_t\mathcal{O}_t} \right)^{-1} \\
+    &= \left( \Gamma^{\mathcal{R}_t\mathcal{O}_t}_{t|t-1} \otimes B \right) \left( \Gamma^{\mathcal{O}_t\mathcal{O}_t}_{t|t-1} \otimes B \right)^{-1} \\
+    &= \left( \Gamma^{\mathcal{R}_t\mathcal{O}_t}_{t|t-1} \otimes B \right) \left( (\Gamma^{\mathcal{O}_t\mathcal{O}_t}_{t|t-1})^{-1} \otimes B^{-1} \right) \\
+    &= \left( \Gamma^{\mathcal{R}_t\mathcal{O}_t}_{t|t-1} (\Gamma^{\mathcal{O}_t\mathcal{O}_t}_{t|t-1})^{-1} \right) \otimes \left( B B^{-1} \right) \\
+    &= \tilde{K}_t \otimes I_2
+\end{align*}
+
+\begin{equation*}
+    \tilde{K}_t = \Gamma^{\mathcal{R}_t\mathcal{O}_t}_{t|t-1} (\Gamma^{\mathcal{O}_t\mathcal{O}_t}_{t|t-1})^{-1}
+\end{equation*}
+
+and the conditional covariance of the non-playing teams becomes
+
+\begin{equation*}
+    \Sigma_{t|t-1}^{\mathcal{R}_t|\mathcal{O}_t} = \left( \Gamma^{\mathcal{R}_t\mathcal{R}_t}_{t|t-1} - \tilde{K}_t \Gamma^{\mathcal{O}_t\mathcal{R}_t}_{t|t-1} \right) \otimes B
+\end{equation*}
+
+Two distinct Kalman gains appear in the recursion. The gain $\tilde{K}_t \in \mathbb{R}^{(K-2) \times 2}$ conditions only the \emph{non-playing} teams on the playing teams and is used for the conditional covariance $\Sigma_{t|t-1}^{\mathcal{R}_t|\mathcal{O}_t}$ (equivalently, in the full state space, $K_t = \tilde{K}_t \otimes I_2$). To update the \emph{full component mean} and the \emph{between-team} covariance, define the full team-space gain
+\begin{equation*}
+    \overline{K}_t = \Gamma_{t|t-1}^{:\mathcal{O}_t} \left( \Gamma_{t|t-1}^{\mathcal{O}_t\mathcal{O}_t} \right)^{-1} \in \mathbb{R}^{K \times 2},
+\end{equation*}
+where $\Gamma_{t|t-1}^{:\mathcal{O}_t}$ contains all rows and the two playing-team columns of $\Gamma_{t|t-1}$. The two gains are the same conditioning operator on different rows: the $\mathcal{O}_t$ rows of $\overline{K}_t$ form the identity, and its $\mathcal{R}_t$ rows coincide with $\tilde{K}_t$. The complete component mean is updated as
+
+\begin{equation*}
+    \mu_t^{(i)} = \mu_{t|t-1}^{(i)} + (\overline{K}_t \otimes I_2) \left( x_t^{\mathcal{O}_t,(i)} - \mu_{t|t-1}^{\mathcal{O}_t,(i)} \right)
+\end{equation*}
+
+The rows of $\overline{K}_t$ belonging to $\mathcal{O}_t$ form the identity, so the playing-team entries of $\mu_t^{(i)}$ equal the sampled entries $x_t^{\mathcal{O}_t,(i)}$, while the $\mathcal{R}_t$ rows recover the conditional mean of the non-playing teams in closed form. The team-space filtered covariance $\Gamma_t$ is defined by the Schur complement
+
+\begin{equation*}
+    \Gamma_t = \Gamma_{t|t-1} - \overline{K}_t \Gamma_{t|t-1}^{\mathcal{O}_t} = \Gamma_{t|t-1} - \Gamma_{t|t-1}^{:\mathcal{O}_t} \left( \Gamma_{t|t-1}^{\mathcal{O}_t\mathcal{O}_t} \right)^{-1} \Gamma_{t|t-1}^{\mathcal{O}_t}
+\end{equation*}
+
+and hence to recover the full filtered covariance $\Sigma_t$, one can simply compute the Kronecker product of $\Gamma_t$ with $B$. The full filtered covariance is sparse because the components of the playing teams of $\Gamma_t$ are zero.
+
+% Because the rows and columns of $\Gamma_t$ corresponding to the playing teams $\mathcal{O}_t$ are zero, the full filtered covariance is sparse.
+
+\begin{equation*}
+    \Sigma_t = \Gamma_t \otimes B = 
+    \begin{pmatrix}
+        \mathbf{0}_{4 \times 4} & \mathbf{0}_{4 \times 2(K-2)} \\
+        \mathbf{0}_{2(K-2) \times 4} & \Gamma_t^{\mathcal{R}_t\mathcal{R}_t} \otimes B
+    \end{pmatrix}
+\end{equation*}
+
+where $\mathbf{0}_{4 \times 4}$ is the zero block for the four coordinates of the two playing teams, whose latent states are now known (sampled) values with no remaining uncertainty, and $\Gamma_t^{\mathcal{R}_t\mathcal{R}_t} \otimes B$ is the non-zero conditional covariance of the non-playing teams. Intuitively, once a team has played a match, its skill level is exactly known at that point in time. Additionally, as mentioned in Section~\ref{sec:model}, the Kronecker structure reduces the number of free parameters in the covariance matrix from $K(2K+1)$ to $K(K+1)/2 + 2$. The computation of $\Gamma_t$ is reduced from $\mathcal{O}((2K)^3)$ to $\mathcal{O}(K^3)$ and we avoid any particle-specific covariance recursions.
+
+\textbf{5 Resampling}: Resample the particles according to the normalised weights $\{w_t^{(i)}\}_{i=1}^N$ and set the weights to $w_t^{(i)} = 1/N$ for all particles.
+
+\section{RB-SMC Smoothing}
+\label{sec:rb-smc-smoothing}
+
+In standard particle-based Forward Filtering Backward Simulation (FFBSi), the backward state at time $t$ is sampled from the discrete set of filtering particles, with probabilities determined by their filtering weights and compatibility with the sampled state at time $t+1$ \citep{godsilldoucetwest2004montecarlosmoothing}. In the RB-SMC formulation, discrete point-particle FFBSi cannot be applied directly, because each filtering particle represents a Gaussian component rather than a complete state. Using the fact that our transition is linear and Gaussian, our terminal posterior filtering distribution can be approximated as a weighted Gaussian mixture with a shared covariance matrix $\Sigma_t$ across all particles.
+
+\begin{equation}
+    p(x_{T} \mid y_{1:T}) \approx \sum_{i=1}^N w_{T}^{(i)} \mathcal{N}(\mu_T^{(i)}, \Sigma_T)
+\end{equation}
+
+This means that a one-step backward kernel is available in closed form to obtain a smoothed trajectory: first select a Gaussian component using its backward weight, and then draw the full state from that component's conditional Gaussian distribution.
+
+\subsection{Deriving the one-step backward kernel}
+
+The one-step backward kernel satisfies
+\begin{equation}
+p(x_t \mid x_{t+1}, y_{1:t}) \propto p(x_t \mid y_{1:t})\, p(x_{t+1} \mid x_t).
+\end{equation}
+To derive this kernel, apply Bayes' rule to the filtering mixture at time $t$,
+\begin{equation}
+p(x_t \mid y_{1:t}) \approx \sum_{i=1}^N w_t^{(i)} \mathcal{N}(x_t \mid \mu_t^{(i)}, \Sigma_t),
+\end{equation}
+and the linear-Gaussian transition $p(x_{t+1} \mid x_t) = \mathcal{N}(x_{t+1} \mid a_{t+1}(x_t), Q_{t+1})$, where $a_{t+1}(x_t) = \mu_0 + \phi_{t+1}(x_t - \mu_0)$ and $Q_{t+1} = (1 - \phi_{t+1}^2)\Sigma_0$. Substituting the mixture and the transition, the backward kernel is proportional to the product
+\begin{equation*}
+p(x_t \mid x_{t+1}, y_{1:t}) \propto \sum_{i=1}^N w_t^{(i)} \mathcal{N}(x_t \mid \mu_t^{(i)}, \Sigma_t)\, \mathcal{N}(x_{t+1} \mid a_{t+1}(x_t), Q_{t+1}),
+\end{equation*}
+in which the transition density depends on $x_t$ through $a_{t+1}(x_t)$. Completing the square in $x_t$ for each component, the product factorises into the predictive density of $x_{t+1}$ under component $i$, $\mathcal{N}(x_{t+1} \mid a_{t+1}^{(i)}, R_{t+1})$, where $a_{t+1}^{(i)} = \mu_0 + \phi_{t+1}(\mu_t^{(i)} - \mu_0)$ and $R_{t+1} = \phi_{t+1}^2 \Sigma_t + (1 - \phi_{t+1}^2)\Sigma_0$, times a conditional Gaussian density in $x_t$; the first factor acts as a component weight, so the backward kernel is itself a Gaussian mixture,
+\begin{equation}
+p(x_t \mid x_{t+1}, y_{1:t}) \approx \sum_{i=1}^N w_{t \mid t+1}^{(i)} \mathcal{N}(x_t \mid \mu_{t \mid t+1}^{(i)}, \Sigma_{t \mid t+1}),
+\end{equation}
+with backward weights
+\begin{equation}
+w_{t \mid t+1}^{(i)} \propto w_t^{(i)} \mathcal{N}(x_{t+1} \mid a_{t+1}^{(i)}, R_{t+1}),
+\end{equation}
+and, by the Rauch-Tung-Striebel (RTS) equations, the corrected mean and covariance of each component
+\begin{equation}
+\mu_{t \mid t+1}^{(i)} = \mu_t^{(i)} + J_t \left( x_{t+1} - a_{t+1}^{(i)} \right), \qquad \Sigma_{t \mid t+1} = \Sigma_t - J_t R_{t+1} J_t^\top, \qquad J_t = \Sigma_t \phi_{t+1} R_{t+1}^{-1}.
+\end{equation}
+Sampling from this mixture therefore proceeds in two steps: draw the component index $I_t \sim \operatorname{Categorical}(w_{t \mid t+1}^{1:N})$, then draw the full state $x_t \sim \mathcal{N}(\mu_{t \mid t+1}^{(I_t)}, \Sigma_{t \mid t+1})$. Repeating this procedure from $t = T-1$ down to $t = 0$ produces a single complete smoothed trajectory $\{X_0^*, \dots, X_T^*\}$.
+
+\subsection{The RB-SMC smoothing algorithm}
+
+The RB-SMC smoothing algorithm is as follows:
+
+\textbf{1 Initialisation} ($t = T$): Sample the terminal particle index $I_T$ using the normalised weights $w_T^{(i)}$, and draw the full terminal state from the corresponding Gaussian mixture,
+\begin{equation*}
+    I_T \sim \operatorname{Categorical}(w_T^{1:N}), \qquad X_T^* \sim \mathcal{N}(\mu_T^{(I_T)}, \Sigma_T)
+\end{equation*}
+
+\textbf{2 Backward recursion} (for $t = T-1, T-2, \dots, 0$): Given the already-sampled state $X_{t+1}^*$, the backward kernel derived in Section~\ref{sec:rb-smc-smoothing} is a Gaussian mixture, and the recursion proceeds in three sub-steps.
+
+\textbf{2a Compute the backward weights}: For every particle $i$, propagate the filtering mean through the OU dynamics and form the predictive covariance,
+\begin{equation*}
+    a_{t+1}^{(i)} = \mu_0 + \phi_{t+1}(\mu_t^{(i)} - \mu_0), \qquad R_{t+1} = \phi_{t+1}^2 \Sigma_t + (1 - \phi_{t+1}^2) \Sigma_0
+\end{equation*}
+then weight each component by its filtering weight and the predictive density of the conditioning state $X_{t+1}^*$,
+\begin{equation*}
+    w_{t \mid t+1}^{(i)} \propto w_t^{(i)} \mathcal{N}\left( X_{t+1}^* \mid a_{t+1}^{(i)}, R_{t+1} \right)
+\end{equation*}
+normalised so that $\sum_{i=1}^N w_{t \mid t+1}^{(i)} = 1$.
+
+\textbf{2b Select and correct the backward component}: Sample the particle index from the backward weights,
+\begin{equation*}
+    I_t \sim \operatorname{Categorical}(w_{t \mid t+1}^{1:N})
+\end{equation*}
+and condition the chosen component on $X_{t+1}^*$ through the RTS equations with the gain
+\begin{equation*}
+    J_t = \Sigma_t \phi_{t+1} R_{t+1}^{-1}
+\end{equation*}
+\begin{align*}
+    \mu_{t \mid t+1}^{(I_t)} &= \mu_t^{(I_t)} + J_t \left( X_{t+1}^* - a_{t+1}^{(I_t)} \right) \\
+    \Sigma_{t \mid t+1} &= \Sigma_t - J_t R_{t+1} J_t^\top
+\end{align*}
+
+\textbf{2c Draw the smoothed state}: Sample the full state from the corrected component,
+\begin{equation*}
+    X_t^* \sim \mathcal{N}\left( \mu_{t \mid t+1}^{(I_t)}, \Sigma_{t \mid t+1} \right)
+\end{equation*}
+
+The recursion terminates at $t = 0$, yielding the smoothed trajectory $\{X_0^*, \dots, X_T^*\}$. Repeating this procedure $M$ times produces $M$ smoothed trajectories $\{X_{0:T}^{*(m)}\}_{m=1}^M$ which is used to obtain the smoothing distribution $p(x_0 \mid y_{1:T})$. The $M$ trajectories can be parallelised across $M$, while each trajectory retains a sequential backward recursion over $T$ steps, each requiring $\mathcal{O}(N)$ mixture evaluations. 
+
+The resulting algorithm is similar to the pure particle smoother of \citet{godsilldoucetwest2004montecarlosmoothing}, but the backward weights combine the forward filtering weights with the predictive density, while the RTS backward estimates determine the Gaussian mixture component from which the full state is drawn \citep{sarkkabunchgodsill2012rbpsmoother}. This backward-simulation construction for a Rao-Blackwellised particle filter on a conditionally linear-Gaussian model follows \citet{lindstenschonbunchgodsill2012rbpsmoother}, and the use of backward simulation in particle methods more generally is discussed by \citet{lindstenschon2011backwardsimulation}. 
+
+%  Repeating this procedure $M$ times produces $M$ smoothed trajectories $\{X_{0:T}^{*(m)}\}_{m=1}^M$; these are conditionally independent given the same fitted filter approximation and independent backward draws, and they do not constitute independent evidence about parameter uncertainty. 
+
+
+\section{Rao-Blackwellised SQMC (RB-SQMC)}
+\label{sec:rb-sqmc}
+
+Since the likelihood function depends only on the latent states of the two playing teams, our 'effective dimension' of the model is $d = 2 \times 2 = 4$ instead of the full state dimension of $2K$. This motivates the use of SQMC methods, which are known to perform better than SMC methods in low-dimensional settings as seen in Section~\ref{sec:sqmc-properties}. 
+
+\citet{chopingerber2017sqmcintroduction} show that SQMC methods can be applied to high-dimensional state-space models if the transition and likelihood functions only depend on a subset of the state coordinates. In our case, we Hilbert-sort the $2K$-dimensional particles using the $4$-dimensional predicted means of the two playing teams, $\Lambda_t(\mu_{t \mid t-1}^{\mathcal{O}_t, (i)})$, with the assumption that the $4$-dimensional predicted means capture the particle diversity in the coordinates that determine the current likelihood. The likelihood is local because $G_t(x_{t-1}, x_t) = G_t(x_t^{\mathcal{O}_t})$, so the potential function depends only on the propagated coordinates of the two playing teams. These two characteristics mean that the locality condition of the cited argument is satisfied at the current step. 
+
+Similarly in Section~\ref{sec:rb-smc}, the RB-SQMC is the same as SQMC algorithm defined in Algorithm~\ref{alg:sqmc}, with the only changes being made in the indexing of the teams being played $x_t^{\mathcal{O}}$. Our algorithm, the RB-SQMC, follows these steps:
+
+\textbf{1 Generate N QMC points}: Generate $N$ RQMC points $(u_t^{1:N}, v_t^{1:N})$ of dimension $1 + (2 \times 2) = 5$, where $u_t$ is the first component, used for ancestor selection, and $v_t$ is the vector of $d = 4$ components used to propagate the latent states of the two playing teams, $x_t^i$ and $x_t^j$.
+
+\textbf{2 Hilbert Sort}: Apply the deterministic OU prediction to each Rao-Blackwellised component. The predictive mean and covariance of the full state are
+\begin{equation*}
+    \mu_{t\mid t-1}^{(i)} = \mu_0 + \phi_t \left( \mu_{t-1}^{(i)} - \mu_0 \right), \qquad
+    \Sigma_{t\mid t-1} = \phi_t^2 \Sigma_{t-1} + \left(1 - \phi_t^2\right) \Sigma_0
+\end{equation*}
+
+so that the playing-team block $\mu_{t\mid t-1}^{\mathcal{O}_t,(i)}$ and $\Sigma_{t\mid t-1}^{\mathcal{O}_t\mathcal{O}_t}$ are the corresponding sub-blocks. Define the four-dimensional sorting key as $z_t^{(i)} = \operatorname{vec}\left( \mu_{t\mid t-1}^{\mathcal{O}_t,(i)} \right) \in \mathbb{R}^4$. Let $\psi_t:\mathbb{R}^4\rightarrow[0,1]^4$ standardise and map these coordinates to the unit hypercube, and let $h:[0,1]^4\rightarrow[0,1]$ denote the inverse Hilbert-curve mapping. Find a permutation $\sigma_t$ such that
+\begin{equation*}
+    h\left(\psi_t(z_t^{(\sigma_t(1))})\right) \leq \cdots \leq h\left(\psi_t(z_t^{(\sigma_t(N))})\right) \notag
+\end{equation*}
+Use the previous normalised particle weights in the same order,
+\begin{equation*}
+    \left( W_{t-1}^{(\sigma_t(1))}, \ldots, W_{t-1}^{(\sigma_t(N))} \right)
+\end{equation*}
+
+Once an ancestor is selected, its complete Rao-Blackwellised component, including the means of the non-playing teams, is retained and propagated.
+
+\textbf{3 Resampling by inverse transform}: Sort the complete QMC pairs $(u_t^{(i)}, v_t^{(i)})$ by their first coordinate so that $u_t^{(1)} \le \cdots \le u_t^{(N)}$, preserving the pairing between each $u_t^{(i)}$ and $v_t^{(i)}$. Perform ancestor selection using the Hilbert-ordered weights $W_{t-1}$ and the first coordinate $u_t$,
+\begin{equation*}
+    a_i = \min \left\{ j : W^{(j)} \ge u_t^{(i)} \right\}, \qquad W^{(j)} = \sum_{k=1}^{j} W_{t-1}^{(\sigma_t(k))}, \qquad b_i = \sigma_t(a_i)
+\end{equation*}
+
+\textbf{4 Propagate}: Propagate each chosen ancestor $b_i$ through the OU dynamics of Section~\ref{sec:model}, using the predictive mean $\mu_{t\mid t-1}^{\mathcal{O}_t,(b_i)}$ and covariance $\Sigma_{t\mid t-1}$ defined in Step 2. The playing-team coordinates are drawn from the predictive marginal by the inverse-CDF transform,
+\begin{equation*}
+    x_t^{\mathcal{O}_t,(i)} = \mu_{t\mid t-1}^{\mathcal{O}_t,(b_i)} + L_{t\mid t-1}\, \Phi^{-1}\left( v_t^{(i)} \right)
+\end{equation*}
+where $L_{t\mid t-1}$ is the Cholesky factor of the playing-team block $\Sigma_{t\mid t-1}^{\mathcal{O}_t\mathcal{O}_t} = \Gamma_{t\mid t-1}^{\mathcal{O}_t\mathcal{O}_t} \otimes B$, and $\Phi^{-1}$ is the coordinate-wise standard normal quantile, so that the uniform RQMC coordinates $v_t^{(i)}$ are transformed to the Gaussian predictive marginal. Proposition~\ref{prop:invcdf} in Appendix~\ref{app:inv-cdf-proof} shows that this transform samples the predictive marginal correctly. The non-playing teams' conditional mean and covariance are updated analytically via the OU prediction and the Kalman conditioning of Section~\ref{sec:model}; the algorithm stores these conditional Gaussian moments rather than explicit coordinates.
+
+\textbf{5 Compute log-weights}: Since the ancestor weights were already used in the inverse-transform resampling, compute the unnormalised log-weights for each particle $(i)$ using only the likelihood function $G_t$,
+\begin{equation*}
+    \log \tilde{w}_t^{(i)} = \log G_t\left( y_t \mid x_t^{\mathcal{O}_t,(i)} \right)
+\end{equation*}
+and normalise,
+\begin{equation*}
+    w_t^{(i)} = \frac{\tilde{w}_t^{(i)}}{\sum_{n=1}^N \tilde{w}_t^{(n)}}
+\end{equation*}
+
+Since the backward step does not resample ancestors, there is no sorting step as in filtering. RB-SQMC smoothing, could in principle, follow the same backward recursion as RB-SMC smoothing (Section~\ref{sec:rb-smc-smoothing}): at each backward step $t$ we instead generate RQMC points $(u_t^{1:M}, v_t^{1:M}) \in \mathbb{R}^{1 + 2K}$, order them by the conditioning state $X_{t+1}^{*(m)}$, select the Gaussian component by inverse-transform of the backward weights, and draw
+\begin{equation*}
+    X_t^{*(m)} = \mu_{t \mid t+1}^{(I_t)} + L_{t \mid t+1}\, \Phi^{-1}\left( v_t^{(m)} \right)
+\end{equation*}
+where $L_{t \mid t+1}$ is the Cholesky factor of the backward covariance $\Sigma_{t \mid t+1}$ and $I_t$ is the selected component index. The caveat is that the since the RQMC point set is of dimension $1+2K$, the low-discprenacy benefit of RQMC is likely to be negligible relative to Monte Carlo.
+
+% FUTURE EXTENSIONS: smoothing for asynchronous local observations
+
+\section{Parameter Estimation}
+\label{sec:parameter-estimation}
+
+Our static parameters for the model are $\Theta = (\Gamma_0, B, \kappa, \alpha, \beta)$ where $\Gamma_0 \in \mathbb{R}^{K \times K}$, $B \in \mathbb{R}^{2 \times 2}$, $\kappa > 0$, $\alpha \in \mathbb{R}$ and $\beta \in \mathbb{R}$, subject to $\Gamma_0 \succ 0$, $B \succ 0$ and $\det(B) = 1$. We fix the initial mean $\mu_0 = \mathbf{0}_{2K}$, so it is not included in $\Theta$. This is because of an identifiability constraint: if $\mu_0$ were allowed to vary, the model would be invariant to a common shift of all strengths combined with an opposite shift of the intercept $\alpha$ in the likelihood function Equation~\eqref{eq:likelihood}. This assumption ties naturally into our model: Given no prior information about teams, we assume that they start from a common baseline of zero strength and the OU process mean-reverts to this baseline over time.
+
+The smoothing algorithm in Section~\ref{sec:rb-sqmc} requires the backward-sampled trajectories to be sufficiently diverse to provide a good estimate of the smoothing distribution. The Rao-Blackwellised structure makes the forward filter only partially stochastic: at each step only the four playing-team coordinates are sampled, while the shared covariance $\Sigma_t = \Gamma_t \otimes B$ propagates deterministically and identically across all particles. Smoothing therefore inherits little intrinsic variance, and the diversity of a backward draw is confined to the selected component index $I_t$ and the sampled playing-team means. If the backward weights concentrate on a small number of components, the effective number of distinct smoothed trajectories is small, so the finite-sample estimate of the initial between-team covariance $\Gamma_0$ can be unstable or dominated by a few ancestors. Increasing the number of smoothed trajectories $M$ would mitigate this concentration, but it is computationally expensive: each trajectory is sampled sequentially from time $T$ down to $0$, and each time step requires evaluating the backward weights against all $N$ particles, giving a cost of $\mathcal{O}(MNT)$ particle-weight evaluations. An attempt was made to run the smoother with a larger number of trajectories, but the resulting cost proved prohibitive within the available budget and the attempt was not successful; this line of investigation was therefore not pursued further.
+
+A simpler and more efficient approach is to estimate the gradient of the marginal log-likelihood. By Fisher's identity \citep{delmoral2004feynman,delmoraldoucetsingh2010forwardsmoothing}, the marginal log-likelihood of the particle filter takes the form
+
+\begin{equation*}\nabla_\Theta \log p(y_{1:T} \mid \Theta) = \int p(x_{0:T} \mid y_{1:T}, \Theta) \nabla_\Theta \log p(x_{0:T}, y_{1:T} \mid \Theta) dx_{0:T},\end{equation*}
+
+and can be approximated by the score-function estimator of \citet{poyiadjisdoucetsingh2011particlescore} defined as 
+
+\begin{equation}
+    \label{eq:score-estimator}
+    \nabla_\Theta \log p(y_{1:T} \mid \Theta) \approx \widehat{S}_{N,T}(\Theta) = \sum_{i=1}^N w_T^{(i)} \nabla_\Theta \log p(\widetilde{x}_{0:T}^{(i)}, y_{1:T} \mid \Theta)
+\end{equation}
+
+where $w_T^{(i)}$ are the (normalised) particle weights at the final time $T$ and $\widetilde{x}_{0:T}^{(i)}$ is the ancestor path of terminal particle $i$, traced back through the resampling steps. The resampling step would normally make the filter non-differentiable, because the ancestor indices are discrete draws. The stop-gradient construction of \citet{scibior2021differentiableparticlefiltering} rewrites each resampled weight as the ratio $w^{(b_i)} / \operatorname{sg}(w^{(b_i)})$, where $b_i$ is the selected ancestor and $\operatorname{sg}$ denotes the stop-gradient operator: on the forward pass this ratio evaluates to one, so the filter is unchanged, while in the gradient the denominator is treated as constant, so resampling contributes no spurious gradient. Backpropagating through $\log \widehat Z_T$ in this way yields a gradient equal to the consistent score estimator of \citet{poyiadjisdoucetsingh2011particlescore}, and we maximise $\log p(y_{1:T} \mid \Theta)$ by gradient ascent on the static parameters $\Theta$.
+
+
+\section{Performance comparison}
+\label{sec:performance-comparison}
+
+We compare RB-SQMC against a factorial state-space baseline, specifically the biased Gaussian extended Kalman filter (EKF) of \texttt{cuthberto-carlos} \citep{cuthbertocarlos2026}, on the 2026 World Cup. This is an end-to-end comparison of two complete pipelines: the EKF is a biased Gaussian approximation, whereas RB-SQMC is a particle approximation, so any difference reflects the effectiveness of the different inference approach. We evaluate the model performance on three metrics: marginal log-likelihood from training, prediction outputs and comparison with FIFA rankings.
+
+\subsection{Experimental design}
+
+The historical data is resetricted to the $K=48$ teams that played in the 2026 World Cup. It is split chronologically into a training period $[1980\text{-}01\text{-}01, 2024\text{-}01\text{-}01)$, a test period $[2024\text{-}01\text{-}01, 2026\text{-}06\text{-}11)$, and a prediction period from 11 June 2026. The prediction period contains the 104 World Cup 2026 fixtures used for the headline scoring. Matches with scores exceeding the truncation threshold of \texttt{max\_goals = 8} are excluded before the split. 
+
+\subsection{Training: marginal log-likelihood}
+
+The static parameters $\Theta = (\Gamma_0, B, \kappa, \alpha, \beta)$ are estimated by maximising the marginal log-likelihood as mentioned in Section~\ref{sec:parameter-estimation}. The SQMC log-likelihood is a particle estimate, its gradient is averaged over independently randomised RQMC replicas at each update, whereas the EKF gradient is deterministic. RB-SQMC evaluates the same likelihood on the sampled playing-team coordinates; the EKF integrates the bivariate-Poisson likelihood under the predictive Gaussian by Gauss--Hermite quadrature of degree $32$ \citep{ghq}. The full parameter set and the exact configuration are listed in Appendix~\ref{app:config}. Table~\ref{tab:logz} reports the training and test log-likelihoods.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+ & EKF & RB-SQMC \\
+\midrule
+Final train log-likelihood & $-15675.04$ & $-14649.74$ \\
+Final test log-likelihood & $-1040.01$ & $-1005.42$ \\
+Maximum test log-likelihood (epoch) & $-1040.01$ (50) & $-959.96$ (49) \\
+\bottomrule
+\end{tabular}
+\caption{Training and test log-likelihoods for the EKF and RB-SQMC at the pre-specified final epoch. Higher (less negative) values indicate a better fit.}
+\label{tab:logz}
+\end{table}
+
+RB-SQMC attained a higher final train log-likelihood than the EKF ($-14649.74$ versus $-15675.04$) and a higher final test log-likelihood ($-1005.42$ versus $-1040.01$). A point to note is that the log-likelihood from the EKF is a Gaussian-approximate normalising constant from moment filtering while the SQMC value is a particle estimate with finite-sample error, so the raw gap is not an exact measure of model fit, and the raw results here do not necessarily indicate superiority. Figure~\ref{fig:logz-overlay} shows the training and test log-likelihood trajectories across epochs for both methods.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{sqmc_ekf/combined/images/logz_overlay_train_test.png}
+\caption{Training and test log-likelihood against epoch for the EKF and RB-SQMC. The EKF value is a Gaussian-approximate normalising constant; the SQMC value is a particle estimate.}
+\label{fig:logz-overlay}
+\end{figure}
+
+The SQMC test log-likelihood is also markedly less stable across epochs than the EKF's. The EKF trajectory is smooth and monotone, improving steadily from $-1101.76$ to $-1040.01$ over the 50 updates. The SQMC trajectory ranges between approximately $-1044.84$ and $-959.96$. This instability comes from SQMC's Monte Carlo error; the maximum test value is a favourable draw rather than a robust optimum.
+
+\subsection{Prediction outputs}
+
+Both methods produce a one-step-ahead score grid for the $104$ matches. We score the resulting distributions with the mean Brier score over the three outcomes (home win, draw, away win), the mean predictive log-score, and outcome accuracy of the 104 World Cup 2026 fixtures. The Brier score is defined as,
+
+\begin{equation*}
+    \text{Brier score} = \frac{1}{N} \sum_{i=1}^N \sum_{c\in\{H,D,A\}} (p_{ic} - o_{ic})^2
+\end{equation*}
+
+where $p_{ic}$ is the predicted probability of outcome $c$ for match $i$, and $o_{ic}$ is the observed outcome indicator. The inner sum is over the three outcomes (home win, draw, away win), so the uniform reference is $2/3$ under this convention. The predictive log-score is defined as,
+
+\begin{equation*}
+    \text{Predictive log-score} = \frac{1}{N} \sum_{i=1}^N \log p(y_i^{\text{home}}, y_i^{\text{away}})
+\end{equation*}
+
+which is the average log-probability assigned to the observed outcome $o_i$ for match $i$. Outcome accuracy is defined as the proportion of matches for which the predicted outcome with the highest probability matches the observed outcome. Table~\ref{tab:prediction} reports the results, and the full win--loss predictions for the fixtures and the knockout stage are collected in Appendix~\ref{app:prediction}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+ & EKF & RB-SQMC \\
+\midrule
+Mean Brier score & $0.5442$ & $0.6878$ \\
+Uniform reference Brier score & $2/3$ & $2/3$ \\
+Brier skill score vs.\ uniform & $0.1838$ & $-0.0316$ \\
+Mean predictive log-score & $-3.131$ & $-3.664$ \\
+Outcome accuracy & $0.5288$ & $0.4712$ \\
+Exact-score accuracy & $0.0769$ & $0.0481$ \\
+\bottomrule
+\end{tabular}
+\caption{One-step-ahead prediction metrics on the 104 World Cup 2026 fixtures. The Brier skill score is relative to the uniform reference $2/3$ and lower Brier scores indicate better prediction on Home Win/Draw/Away Win. The predictive log-score is the mean scoreline log-probability over the truncated score grid.}
+\label{tab:prediction}
+\end{table}
+
+On the 104 prediction-split matches, RB-SQMC produces worse performance predictive performance than the EKF on all metrics. RB-SQMC also performs worse than the uniform reference of Brier score, which means that it is worse than guessing equally on all three outcomes of a match.
+
+As an illustration of a forecast, we review the final of the 2026 World Cup, Spain vs.\ Argentina, played on 19 July 2026. The images in Figure~\ref{fig:prediction-final} show the pre-match predicted score grids for both methods, with the actual result (a $1$--$0$ win for Spain) marked by a red outline. The EKF assigns the highest probability to a home win ($0.479$) and a draw ($0.207$), with the modal score at $1$--$1$. RB-SQMC instead assigns the highest probability to an Argentina win ($0.470$), then a draw ($0.384$) and a Spain win ($0.146$), with the modal score at $0$--$0$. The EKF model had a better Brier score of $0.413$ compared to RB-SQMC's $1.097$, which favoured an Argentina win heavily. The predicted results for the knockout stages can be found in Appendix~\ref{app:prediction}, and all 104 predictions are recorded in the repository at a commit-specific path listed in Appendix~\ref{app:code}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{\textwidth}
+\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png}
+\caption{EKF predicted score grid.}
+\label{fig:prediction-final-ekf}
+\end{subfigure}
+\begin{subfigure}{\textwidth}
+\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png}
+\caption{RB-SQMC predicted score grid.}
+\label{fig:prediction-final-sqmc}
+\end{subfigure}
+\caption{Predicted score grids for the final match, Spain vs.\ Argentina, under the EKF and RB-SQMC. The actual result is marked by a red outline.}
+\label{fig:prediction-final}
+\end{figure}
+
+\subsection{Evaluation}
+
+The EKF produces a single deterministic trajectory, thus the filtering states are linear, whereas RB-SQMC reports the weighted particle mean of the posterior, which appear to be more stochastic, representing the random evolution of teams. Figure~\ref{fig:timeseries} shows the filtered attacking and defensive strength trajectories for the final top-five teams under each method. 
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}{\textwidth}
+\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/ekf_timeseries_states.png}
+\caption{EKF filtered states.}
+\label{fig:timeseries-ekf}
+\end{subfigure}
+\begin{subfigure}{\textwidth}
+\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/sqmc_timeseries_states.png}
+\caption{RB-SQMC filtered states.}
+\label{fig:timeseries-sqmc}
+\end{subfigure}
+\caption{Filtered attacking and defensive strengths over time for the final top-five teams under the EKF and RB-SQMC.}
+\label{fig:timeseries}
+\end{figure}
+
+The difference between EKF and RB-SQMC is that RB-SQMC retains the cross-team covariance, whereas the EKF discards it after every match. Figure~\ref{fig:topn-correlation} reports the strongest positive and negative between-team correlations carried by the prior filter covariance $\Gamma_0$. The strongest positive pairs are dominated by teams in the same confederation, such as England--France and Argentina--Colombia, which is consistent with the assumption that regional teams evolve together.
+
+% The difference between EKF and RB-SQMC is that RB-SQMC retains the cross-team covariance, whereas the EKF discards it after every match. Figure~\ref{fig:topn-correlation} reports the strongest positive and negative between-team correlations carried by the prior filter covariance $\Gamma_0$. The strongest positive pairs are dominated by teams in the same confederation, such as England--France and Argentina--Colombia. We read this as a post-hoc interpretation of an estimated prior covariance rather than an established mechanism: $\Gamma_0$ was not regularised or structured in the reported fit, and the stability of these signs across seeds has not been assessed, so the plot describes the estimated prior rather than an established mechanism.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{sqmc_ekf/combined/images/sqmc_correlation_topn_bar.png}
+\caption{Strongest positive and negative between-team correlations carried by the prior filter covariance $\Gamma_0$ under RB-SQMC.}
+\label{fig:topn-correlation}
+\end{figure}
+
+\subsection{Comparison with the FIFA ranking}
+
+% The log-likelihood above favour the EKF on prediction but RB-SQMC on the log-likelihood, although they are not exact comparisons. EKF did produce a better prediction result compared to RB-SQMC. To assess which method produces the more plausible ranking of team strengths, 
+
+We compare the post-tournament rankings of both methods with the FIFA Men's World Ranking \citep{fifaworldranking2026}, which uses the Elo-stye rating system of \citet{elo1978rating} to rank national teams, used commonly in chess and go. Table~\ref{tab:fifa-comparison} reports the top ten teams under each method after the World Cup, together with the FIFA ranking published on 20 July 2026.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{clll}
+\toprule
+Rank & EKF & RB-SQMC & FIFA \\
+\midrule
+1 & Spain & Germany & Spain \\
+2 & Argentina & Brazil & Argentina \\
+3 & Brazil & Sweden & France \\
+4 & Belgium & Norway & England \\
+5 & Portugal & England & Brazil \\
+6 & Colombia & Argentina & Morocco \\
+7 & England & Australia & Portugal \\
+8 & Morocco & Ivory Coast & Belgium \\
+9 & Switzerland & Canada & Netherlands \\
+10 & France & Netherlands & Mexico \\
+\bottomrule
+\end{tabular}
+\caption{Post-tournament top-ten team rankings under the EKF and RB-SQMC, compared with the FIFA Men's World Ranking of 20 July 2026 \citep{fifaworldranking2026}.}
+\label{tab:fifa-comparison}
+\end{table}
+
+The EKF's post-tournament ranking aligns closely with the FIFA ranking: both place Spain first and Argentina second, and both include France, England, Brazil, Morocco, Portugal and Belgium in the top ten. RB-SQMC's ranking is less plausible: it omits Spain, France, Portugal and Belgium from the top ten entirely despite these teams advancing to the top 8 of the 2026 World Cup. It also places Argentina sixth despite Argentina reaching the final and Germany first, despite Germany being eliminated in the round of 32. The EKF therefore produces the more justifiable qualitative ranking, along with its better prediction metrics, even though RB-SQMC attains the higher log-likelihood. The full pre- and post-tournament rankings for both methods are collected in Appendix~\ref{app:rankings}.
+
+\subsection{Discussion}
+\label{sec:performance-comparison-limitations}
+
+For our dataset of 1980 onwards, RB-SQMC attained a higher test log-likelihood than the EKF, yet it produced worse predictive performance on the 104 World Cup 2026 fixtures. We highlight some key points for discussion on the issues we faced.
+
+\textbf{Computational cost is the principal limitation} The factorial SSM is extremely efficient: it runs on a CPU in seconds and can be run on a laptop. In contrast, a single optimisation run of RB-SQMC with $512$ particles took approximately $1.6$ hours on an A100 GPU, dominated by the repeated particle-filter evaluations and the Hilbert sorting. This cost prevented running multiple seeds or multiple RQMC scrambles, so the reported SQMC results are a single finite-particle realisation. A fixed-checkpoint sensitivity analysis over particle counts and random seeds would be needed to establish numerical stability, and averaging over several RQMC scrambles would give a more reliable and robust estimate of RB-SQMC's predictive performance. 
+
+% \paragraph{Model misspecification.} Stationary OU dynamics, a shared attack--defence covariance, constant scoring and shared-Poisson parameters, no covariates, neutral-venue handling and a dense time-invariant cross-team covariance are strong assumptions. Posterior predictive checks and targeted alternatives are the remedy. Another model misspecification is the weight of each tournament - being able to weight different leagues.
+
+\textbf{An approximate model is suitable for this problem given the constraints} Particle methods are more flexible for non-Gaussian likelihoods than the Gaussian moment approximation of the EKF, and the Rao-Blackwellised construction retains the cross-team covariance that the factorial EKF discards. Empirically,, this additional flexibility did not translate into better prediction on the World Cup fixtures. We also observed that filter states of the EKF was similar to the Fifa 2026 rankings. One explanation is that the independent-evolution and Gaussian assumptions of the factorial model are adequate for this data set. The RB-SQMC construction may be better suited to settings in which the latent states are more strongly non-Gaussian, for example in finance or biology, but this is a hypothesis to be tested rather than a conclusion of the present study.

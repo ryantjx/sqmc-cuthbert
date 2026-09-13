@@ -1,0 +1,30 @@
+{
+  "platforms": [
+    "cpu",
+    "gpu"
+  ],
+  "dimensions": [
+    2,
+    5,
+    10,
+    30,
+    60
+  ],
+  "n_values": [
+    128,
+    256,
+    512,
+    2048,
+    8192,
+    32768
+  ],
+  "repeats": 10,
+  "warmups": 2,
+  "seed": 42,
+  "output_dir": "/content/sqmc-comparison-13092026_1304/hilbert_sort",
+  "sequences": [
+    "sobol",
+    "halton"
+  ],
+  "distribution": "normal"
+}

@@ -1,0 +1,5 @@
+{
+  "evaluation_only": true,
+  "parameter_source": "rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/sqmc/results/sqmc/fitted_params.json",
+  "parameter_checkpoint": 50
+}

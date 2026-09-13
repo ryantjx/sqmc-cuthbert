@@ -1,0 +1,270 @@
+Comparison output: /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431
++ /Users/ryant/Github/ryantjx/rbsqmc/.venv/bin/python -u -m rbsqmc.comparison.sqmc_ekf.run --config /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/comparison_config.json --data /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/data/results.csv --methods ekf --output-dir /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf
+Default initial parameters: num_teams=48, gamma_0.shape=(48, 48), B.shape=(2, 2)
+    B: [[1.  0.2]
+ [0.2 1. ]]
+    mean_0: 0.0
+    gamma_0: 0.13437500000000024
+    kappa: 0.001
+    alpha: 0.2
+    beta: -4.0
+ekf: compiled in 0.9s
+ekf epoch 1/50: train -16796.7722, test -1101.7569, |grad| 1995.2771, 0.7s
+ekf epoch 2/50: train -16738.3594, test -1098.6467, |grad| 1964.7751, 0.4s
+ekf epoch 3/50: train -16681.1956, test -1095.6130, |grad| 1932.7056, 0.3s
+ekf epoch 4/50: train -16625.1710, test -1092.4151, |grad| 1900.6612, 0.3s
+ekf epoch 5/50: train -16570.3559, test -1089.1411, |grad| 1868.7410, 0.3s
+ekf epoch 6/50: train -16516.9942, test -1085.9077, |grad| 1836.8474, 0.3s
+ekf epoch 7/50: train -16465.2283, test -1082.8121, |grad| 1805.0792, 0.3s
+ekf epoch 8/50: train -16415.0765, test -1079.9239, |grad| 1773.5054, 0.3s
+ekf epoch 9/50: train -16366.5806, test -1077.2441, |grad| 1742.1271, 0.2s
+ekf epoch 10/50: train -16319.8471, test -1074.7355, |grad| 1711.0360, 0.3s
+ekf epoch 11/50: train -16274.9644, test -1072.3510, |grad| 1680.4231, 0.3s
+ekf epoch 12/50: train -16231.9570, test -1070.0434, |grad| 1650.4628, 0.3s
+ekf epoch 13/50: train -16190.8170, test -1067.7870, |grad| 1621.2505, 0.2s
+ekf epoch 14/50: train -16151.5542, test -1065.5882, |grad| 1592.8291, 0.2s
+ekf epoch 15/50: train -16114.1929, test -1063.4718, |grad| 1565.2555, 0.2s
+ekf epoch 16/50: train -16078.7392, test -1061.4679, |grad| 1538.6109, 0.2s
+ekf epoch 17/50: train -16045.1682, test -1059.6011, |grad| 1512.9677, 0.2s
+ekf epoch 18/50: train -16013.4396, test -1057.8815, |grad| 1488.3681, 0.2s
+ekf epoch 19/50: train -15983.5190, test -1056.3023, |grad| 1464.8387, 0.3s
+ekf epoch 20/50: train -15955.3789, test -1054.8463, |grad| 1442.4122, 0.2s
+ekf epoch 21/50: train -15928.9847, test -1053.4918, |grad| 1421.1240, 0.2s
+ekf epoch 22/50: train -15904.2890, test -1052.2185, |grad| 1400.9950, 0.2s
+ekf epoch 23/50: train -15881.2357, test -1051.0123, |grad| 1382.0215, 0.2s
+ekf epoch 24/50: train -15859.7689, test -1049.8680, |grad| 1364.1840, 0.2s
+ekf epoch 25/50: train -15839.8364, test -1048.7880, |grad| 1347.4625, 0.2s
+ekf epoch 26/50: train -15821.3867, test -1047.7785, |grad| 1331.8429, 0.2s
+ekf epoch 27/50: train -15804.3654, test -1046.8456, |grad| 1317.3127, 0.2s
+ekf epoch 28/50: train -15788.7145, test -1045.9936, |grad| 1303.8543, 0.2s
+ekf epoch 29/50: train -15774.3747, test -1045.2226, |grad| 1291.4415, 0.2s
+ekf epoch 30/50: train -15761.2875, test -1044.5298, |grad| 1280.0421, 0.2s
+ekf epoch 31/50: train -15749.3956, test -1043.9094, |grad| 1269.6203, 0.2s
+ekf epoch 32/50: train -15738.6430, test -1043.3547, |grad| 1260.1388, 0.2s
+ekf epoch 33/50: train -15728.9733, test -1042.8590, |grad| 1251.5582, 0.2s
+ekf epoch 34/50: train -15720.3301, test -1042.4161, |grad| 1243.8371, 0.2s
+ekf epoch 35/50: train -15712.6563, test -1042.0212, |grad| 1236.9322, 0.2s
+ekf epoch 36/50: train -15705.8953, test -1041.6703, |grad| 1230.7992, 0.2s
+ekf epoch 37/50: train -15699.9901, test -1041.3607, |grad| 1225.3932, 0.2s
+ekf epoch 38/50: train -15694.8844, test -1041.0900, |grad| 1220.6699, 0.2s
+ekf epoch 39/50: train -15690.5215, test -1040.8562, |grad| 1216.5848, 0.2s
+ekf epoch 40/50: train -15686.8448, test -1040.6573, |grad| 1213.0937, 0.3s
+ekf epoch 41/50: train -15683.7973, test -1040.4912, |grad| 1210.1519, 0.2s
+ekf epoch 42/50: train -15681.3216, test -1040.3555, |grad| 1207.7142, 0.2s
+ekf epoch 43/50: train -15679.3599, test -1040.2474, |grad| 1205.7348, 0.2s
+ekf epoch 44/50: train -15677.8538, test -1040.1643, |grad| 1204.1673, 0.2s
+ekf epoch 45/50: train -15676.7443, test -1040.1029, |grad| 1202.9648, 0.2s
+ekf epoch 46/50: train -15675.9719, test -1040.0601, |grad| 1202.0797, 0.3s
+ekf epoch 47/50: train -15675.4765, test -1040.0326, |grad| 1201.4641, 0.2s
+ekf epoch 48/50: train -15675.1973, test -1040.0171, |grad| 1201.0696, 0.2s
+ekf epoch 49/50: train -15675.0729, test -1040.0102, |grad| 1200.8475, 0.2s
+ekf epoch 50/50: train -15675.0418, test -1040.0085, |grad| 1200.7487, 0.2s
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_top5_strengths.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_timeseries_states.png
+Saved timeseries data to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_timeseries_states.json
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_pre_worldcup_rankings.png
+Saved rankings data to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_pre_worldcup_rankings.json
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_post_worldcup_rankings.png
+Saved rankings data to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_post_worldcup_rankings.json
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-10_Spain_vs_Belgium.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-11_Norway_vs_England.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-11_Argentina_vs_Switzerland.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-14_France_vs_Spain.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-15_England_vs_Argentina.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-18_France_vs_England.png
+Saved plot to /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf/images/ekf_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png
+Partial comparison (ekf) complete: /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf
+[1/6] Verifying source commit 336842f0e873 is pushed to main...
++ git ls-remote https://github.com/ryantjx/rbsqmc.git refs/heads/main
+336842f0e8739071141928486f54db1d08175f0c	refs/heads/main
++ git -C /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc rev-parse refs/heads/main
+336842f0e8739071141928486f54db1d08175f0c
++ git -C /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc bundle create /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-source-6ig4m1kf/source.bundle refs/heads/main
+[2/6] Provisioning A100 session 'sqmc_ekf_09092026_1431_f4321a23cb'...
+[3/6] Uploading source bundle and pinning the checkout (installs deps, asserts GPU)...
+[4/6] Verifying remote metadata...
+Downloaded and verified root.
+[5/6] Running the comparison (per-epoch progress is mirrored below; use --no-stream-logs to silence it)...
+sqmc: compiled in 15.7s
+sqmc epoch 1/50: train -15278.6916, test -1019.3778, |grad| 549.8720, 112.3s
+sqmc epoch 2/50: train -15160.6996, test -1044.8395, |grad| 544.8718, 111.8s
+sqmc epoch 3/50: train -15210.8084, test -1008.0106, |grad| 516.9730, 112.2s
++ /Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3 /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py sqmc_ekf_09092026_1431_f4321a23cb gpu-a100-s-kkb-ass1c1-m942l3mq8xts --exec-file /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-njbt8rzz/dispatch.py --timeout 600
+Traceback (most recent call last):
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 95, in <module>
+    execute(state, args.session, args.endpoint, args.exec_file.read_text(), args.timeout)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 73, in execute
+    outputs = runtime.execute_code(code, timeout=timeout)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/colab_cli/runtime.py", line 227, in execute_code
+    reply = self.kernel_client.execute(code, **kwargs)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 287, in execute
+    reply = self._manager.client.execute_interactive(
+        code,
+    ...<7 lines>...
+        stdin_hook=stdin_hook,
+    )
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/wsclient.py", line 1088, in execute_interactive
+    raise RuntimeError("Connection was lost.")
+RuntimeError: Connection was lost.
+Progress poll failed (1/5); retrying in 15s: Command '['/Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3', '/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py', 'sqmc_ekf_09092026_1431_f4321a23cb', 'gpu-a100-s-kkb-ass1c1-m942l3mq8xts', '--exec-file', '/var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-njbt8rzz/dispatch.py', '--timeout', '600']' returned non-zero exit status 1.
+sqmc epoch 4/50: train -15199.3745, test -1025.9272, |grad| 488.0293, 112.2s
+sqmc epoch 5/50: train -15243.9921, test -1010.7276, |grad| 475.4786, 112.1s
+sqmc epoch 6/50: train -15152.5510, test -1016.5038, |grad| 463.9910, 111.8s
+sqmc epoch 7/50: train -15165.6367, test -1036.4637, |grad| 463.3750, 112.5s
++ /Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3 /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py sqmc_ekf_09092026_1431_f4321a23cb gpu-a100-s-kkb-ass1c1-m942l3mq8xts --exec-file /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-h2veuyhg/dispatch.py --timeout 600
+Traceback (most recent call last):
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 95, in <module>
+    execute(state, args.session, args.endpoint, args.exec_file.read_text(), args.timeout)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 73, in execute
+    outputs = runtime.execute_code(code, timeout=timeout)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/colab_cli/runtime.py", line 227, in execute_code
+    reply = self.kernel_client.execute(code, **kwargs)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 287, in execute
+    reply = self._manager.client.execute_interactive(
+        code,
+    ...<7 lines>...
+        stdin_hook=stdin_hook,
+    )
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/wsclient.py", line 1088, in execute_interactive
+    raise RuntimeError("Connection was lost.")
+RuntimeError: Connection was lost.
+Progress poll failed (1/5); retrying in 15s: Command '['/Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3', '/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py', 'sqmc_ekf_09092026_1431_f4321a23cb', 'gpu-a100-s-kkb-ass1c1-m942l3mq8xts', '--exec-file', '/var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-h2veuyhg/dispatch.py', '--timeout', '600']' returned non-zero exit status 1.
+sqmc epoch 8/50: train -15164.3371, test -1009.3060, |grad| 461.1797, 112.9s
+sqmc epoch 9/50: train -15152.7012, test -1001.9173, |grad| 440.8402, 112.7s
+sqmc epoch 10/50: train -15050.9777, test -1016.2718, |grad| 458.6941, 112.6s
+sqmc epoch 11/50: train -15029.5033, test -1001.9743, |grad| 454.6138, 112.8s
+sqmc epoch 12/50: train -15026.2527, test -974.3898, |grad| 427.2980, 112.3s
+sqmc epoch 13/50: train -14911.2925, test -1033.0271, |grad| 435.2307, 112.1s
+sqmc epoch 14/50: train -14876.6774, test -997.2257, |grad| 431.0769, 112.2s
+sqmc epoch 15/50: train -14815.7143, test -981.1930, |grad| 425.5441, 112.2s
+sqmc epoch 16/50: train -14923.3194, test -1003.9933, |grad| 430.0792, 111.9s
+sqmc epoch 17/50: train -14873.9091, test -994.0486, |grad| 400.7750, 112.0s
+sqmc epoch 18/50: train -14896.8190, test -981.6795, |grad| 402.4515, 112.1s
+sqmc epoch 19/50: train -14901.5171, test -982.5603, |grad| 386.2632, 112.6s
+sqmc epoch 20/50: train -14755.6449, test -1005.6998, |grad| 383.9387, 112.5s
+sqmc epoch 21/50: train -14809.3287, test -990.8198, |grad| 380.5189, 112.1s
+sqmc epoch 22/50: train -14717.9434, test -997.7953, |grad| 377.2899, 112.7s
+sqmc epoch 23/50: train -14742.3903, test -1011.2527, |grad| 376.8196, 112.8s
+sqmc epoch 24/50: train -14714.3731, test -980.2417, |grad| 398.3824, 112.8s
+sqmc epoch 25/50: train -14696.0545, test -1011.3425, |grad| 367.0660, 113.0s
+sqmc epoch 26/50: train -14708.9156, test -975.8198, |grad| 384.8458, 113.0s
++ /Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3 /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py sqmc_ekf_09092026_1431_f4321a23cb gpu-a100-s-kkb-ass1c1-m942l3mq8xts --exec-file /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-77lgzcm3/dispatch.py --timeout 600
+Traceback (most recent call last):
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 95, in <module>
+    execute(state, args.session, args.endpoint, args.exec_file.read_text(), args.timeout)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 73, in execute
+    outputs = runtime.execute_code(code, timeout=timeout)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/colab_cli/runtime.py", line 227, in execute_code
+    reply = self.kernel_client.execute(code, **kwargs)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 287, in execute
+    reply = self._manager.client.execute_interactive(
+        code,
+    ...<7 lines>...
+        stdin_hook=stdin_hook,
+    )
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/wsclient.py", line 1088, in execute_interactive
+    raise RuntimeError("Connection was lost.")
+RuntimeError: Connection was lost.
+Progress poll failed (1/5); retrying in 15s: Command '['/Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3', '/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py', 'sqmc_ekf_09092026_1431_f4321a23cb', 'gpu-a100-s-kkb-ass1c1-m942l3mq8xts', '--exec-file', '/var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-77lgzcm3/dispatch.py', '--timeout', '600']' returned non-zero exit status 1.
++ /Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3 /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py sqmc_ekf_09092026_1431_f4321a23cb gpu-a100-s-kkb-ass1c1-m942l3mq8xts --exec-file /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-muoehmja/dispatch.py --timeout 600
+ERROR:websocket:'NoneType' object has no attribute 'sock' - goodbye
+Traceback (most recent call last):
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 95, in <module>
+    execute(state, args.session, args.endpoint, args.exec_file.read_text(), args.timeout)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 73, in execute
+    outputs = runtime.execute_code(code, timeout=timeout)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/colab_cli/runtime.py", line 227, in execute_code
+    reply = self.kernel_client.execute(code, **kwargs)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 287, in execute
+    reply = self._manager.client.execute_interactive(
+        code,
+    ...<7 lines>...
+        stdin_hook=stdin_hook,
+    )
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/wsclient.py", line 1088, in execute_interactive
+    raise RuntimeError("Connection was lost.")
+RuntimeError: Connection was lost.
+ERROR:jupyter_kernel_client:Failed to stop the kernel client
+Traceback (most recent call last):
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 173, in __del__
+    self.stop()
+    ~~~~~~~~~^^
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 434, in stop
+    if self._manager and self._manager.has_kernel:
+       ^^^^^^^^^^^^^
+AttributeError: 'KernelClient' object has no attribute '_manager'
+Progress poll failed (1/5); retrying in 15s: Command '['/Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3', '/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py', 'sqmc_ekf_09092026_1431_f4321a23cb', 'gpu-a100-s-kkb-ass1c1-m942l3mq8xts', '--exec-file', '/var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-muoehmja/dispatch.py', '--timeout', '600']' returned non-zero exit status 1.
+sqmc epoch 27/50: train -14754.7215, test -1017.0720, |grad| 380.0063, 112.9s
+sqmc epoch 28/50: train -14722.2805, test -999.4675, |grad| 369.2888, 112.8s
+sqmc epoch 29/50: train -14662.1982, test -993.5193, |grad| 366.3956, 112.9s
+sqmc epoch 30/50: train -14628.5583, test -978.3735, |grad| 354.5671, 112.9s
+sqmc epoch 31/50: train -14719.5827, test -995.0202, |grad| 392.0753, 112.8s
+sqmc epoch 32/50: train -14687.3707, test -995.9593, |grad| 382.7438, 112.8s
+sqmc epoch 33/50: train -14780.4423, test -978.9807, |grad| 353.7025, 112.9s
+sqmc epoch 34/50: train -14616.1410, test -989.6008, |grad| 377.4744, 112.7s
+sqmc epoch 35/50: train -14596.6923, test -980.9742, |grad| 345.3523, 112.9s
+sqmc epoch 36/50: train -14610.1671, test -972.4099, |grad| 380.7677, 113.1s
++ /Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3 /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py sqmc_ekf_09092026_1431_f4321a23cb gpu-a100-s-kkb-ass1c1-m942l3mq8xts --exec-file /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-fr06ha1i/dispatch.py --timeout 600
+Traceback (most recent call last):
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 95, in <module>
+    execute(state, args.session, args.endpoint, args.exec_file.read_text(), args.timeout)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 73, in execute
+    outputs = runtime.execute_code(code, timeout=timeout)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/colab_cli/runtime.py", line 227, in execute_code
+    reply = self.kernel_client.execute(code, **kwargs)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 287, in execute
+    reply = self._manager.client.execute_interactive(
+        code,
+    ...<7 lines>...
+        stdin_hook=stdin_hook,
+    )
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/wsclient.py", line 1088, in execute_interactive
+    raise RuntimeError("Connection was lost.")
+RuntimeError: Connection was lost.
+Progress poll failed (1/5); retrying in 15s: Command '['/Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3', '/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py', 'sqmc_ekf_09092026_1431_f4321a23cb', 'gpu-a100-s-kkb-ass1c1-m942l3mq8xts', '--exec-file', '/var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-fr06ha1i/dispatch.py', '--timeout', '600']' returned non-zero exit status 1.
+sqmc epoch 37/50: train -14609.0009, test -984.8299, |grad| 346.8775, 115.2s
+sqmc epoch 38/50: train -14643.7088, test -1008.3324, |grad| 357.2323, 114.7s
+sqmc epoch 39/50: train -14688.4127, test -983.0400, |grad| 355.6048, 113.9s
+sqmc epoch 40/50: train -14639.6114, test -978.1163, |grad| 358.6465, 114.8s
++ /Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3 /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py sqmc_ekf_09092026_1431_f4321a23cb gpu-a100-s-kkb-ass1c1-m942l3mq8xts --exec-file /var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-rfkjr5u3/dispatch.py --timeout 600
+Traceback (most recent call last):
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 95, in <module>
+    execute(state, args.session, args.endpoint, args.exec_file.read_text(), args.timeout)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py", line 73, in execute
+    outputs = runtime.execute_code(code, timeout=timeout)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/colab_cli/runtime.py", line 227, in execute_code
+    reply = self.kernel_client.execute(code, **kwargs)
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/client.py", line 287, in execute
+    reply = self._manager.client.execute_interactive(
+        code,
+    ...<7 lines>...
+        stdin_hook=stdin_hook,
+    )
+  File "/Users/ryant/.local/share/uv/tools/google-colab-cli/lib/python3.13/site-packages/jupyter_kernel_client/wsclient.py", line 1088, in execute_interactive
+    raise RuntimeError("Connection was lost.")
+RuntimeError: Connection was lost.
+Progress poll failed (1/5); retrying in 15s: Command '['/Users/ryant/.local/share/uv/tools/google-colab-cli/bin/python3', '/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/scripts/refresh_colab_proxy.py', 'sqmc_ekf_09092026_1431_f4321a23cb', 'gpu-a100-s-kkb-ass1c1-m942l3mq8xts', '--exec-file', '/var/folders/76/sv22wlqx51l_7wpcjlt9ds2c0000gn/T/sqmc-dispatch-rfkjr5u3/dispatch.py', '--timeout', '600']' returned non-zero exit status 1.
+sqmc epoch 41/50: train -14595.1507, test -981.2011, |grad| 367.1468, 114.2s
+sqmc epoch 42/50: train -14675.1134, test -967.5956, |grad| 355.6270, 115.5s
+sqmc epoch 43/50: train -14590.8300, test -980.6373, |grad| 365.6562, 114.8s
+sqmc epoch 44/50: train -14596.1886, test -963.0003, |grad| 340.0507, 115.3s
+sqmc epoch 45/50: train -14571.7253, test -977.4102, |grad| 366.2870, 114.9s
+sqmc epoch 46/50: train -14531.3088, test -988.1433, |grad| 348.8256, 114.7s
+sqmc epoch 47/50: train -14616.7192, test -978.5347, |grad| 368.3667, 114.6s
+sqmc epoch 48/50: train -14755.7595, test -995.2663, |grad| 345.9322, 114.4s
+sqmc epoch 49/50: train -14670.5243, test -959.9586, |grad| 363.4596, 115.2s
+sqmc epoch 50/50: train -14649.7370, test -1005.4168, |grad| 335.7588, 113.0s
+[6/6] Downloading and verifying run artifacts...
+Downloaded and verified run.
+Downloaded and verified root.
++ /Users/ryant/Github/ryantjx/rbsqmc/.venv/bin/python -u -m rbsqmc.comparison.sqmc_ekf.run --config /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/comparison_config.json --data /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/data/results.csv --combine /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/ekf /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/sqmc --output-dir /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/combined
+/Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/run.py:237: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "completed_at_utc": datetime.utcnow().isoformat() + "Z",
+OK: comparison artifacts validated: /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/combined
+Comparison complete: /Users/ryant/Github/ryantjx/rbsqmc/rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/combined

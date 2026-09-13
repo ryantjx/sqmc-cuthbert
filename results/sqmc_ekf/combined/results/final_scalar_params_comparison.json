@@ -1,0 +1,63 @@
+{
+  "run_id": "combined",
+  "checkpoint_epoch_ekf": 50,
+  "checkpoint_epoch_sqmc": 50,
+  "rows": [
+    {
+      "parameter": "alpha",
+      "meaning": "Baseline log scoring rate",
+      "unit": "log goals",
+      "ekf": 0.21938629666334505,
+      "sqmc": 0.2781135265785763,
+      "sqmc_minus_ekf": 0.058727229915231244
+    },
+    {
+      "parameter": "beta",
+      "meaning": "Log rate of the shared Poisson component",
+      "unit": "log goals",
+      "ekf": -3.5020707591347,
+      "sqmc": -3.4872954152458266,
+      "sqmc_minus_ekf": 0.014775343888873138
+    },
+    {
+      "parameter": "kappa",
+      "meaning": "OU mean-reversion rate",
+      "unit": "per day",
+      "ekf": 0.0006147236271612383,
+      "sqmc": 0.0006152692839367732,
+      "sqmc_minus_ekf": 5.456567755349065e-07
+    },
+    {
+      "parameter": "friendly_scale",
+      "meaning": "Strength scaling for friendly matches",
+      "unit": "dimensionless",
+      "ekf": 2.2614350385512685,
+      "sqmc": 2.4074447825693293,
+      "sqmc_minus_ekf": 0.14600974401806077
+    },
+    {
+      "parameter": "exp(alpha)",
+      "meaning": "Baseline scoring rate",
+      "unit": "goals",
+      "ekf": 1.2453122437481474,
+      "sqmc": 1.3206361159988445,
+      "sqmc_minus_ekf": 0.07532387225069703
+    },
+    {
+      "parameter": "exp(beta)",
+      "meaning": "Shared-component rate",
+      "unit": "goals",
+      "ekf": 0.03013491661393144,
+      "sqmc": 0.03058347601928241,
+      "sqmc_minus_ekf": 0.0004485594053509692
+    },
+    {
+      "parameter": "log(2)/kappa",
+      "meaning": "OU half-life",
+      "unit": "days",
+      "ekf": 1127.5753036545266,
+      "sqmc": 1126.5753039463857,
+      "sqmc_minus_ekf": -0.9999997081408765
+    }
+  ]
+}

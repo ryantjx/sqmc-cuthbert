@@ -1,0 +1,22 @@
+\chapter{Conclusion}
+We developed the framework for performing SQMC on parallel accelerators in \texttt{jax} and we observe that SQMC does have a performance advantage when implemented on parallel accelerators as compared to CPU. We also demonstrated the application of SQMC to a football model, which is a high-dimensional problem with sparse local observations. However, the final RB-SQMC model does not perform better than a factorial state-space extended Kalman filter (EKF) model in this comparison. 
+
+These implementations motivate two directions for future work.
+
+\begin{itemize}
+\item \textbf{RB-SQMC smoothing with low discrepancy preserved.} In Section \ref{sec:rb-sqmc}, we briefly described Rao--Blackwellised SQMC smoother. The RQMC points lie in high dimension, however, so their low-discrepancy advantage over Monte Carlo is negligible. Future work should develop smoothing for SQMC with asynchronous, sparse local observations that retains the low-discrepancy benefit of RQMC.
+
+\item \textbf{Computationally cheaper parameter estimation for SQMC.} Particle-based parameter estimation for SQMC is limited by computational cost, as Section~\ref{sec:performance-comparison} shows. Potential alternative algorithms include fixed-lag approximations such as particle stitching \citep{duffieldsingh2022onlinesmoothing}, expectation--maximisation with closed-form smoothing \citep{duffieldpowerrimella2024factorialssm}, and memory-reducing methods such as the marginal particle filter \citep{klaasdefreitasdoucet2005marginalpf} or PaRIS \citep{olssonwesterborn2017paris}. However, these algorithms assume random particle systems and it remains to establish whether---and with what cost and bias---they remain effective when resampling is replaced by the quantisation-based, low-discrepancy resampling on which SQMC relies, and whether they extend to asynchronous and sparse observations.
+\end{itemize}
+
+This work forms part of the wider body of work within the open-source state-space inference package \texttt{cuthbert}.
+
+% These implementations are drivers for future discussions
+% - RB-SQMC smoothing that can preserve low-discrepancy (Section \ref{sec:rb-sqmc}) that was not finished
+% - limitation of parameter estimation is computational cost: need to analyze how SQMC / Rao-Blackwellisation effect of the different algorithms such as ...
+
+
+
+% Model: RB-SQMC smoothing that can preserve low-discrepancy
+
+% The principal limitation of parameter estimation is the computational cost in particle methods. The simplest solution is to run the parameter estimation on better hardware for a longer duration. We consider a few approaches that could help address the computational limitation without sacrificing estimation performance or simply getting better hardware: alternative algorithms such as \textit{particle stitching} \citep{duffieldsingh2022onlinesmoothing}, which uses a fixed-lag approximation to obtain the full smoothing distribution without storing all $T$ particle clouds at the cost of a controllable bias, and expectation--maximisation with closed-form smoothing \citep{duffieldpowerrimella2024factorialssm}, which converges in far fewer iterations than gradient ascent; and reducing the memory used in computations, for example the marginal particle filter \citep{klaasdefreitasdoucet2005marginalpf}, which keeps only the current marginals, or the PaRIS algorithm \citep{olssonwesterborn2017paris}, which computes online smoothing for additive functionals in a single forward pass.

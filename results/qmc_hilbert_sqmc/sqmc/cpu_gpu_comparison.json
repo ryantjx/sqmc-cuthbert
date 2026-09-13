@@ -1,0 +1,83 @@
+[
+  {
+    "dimension": 2,
+    "budget_seconds": 0.05,
+    "cpu_n": 128,
+    "gpu_n": 512,
+    "cpu_validation_rmse": 0.13007515406376371,
+    "gpu_validation_rmse": 0.06300644020632246,
+    "cpu_over_gpu_error": 2.0644739432638373
+  },
+  {
+    "dimension": 2,
+    "budget_seconds": 0.1,
+    "cpu_n": 256,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 0.09013960707123002,
+    "gpu_validation_rmse": 0.02418054059359805,
+    "cpu_over_gpu_error": 3.727774684040565
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.05,
+    "cpu_n": 256,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 0.2536174674203268,
+    "gpu_validation_rmse": 0.10313637346676585,
+    "cpu_over_gpu_error": 2.4590496921248763
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.1,
+    "cpu_n": 512,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 0.19570441190543092,
+    "gpu_validation_rmse": 0.10313637346676585,
+    "cpu_over_gpu_error": 1.8975304766605328
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.05,
+    "cpu_n": 128,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 0.7365986881520519,
+    "gpu_validation_rmse": 0.29818962725691467,
+    "cpu_over_gpu_error": 2.470235785624468
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.1,
+    "cpu_n": 256,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 0.5816067111445262,
+    "gpu_validation_rmse": 0.29818962725691467,
+    "cpu_over_gpu_error": 1.9504592312442333
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.05,
+    "cpu_n": 128,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 1.5709026333370244,
+    "gpu_validation_rmse": 1.031287114485816,
+    "cpu_over_gpu_error": 1.5232447019569835
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.1,
+    "cpu_n": 256,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 1.386782425346532,
+    "gpu_validation_rmse": 1.031287114485816,
+    "cpu_over_gpu_error": 1.344710319626131
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.1,
+    "cpu_n": 128,
+    "gpu_n": 2048,
+    "cpu_validation_rmse": 2.4607890258072707,
+    "gpu_validation_rmse": 1.791981127781043,
+    "cpu_over_gpu_error": 1.373222623641351
+  }
+]

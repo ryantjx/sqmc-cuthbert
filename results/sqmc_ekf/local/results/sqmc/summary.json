@@ -1,0 +1,21 @@
+{
+  "n_epochs_completed": 50,
+  "baseline": [
+    -15342.257087099166,
+    -1011.9707457656787
+  ],
+  "compilation_sec": 15.653642158999986,
+  "execution_sec": 5655.539054366,
+  "elapsed_sec": 5671.1926965249995,
+  "final_train_logz": -14649.736986385904,
+  "final_test_logz": -1005.4167978707083,
+  "best_test_logz": -959.9585717908358,
+  "best_test_epoch": 49,
+  "checkpoint_policy": "final_epoch",
+  "learning_rate_schedule": "cosine",
+  "gradient_replicas": 15,
+  "score_replicas": 1,
+  "prediction_sec": 4.023742500008666,
+  "evaluation_only": true,
+  "parameter_source": "rbsqmc/comparison/sqmc_ekf/outputs/09092026_1431/sqmc/results/sqmc/fitted_params.json"
+}

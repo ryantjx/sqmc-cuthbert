@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "run_id": "13092026_1304",
+  "source_commit": "95f4412d2fe9faba8defec4a330713f61a793511",
+  "config_sha256": "114c6bd8ec3dfed08fe7fe631f275d7c8313a59ab93f807eac229b6506311fcb",
+  "started_utc": "2026-09-13T13:04:34.291726+00:00",
+  "session": "comparison_13092026_1304_23126b4660",
+  "shutdown": "verified_stopped",
+  "secondary_errors": [],
+  "stages": {
+    "qmc": {
+      "execution": "complete",
+      "download": "complete",
+      "started_utc": "2026-09-13T13:05:39.259537+00:00",
+      "finished_utc": "2026-09-13T13:16:12.968185+00:00",
+      "archive_ready": true,
+      "downloaded_utc": "2026-09-13T13:16:24.725525+00:00"
+    },
+    "hilbert_sort": {
+      "execution": "complete",
+      "download": "complete",
+      "started_utc": "2026-09-13T13:16:27.134221+00:00",
+      "finished_utc": "2026-09-13T13:19:10.002268+00:00",
+      "archive_ready": true,
+      "downloaded_utc": "2026-09-13T13:19:37.435282+00:00"
+    },
+    "sqmc": {
+      "execution": "complete",
+      "download": "complete",
+      "started_utc": "2026-09-13T13:19:40.391858+00:00",
+      "finished_utc": "2026-09-13T13:25:29.437490+00:00",
+      "archive_ready": true,
+      "downloaded_utc": "2026-09-13T13:25:38.700102+00:00"
+    }
+  },
+  "endpoint": "gpu-a100-s-kkb-ass1c1-3umzqftrnbogd",
+  "shutdown_utc": "2026-09-13T13:25:45.493672+00:00",
+  "finished_utc": "2026-09-13T13:25:45.494320+00:00",
+  "exit_code": 0
+}

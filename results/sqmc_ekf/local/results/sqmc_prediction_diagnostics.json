@@ -1,0 +1,4380 @@
+{
+  "schema_version": 1,
+  "source_revision": "336842f0e8739071141928486f54db1d08175f0c",
+  "dataset_hash": "4db1d359d1438a23918df4af217da09b72dd92bb638f2a393d49d91616c92ce3",
+  "checkpoint_hash": "b701f8d832c4103a31152f2c15358b84e461f2c0d2822dce3b5236ea7643557b",
+  "filter_key_provenance": "fold_in(root, 2_000_000)",
+  "n_particles": 512,
+  "max_goals": 8,
+  "scope": "worldcup",
+  "forecasts": [
+    {
+      "fixture_id": 49416,
+      "date": "2026-06-11",
+      "home_id": 26,
+      "away_id": 38,
+      "home": "Mexico",
+      "away": "South Africa",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5007,
+      "history_index": 5008,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.3564782116543816,
+        "home_defence": 0.3711706178045411,
+        "away_attack": -0.227484013605763,
+        "away_defence": 0.664023519442766
+      },
+      "posterior_means": {
+        "home_attack": -0.02402087856000197,
+        "home_defence": 0.3475880779739527,
+        "away_attack": -0.32873622087103127,
+        "away_defence": 0.4117384872303831
+      },
+      "total_strength_difference": {
+        "mean": -0.42184709968684375,
+        "q05": -1.6124670783454889,
+        "q50": -0.45617257513451853,
+        "q95": 0.8741397241878073,
+        "fraction_positive": 0.275390625
+      },
+      "ess_before_resampling": 458.14703868023787,
+      "ess_after_update": 267.3206374668113,
+      "raw_grid_mass": 0.9997933396942734,
+      "outcome_probabilities": {
+        "home": 0.24194136520899323,
+        "draw": 0.39562883770076473,
+        "away": 0.3624297970902422
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49417,
+      "date": "2026-06-11",
+      "home_id": 39,
+      "away_id": 12,
+      "home": "South Korea",
+      "away": "Czech Republic",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5008,
+      "history_index": 5009,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.8377987910835264,
+        "home_defence": 0.17929916474853083,
+        "away_attack": 1.260152768721875,
+        "away_defence": 0.7263697006049383
+      },
+      "posterior_means": {
+        "home_attack": -0.29772628153963937,
+        "home_defence": 0.4157159391062377,
+        "away_attack": 0.8436438433265011,
+        "away_defence": 0.2609956972052023
+      },
+      "total_strength_difference": {
+        "mean": -2.645022095661809,
+        "q05": -4.5997941713571455,
+        "q50": -2.7368339252033875,
+        "q95": -0.5909308208411344,
+        "fraction_positive": 0.015625
+      },
+      "ess_before_resampling": 267.3206374668113,
+      "ess_after_update": 112.23945511543347,
+      "raw_grid_mass": 0.853069256008934,
+      "outcome_probabilities": {
+        "home": 0.04549431566094496,
+        "draw": 0.09151994977228063,
+        "away": 0.8629857345667742
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49418,
+      "date": "2026-06-12",
+      "home_id": 7,
+      "away_id": 5,
+      "home": "Canada",
+      "away": "Bosnia and Herzegovina",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5009,
+      "history_index": 5010,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.2549766860450509,
+        "home_defence": 1.1513673087500567,
+        "away_attack": -0.5922688872180002,
+        "away_defence": 0.7091725082615425
+      },
+      "posterior_means": {
+        "home_attack": 0.16503321451989286,
+        "home_defence": 1.0625500636914873,
+        "away_attack": -0.4263723162703443,
+        "away_defence": 0.8008943526692924
+      },
+      "total_strength_difference": {
+        "mean": 1.2894403737515652,
+        "q05": -0.8970611756277462,
+        "q50": 1.2702485552034255,
+        "q95": 3.1606797483814044,
+        "fraction_positive": 0.79296875
+      },
+      "ess_before_resampling": 112.23945511543347,
+      "ess_after_update": 377.97113009259374,
+      "raw_grid_mass": 0.9894991156446977,
+      "outcome_probabilities": {
+        "home": 0.4967693392995076,
+        "draw": 0.3841987112017061,
+        "away": 0.11903194949878602
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49419,
+      "date": "2026-06-12",
+      "home_id": 45,
+      "away_id": 32,
+      "home": "United States",
+      "away": "Paraguay",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5010,
+      "history_index": 5011,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.060294053285138566,
+        "home_defence": 0.634954955436095,
+        "away_attack": -0.4996045145567759,
+        "away_defence": 0.4503677611440629
+      },
+      "posterior_means": {
+        "home_attack": 0.21436209680797894,
+        "home_defence": 0.448608528029171,
+        "away_attack": -0.7080454816591657,
+        "away_defence": -0.2750581920652259
+      },
+      "total_strength_difference": {
+        "mean": 0.6238976555636695,
+        "q05": -2.065225261011302,
+        "q50": 1.0487759185383498,
+        "q95": 3.0128722244789983,
+        "fraction_positive": 0.640625
+      },
+      "ess_before_resampling": 377.97113009259374,
+      "ess_after_update": 129.8996735331846,
+      "raw_grid_mass": 0.9983849097584163,
+      "outcome_probabilities": {
+        "home": 0.4271504035615988,
+        "draw": 0.2903537347684535,
+        "away": 0.2824958616699486
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49420,
+      "date": "2026-06-13",
+      "home_id": 34,
+      "away_id": 42,
+      "home": "Qatar",
+      "away": "Switzerland",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5011,
+      "history_index": 5012,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.6400599638852355,
+        "home_defence": -0.5571504709940251,
+        "away_attack": 0.5707775808304542,
+        "away_defence": 0.9742219642792378
+      },
+      "posterior_means": {
+        "home_attack": -0.6152686037096634,
+        "home_defence": -0.567638880742231,
+        "away_attack": -0.25345287145077067,
+        "away_defence": 0.40323190603102177
+      },
+      "total_strength_difference": {
+        "mean": -2.742209979988953,
+        "q05": -5.120990692549142,
+        "q50": -2.709728533964294,
+        "q95": -0.557894620501732,
+        "fraction_positive": 0.013671875
+      },
+      "ess_before_resampling": 129.8996735331846,
+      "ess_after_update": 210.55301999620795,
+      "raw_grid_mass": 0.7948200985072176,
+      "outcome_probabilities": {
+        "home": 0.05411591632625555,
+        "draw": 0.10990889618968935,
+        "away": 0.8359751874840544
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49421,
+      "date": "2026-06-13",
+      "home_id": 6,
+      "away_id": 27,
+      "home": "Brazil",
+      "away": "Morocco",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5012,
+      "history_index": 5013,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6950005669140984,
+        "home_defence": 0.976151120996445,
+        "away_attack": 0.5003930134305906,
+        "away_defence": 0.9012124074643324
+      },
+      "posterior_means": {
+        "home_attack": 0.6941127211240805,
+        "home_defence": 0.9470460371715361,
+        "away_attack": 0.5428529036174548,
+        "away_defence": 0.9070113951481605
+      },
+      "total_strength_difference": {
+        "mean": 0.2695462670156202,
+        "q05": -1.6570516031895521,
+        "q50": 0.18428894492900827,
+        "q95": 2.034919752820312,
+        "fraction_positive": 0.66796875
+      },
+      "ess_before_resampling": 210.55301999620795,
+      "ess_after_update": 463.9268599750314,
+      "raw_grid_mass": 0.9975536949502534,
+      "outcome_probabilities": {
+        "home": 0.4125885344219447,
+        "draw": 0.28108011820386775,
+        "away": 0.30633134737418716
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49422,
+      "date": "2026-06-13",
+      "home_id": 20,
+      "away_id": 36,
+      "home": "Haiti",
+      "away": "Scotland",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5013,
+      "history_index": 5014,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -1.3121905751978942,
+        "home_defence": -0.4095377965985982,
+        "away_attack": 0.8974489479102089,
+        "away_defence": 0.8168919668898234
+      },
+      "posterior_means": {
+        "home_attack": -1.1961262429487842,
+        "home_defence": -0.06176724881334608,
+        "away_attack": 0.5095361689225795,
+        "away_defence": 0.7804539990693835
+      },
+      "total_strength_difference": {
+        "mean": -3.436069286596524,
+        "q05": -4.738055543536993,
+        "q50": -3.7933975150697306,
+        "q95": -1.7106826762253327,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 463.9268599750314,
+      "ess_after_update": 214.2530786204526,
+      "raw_grid_mass": 0.7358506722641257,
+      "outcome_probabilities": {
+        "home": 0.01660926052460234,
+        "draw": 0.07210722828758047,
+        "away": 0.9112835111878175
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49423,
+      "date": "2026-06-13",
+      "home_id": 2,
+      "away_id": 44,
+      "home": "Australia",
+      "away": "Turkey",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5014,
+      "history_index": 5015,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.0009218630258487903,
+        "home_defence": 0.6841342981443193,
+        "away_attack": 0.5325942380169231,
+        "away_defence": 0.0502543764879798
+      },
+      "posterior_means": {
+        "home_attack": -0.020070395482142036,
+        "home_defence": 0.8802801934362934,
+        "away_attack": 0.24310608312385376,
+        "away_defence": -0.09788277503883153
+      },
+      "total_strength_difference": {
+        "mean": 0.10220754666526513,
+        "q05": -1.448648131429657,
+        "q50": 0.07214876696555564,
+        "q95": 1.8604982964815222,
+        "fraction_positive": 0.546875
+      },
+      "ess_before_resampling": 214.2530786204526,
+      "ess_after_update": 302.979335423596,
+      "raw_grid_mass": 0.9869360168284713,
+      "outcome_probabilities": {
+        "home": 0.39347354400708956,
+        "draw": 0.23961626791464574,
+        "away": 0.3669101880782642
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49424,
+      "date": "2026-06-14",
+      "home_id": 18,
+      "away_id": 11,
+      "home": "Germany",
+      "away": "Cura\u00e7ao",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5015,
+      "history_index": 5016,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.39825707473302513,
+        "home_defence": 0.3686691899745077,
+        "away_attack": -0.47156368648532787,
+        "away_defence": 0.05265677494036461
+      },
+      "posterior_means": {
+        "home_attack": 1.0775691169040307,
+        "home_defence": 0.7483910575995875,
+        "away_attack": -0.5461641377273033,
+        "away_defence": -0.35883452106719005
+      },
+      "total_strength_difference": {
+        "mean": 1.185833176252496,
+        "q05": -0.7808262813252865,
+        "q50": 1.024705406750324,
+        "q95": 3.9071035944609696,
+        "fraction_positive": 0.759765625
+      },
+      "ess_before_resampling": 302.979335423596,
+      "ess_after_update": 123.36986739438632,
+      "raw_grid_mass": 0.9210034221184742,
+      "outcome_probabilities": {
+        "home": 0.5809771561579926,
+        "draw": 0.2134401289690735,
+        "away": 0.20558271487293375
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49425,
+      "date": "2026-06-14",
+      "home_id": 23,
+      "away_id": 14,
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5016,
+      "history_index": 5017,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.4931083452602563,
+        "home_defence": 0.29332780141436826,
+        "away_attack": 0.7537171726764276,
+        "away_defence": 0.7774353236897186
+      },
+      "posterior_means": {
+        "home_attack": 0.9173486951821339,
+        "home_defence": 0.8904180440560072,
+        "away_attack": -0.2772247657254284,
+        "away_defence": 1.3377098096375073
+      },
+      "total_strength_difference": {
+        "mean": -0.7447163496915213,
+        "q05": -2.3192544396102166,
+        "q50": -1.0228838806786988,
+        "q95": 1.238686401414585,
+        "fraction_positive": 0.322265625
+      },
+      "ess_before_resampling": 123.36986739438632,
+      "ess_after_update": 147.59659924729127,
+      "raw_grid_mass": 0.9585241376946981,
+      "outcome_probabilities": {
+        "home": 0.22891346061564258,
+        "draw": 0.1694606452668839,
+        "away": 0.6016258941174725
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49426,
+      "date": "2026-06-14",
+      "home_id": 28,
+      "away_id": 24,
+      "home": "Netherlands",
+      "away": "Japan",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5017,
+      "history_index": 5018,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.3537650101961551,
+        "home_defence": 0.4613954302576097,
+        "away_attack": 1.4226417669792013,
+        "away_defence": 0.1622416787621946
+      },
+      "posterior_means": {
+        "home_attack": 1.296953697731013,
+        "home_defence": 0.565780197065854,
+        "away_attack": 1.3747798234943636,
+        "away_defence": 0.37648358736713583
+      },
+      "total_strength_difference": {
+        "mean": 0.2302769947123689,
+        "q05": -0.9643703461092257,
+        "q50": 0.295150137230051,
+        "q95": 1.1938298620574612,
+        "fraction_positive": 0.689453125
+      },
+      "ess_before_resampling": 147.59659924729127,
+      "ess_after_update": 278.5720216284244,
+      "raw_grid_mass": 0.8377890655790947,
+      "outcome_probabilities": {
+        "home": 0.5258736423220992,
+        "draw": 0.12497172366136527,
+        "away": 0.3491546340165356
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49427,
+      "date": "2026-06-14",
+      "home_id": 41,
+      "away_id": 43,
+      "home": "Sweden",
+      "away": "Tunisia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5018,
+      "history_index": 5019,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.8441107487864495,
+        "home_defence": 0.8766354086309819,
+        "away_attack": 0.7738602412272244,
+        "away_defence": -0.13867413626412115
+      },
+      "posterior_means": {
+        "home_attack": 1.1442485239026396,
+        "home_defence": 1.0841255261256175,
+        "away_attack": 0.9970330475689615,
+        "away_defence": -0.3795926765576531
+      },
+      "total_strength_difference": {
+        "mean": 1.085560052454328,
+        "q05": -0.9011942414031054,
+        "q50": 1.4547888727229723,
+        "q95": 2.433367204273498,
+        "fraction_positive": 0.796875
+      },
+      "ess_before_resampling": 278.5720216284244,
+      "ess_after_update": 300.0183660063787,
+      "raw_grid_mass": 0.7765224090474923,
+      "outcome_probabilities": {
+        "home": 0.6456076698381936,
+        "draw": 0.1446072417191935,
+        "away": 0.20978508844261295
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49428,
+      "date": "2026-06-15",
+      "home_id": 4,
+      "away_id": 15,
+      "home": "Belgium",
+      "away": "Egypt",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5019,
+      "history_index": 5020,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.2800377733956256,
+        "home_defence": 0.43065806212896196,
+        "away_attack": 0.30446393654318343,
+        "away_defence": 0.5404065683143077
+      },
+      "posterior_means": {
+        "home_attack": 1.2733236336190474,
+        "home_defence": 0.4363422404321562,
+        "away_attack": 0.33386113672204637,
+        "away_defence": 0.6048844000042276
+      },
+      "total_strength_difference": {
+        "mean": 0.8658253306670965,
+        "q05": 0.07265832288674058,
+        "q50": 0.9276147772562384,
+        "q95": 1.6089099271062075,
+        "fraction_positive": 0.96484375
+      },
+      "ess_before_resampling": 300.0183660063787,
+      "ess_after_update": 460.5073972239522,
+      "raw_grid_mass": 0.9932163051945224,
+      "outcome_probabilities": {
+        "home": 0.6801869935901375,
+        "draw": 0.15159482805131458,
+        "away": 0.16821817835854758
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49429,
+      "date": "2026-06-15",
+      "home_id": 21,
+      "away_id": 29,
+      "home": "Iran",
+      "away": "New Zealand",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5020,
+      "history_index": 5021,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.05027368811139478,
+        "home_defence": 1.0813469359682115,
+        "away_attack": -0.40199509634964653,
+        "away_defence": 0.7677021361073383
+      },
+      "posterior_means": {
+        "home_attack": 0.1057484422412205,
+        "home_defence": 0.9082492522173349,
+        "away_attack": -0.2797185027609578,
+        "away_defence": 0.7867295204350181
+      },
+      "total_strength_difference": {
+        "mean": 0.6653662080991252,
+        "q05": -0.7924537757804065,
+        "q50": 0.6315379679002886,
+        "q95": 2.2056870447279873,
+        "fraction_positive": 0.759765625
+      },
+      "ess_before_resampling": 460.5073972239522,
+      "ess_after_update": 315.30720191374957,
+      "raw_grid_mass": 0.9991091558706229,
+      "outcome_probabilities": {
+        "home": 0.36893604174436867,
+        "draw": 0.45269772323761914,
+        "away": 0.1783662350180122
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49430,
+      "date": "2026-06-15",
+      "home_id": 40,
+      "away_id": 8,
+      "home": "Spain",
+      "away": "Cape Verde",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5021,
+      "history_index": 5022,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.26110561680154465,
+        "home_defence": 0.7123756560837583,
+        "away_attack": 0.023046593630363894,
+        "away_defence": -0.8487858928200462
+      },
+      "posterior_means": {
+        "home_attack": 0.19209720325878998,
+        "home_defence": 0.7211335838039377,
+        "away_attack": -0.052040684943076544,
+        "away_defence": -0.3176067761205752
+      },
+      "total_strength_difference": {
+        "mean": 1.7992205720749852,
+        "q05": 0.3804248937313698,
+        "q50": 1.8304606117073452,
+        "q95": 3.2855479189335193,
+        "fraction_positive": 0.984375
+      },
+      "ess_before_resampling": 315.30720191374957,
+      "ess_after_update": 153.93653140055872,
+      "raw_grid_mass": 0.8842037972618724,
+      "outcome_probabilities": {
+        "home": 0.8333490238182983,
+        "draw": 0.09347829368669221,
+        "away": 0.07317268249500955
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49431,
+      "date": "2026-06-15",
+      "home_id": 35,
+      "away_id": 46,
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5022,
+      "history_index": 5023,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.43208274182701545,
+        "home_defence": 0.9739930757316084,
+        "away_attack": 1.3173794755170702,
+        "away_defence": 0.18805496793614632
+      },
+      "posterior_means": {
+        "home_attack": 0.4325118024948541,
+        "home_defence": 0.9918622807612019,
+        "away_attack": 1.232823862948314,
+        "away_defence": 0.2453431729312755
+      },
+      "total_strength_difference": {
+        "mean": -0.0993586258945929,
+        "q05": -1.0298037168765701,
+        "q50": -0.08393968259783069,
+        "q95": 0.7541726335699954,
+        "fraction_positive": 0.43359375
+      },
+      "ess_before_resampling": 153.93653140055872,
+      "ess_after_update": 444.7896807969542,
+      "raw_grid_mass": 0.9949261010863213,
+      "outcome_probabilities": {
+        "home": 0.37085923128229215,
+        "draw": 0.1971399074137718,
+        "away": 0.43200086130393567
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49432,
+      "date": "2026-06-16",
+      "home_id": 17,
+      "away_id": 37,
+      "home": "France",
+      "away": "Senegal",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5023,
+      "history_index": 5024,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6151448748418495,
+        "home_defence": -0.29167084755229505,
+        "away_attack": 0.6759778726231873,
+        "away_defence": 1.3521080091827165
+      },
+      "posterior_means": {
+        "home_attack": 0.6697703890328586,
+        "home_defence": -0.2436952207731264,
+        "away_attack": 0.6184360093620825,
+        "away_defence": 1.3222339291305423
+      },
+      "total_strength_difference": {
+        "mean": -1.7046118545163496,
+        "q05": -2.167339313897735,
+        "q50": -1.6985780412429543,
+        "q95": -1.2176386243079487,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 444.7896807969542,
+      "ess_after_update": 344.9605494808166,
+      "raw_grid_mass": 0.981657714175255,
+      "outcome_probabilities": {
+        "home": 0.04035917337416935,
+        "draw": 0.08419796412876959,
+        "away": 0.875442862497061
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49433,
+      "date": "2026-06-16",
+      "home_id": 22,
+      "away_id": 30,
+      "home": "Iraq",
+      "away": "Norway",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5024,
+      "history_index": 5025,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.2686983783258051,
+        "home_defence": 0.6197239416163356,
+        "away_attack": 1.34074363403649,
+        "away_defence": 0.9419956963712277
+      },
+      "posterior_means": {
+        "home_attack": 0.0670496844807517,
+        "home_defence": 0.1846161109786399,
+        "away_attack": 1.41094639113955,
+        "away_defence": 1.012923884622943
+      },
+      "total_strength_difference": {
+        "mean": -1.3943170104655773,
+        "q05": -2.975386126754445,
+        "q50": -2.2437747152452285,
+        "q95": 0.47349534408785027,
+        "fraction_positive": 0.28125
+      },
+      "ess_before_resampling": 344.9605494808166,
+      "ess_after_update": 323.9135088190306,
+      "raw_grid_mass": 0.9002650414688775,
+      "outcome_probabilities": {
+        "home": 0.19099091494193002,
+        "draw": 0.15156220513114751,
+        "away": 0.6574468799269225
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49434,
+      "date": "2026-06-16",
+      "home_id": 1,
+      "away_id": 0,
+      "home": "Argentina",
+      "away": "Algeria",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5025,
+      "history_index": 5026,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.13499842138917048,
+        "home_defence": 0.7076842449338603,
+        "away_attack": 0.21454595524647516,
+        "away_defence": 1.000842579464332
+      },
+      "posterior_means": {
+        "home_attack": 0.6615484087181637,
+        "home_defence": 0.9211505067208483,
+        "away_attack": 0.13439769173331564,
+        "away_defence": 0.9234801899456498
+      },
+      "total_strength_difference": {
+        "mean": -0.37270586838777625,
+        "q05": -1.756384686701335,
+        "q50": -0.3658683949440361,
+        "q95": 0.9220993755433157,
+        "fraction_positive": 0.306640625
+      },
+      "ess_before_resampling": 323.9135088190306,
+      "ess_after_update": 166.60321587261373,
+      "raw_grid_mass": 0.9996698969382495,
+      "outcome_probabilities": {
+        "home": 0.2542730489396572,
+        "draw": 0.35336838188384984,
+        "away": 0.3923585691764927
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49435,
+      "date": "2026-06-16",
+      "home_id": 3,
+      "away_id": 25,
+      "home": "Austria",
+      "away": "Jordan",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5026,
+      "history_index": 5027,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.08014382083783,
+        "home_defence": -0.18781911250525335,
+        "away_attack": 0.4673329882209862,
+        "away_defence": 0.3832915548023712
+      },
+      "posterior_means": {
+        "home_attack": 1.0031157578574723,
+        "home_defence": -0.1559903304507894,
+        "away_attack": 0.2540235246633898,
+        "away_defence": 0.5153367618159165
+      },
+      "total_strength_difference": {
+        "mean": 0.041700165309219286,
+        "q05": -0.5340068756726771,
+        "q50": 0.01836118895940539,
+        "q95": 0.6850686646788395,
+        "fraction_positive": 0.525390625
+      },
+      "ess_before_resampling": 166.60321587261373,
+      "ess_after_update": 404.2602535055937,
+      "raw_grid_mass": 0.869306345146543,
+      "outcome_probabilities": {
+        "home": 0.3999482065869958,
+        "draw": 0.19323299589876453,
+        "away": 0.4068187975142397
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49436,
+      "date": "2026-06-17",
+      "home_id": 33,
+      "away_id": 13,
+      "home": "Portugal",
+      "away": "DR Congo",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5027,
+      "history_index": 5028,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.5696914400039551,
+        "home_defence": 0.37518764057845916,
+        "away_attack": 0.2881914259182402,
+        "away_defence": -0.20025579464479992
+      },
+      "posterior_means": {
+        "home_attack": 0.44381701136868107,
+        "home_defence": 0.3794445040119116,
+        "away_attack": 0.2686895381674282,
+        "away_defence": 0.01586310493546913
+      },
+      "total_strength_difference": {
+        "mean": 0.856943449308974,
+        "q05": -0.5704809360818562,
+        "q50": 0.8611974303976707,
+        "q95": 2.205544808619411,
+        "fraction_positive": 0.859375
+      },
+      "ess_before_resampling": 404.2602535055937,
+      "ess_after_update": 335.3987575368666,
+      "raw_grid_mass": 0.9510654094556286,
+      "outcome_probabilities": {
+        "home": 0.6497606580648743,
+        "draw": 0.1469177042844338,
+        "away": 0.20332163765069192
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49437,
+      "date": "2026-06-17",
+      "home_id": 47,
+      "away_id": 9,
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5028,
+      "history_index": 5029,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.3441022906541735,
+        "home_defence": 0.38343121711792966,
+        "away_attack": -0.021559448737685737,
+        "away_defence": 0.10900718299224192
+      },
+      "posterior_means": {
+        "home_attack": -0.3754043355247683,
+        "home_defence": 0.3457252868333916,
+        "away_attack": 0.04453766113393881,
+        "away_defence": 0.11585621730307062
+      },
+      "total_strength_difference": {
+        "mean": -0.04811880779080013,
+        "q05": -1.2911545606155814,
+        "q50": 0.016513224443990386,
+        "q95": 0.5941227366080852,
+        "fraction_positive": 0.515625
+      },
+      "ess_before_resampling": 335.3987575368666,
+      "ess_after_update": 428.6707075795476,
+      "raw_grid_mass": 0.9999938990603999,
+      "outcome_probabilities": {
+        "home": 0.3315821415774152,
+        "draw": 0.3240843963680298,
+        "away": 0.3443334620545548
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49438,
+      "date": "2026-06-17",
+      "home_id": 16,
+      "away_id": 10,
+      "home": "England",
+      "away": "Croatia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5029,
+      "history_index": 5030,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.1264601348633657,
+        "home_defence": 1.88831548507654,
+        "away_attack": 1.5103959888133558,
+        "away_defence": -0.23767953757512808
+      },
+      "posterior_means": {
+        "home_attack": 0.16773344217480465,
+        "home_defence": 1.8665700753111203,
+        "away_attack": 1.5133549444308063,
+        "away_defence": -0.30473165221118703
+      },
+      "total_strength_difference": {
+        "mean": 0.7420591687016784,
+        "q05": -0.2528277250206784,
+        "q50": 0.8078192117452714,
+        "q95": 1.3195494668761416,
+        "fraction_positive": 0.921875
+      },
+      "ess_before_resampling": 428.6707075795476,
+      "ess_after_update": 418.4465350850907,
+      "raw_grid_mass": 0.9993597118964868,
+      "outcome_probabilities": {
+        "home": 0.604124943147227,
+        "draw": 0.20899249669197612,
+        "away": 0.18688256016079746
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49439,
+      "date": "2026-06-17",
+      "home_id": 19,
+      "away_id": 31,
+      "home": "Ghana",
+      "away": "Panama",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5030,
+      "history_index": 5031,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.3485753123984931,
+        "home_defence": 0.12927618477858074,
+        "away_attack": -0.8726343975881742,
+        "away_defence": -0.5818115428617087
+      },
+      "posterior_means": {
+        "home_attack": 0.27064309892253696,
+        "home_defence": 0.15191906465696609,
+        "away_attack": -0.882971576128053,
+        "away_defence": -0.5359736772324071
+      },
+      "total_strength_difference": {
+        "mean": 1.9322974376269566,
+        "q05": 1.3390138665008544,
+        "q50": 1.9284535978821211,
+        "q95": 2.5489022278177864,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 418.4465350850907,
+      "ess_after_update": 400.68325357759915,
+      "raw_grid_mass": 0.9814008436419379,
+      "outcome_probabilities": {
+        "home": 0.8843135648594806,
+        "draw": 0.08264174101501712,
+        "away": 0.033044694125502184
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49440,
+      "date": "2026-06-18",
+      "home_id": 12,
+      "away_id": 38,
+      "home": "Czech Republic",
+      "away": "South Africa",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5031,
+      "history_index": 5032,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.4166384752401042,
+        "home_defence": -0.17381142564570334,
+        "away_attack": 0.5884291921997186,
+        "away_defence": 0.20086807625549294
+      },
+      "posterior_means": {
+        "home_attack": 1.3443846417096497,
+        "home_defence": -0.12421886930302575,
+        "away_attack": 0.5209118824836124,
+        "away_defence": 0.22951888394179606
+      },
+      "total_strength_difference": {
+        "mean": 0.4535297811391892,
+        "q05": -0.08873917651755572,
+        "q50": 0.3302927575791791,
+        "q95": 1.9942667687670041,
+        "fraction_positive": 0.8984375
+      },
+      "ess_before_resampling": 400.68325357759915,
+      "ess_after_update": 323.4266299754964,
+      "raw_grid_mass": 0.9325299545823112,
+      "outcome_probabilities": {
+        "home": 0.5982164169496252,
+        "draw": 0.13081048639522305,
+        "away": 0.2709730966551517
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49441,
+      "date": "2026-06-18",
+      "home_id": 26,
+      "away_id": 39,
+      "home": "Mexico",
+      "away": "South Korea",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5032,
+      "history_index": 5033,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.5576790499450083,
+        "home_defence": 0.6437134623964066,
+        "away_attack": -0.33536481275741237,
+        "away_defence": 0.45756740413718394
+      },
+      "posterior_means": {
+        "home_attack": -0.5634876615115288,
+        "home_defence": 0.6518574884268734,
+        "away_attack": -0.349941888619,
+        "away_defence": 0.4398680571546798
+      },
+      "total_strength_difference": {
+        "mean": -0.03616817892837308,
+        "q05": -0.47640250686942864,
+        "q50": -0.02683629687002137,
+        "q95": 0.3894113035183835,
+        "fraction_positive": 0.447265625
+      },
+      "ess_before_resampling": 323.4266299754964,
+      "ess_after_update": 502.6667317625819,
+      "raw_grid_mass": 0.9999998496918043,
+      "outcome_probabilities": {
+        "home": 0.258759787649758,
+        "draw": 0.46905791890365,
+        "away": 0.27218229344659195
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49442,
+      "date": "2026-06-18",
+      "home_id": 42,
+      "away_id": 5,
+      "home": "Switzerland",
+      "away": "Bosnia and Herzegovina",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5033,
+      "history_index": 5034,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.20241171954928,
+        "home_defence": 0.88129783485042,
+        "away_attack": 0.5152625017960156,
+        "away_defence": 0.27949741868129013
+      },
+      "posterior_means": {
+        "home_attack": 1.218719923538484,
+        "home_defence": 0.8825568804509503,
+        "away_attack": 0.5177127386276962,
+        "away_defence": 0.26056667146234413
+      },
+      "total_strength_difference": {
+        "mean": 1.288949633922394,
+        "q05": 0.805676415948264,
+        "q50": 1.31779381256328,
+        "q95": 1.7267186099465734,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 502.6667317625819,
+      "ess_after_update": 496.92600293914717,
+      "raw_grid_mass": 0.9856425019222549,
+      "outcome_probabilities": {
+        "home": 0.8162847913772617,
+        "draw": 0.10964809511699049,
+        "away": 0.07406711350574766
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49443,
+      "date": "2026-06-18",
+      "home_id": 7,
+      "away_id": 34,
+      "home": "Canada",
+      "away": "Qatar",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5034,
+      "history_index": 5035,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.4259420127532183,
+        "home_defence": 0.9599095673428,
+        "away_attack": -0.41877512076129775,
+        "away_defence": 0.8346223336245921
+      },
+      "posterior_means": {
+        "home_attack": 1.528391456150327,
+        "home_defence": 0.9644638383250882,
+        "away_attack": -0.5001736119908453,
+        "away_defence": 0.7829218261156455
+      },
+      "total_strength_difference": {
+        "mean": 1.9700043672327237,
+        "q05": 0.6782638865285844,
+        "q50": 2.186690170364466,
+        "q95": 2.5725028439906703,
+        "fraction_positive": 0.998046875
+      },
+      "ess_before_resampling": 496.92600293914717,
+      "ess_after_update": 329.2604298959012,
+      "raw_grid_mass": 0.9972859685899145,
+      "outcome_probabilities": {
+        "home": 0.8136890824124157,
+        "draw": 0.13466783462018525,
+        "away": 0.051643082967398356
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49444,
+      "date": "2026-06-19",
+      "home_id": 36,
+      "away_id": 27,
+      "home": "Scotland",
+      "away": "Morocco",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5035,
+      "history_index": 5036,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.4409836072824985,
+        "home_defence": 0.5244829350505232,
+        "away_attack": -0.6342763566386598,
+        "away_defence": 1.2521891383974342
+      },
+      "posterior_means": {
+        "home_attack": 0.4258559232710349,
+        "home_defence": 0.5131931637637448,
+        "away_attack": -0.6277676165633058,
+        "away_defence": 1.2542844129667092
+      },
+      "total_strength_difference": {
+        "mean": 0.3475537605742475,
+        "q05": -0.045952623321297875,
+        "q50": 0.3614365417544767,
+        "q95": 0.7430173284835132,
+        "fraction_positive": 0.9140625
+      },
+      "ess_before_resampling": 329.2604298959012,
+      "ess_after_update": 501.7889504869512,
+      "raw_grid_mass": 0.9999999506866447,
+      "outcome_probabilities": {
+        "home": 0.3281354109621058,
+        "draw": 0.45925041182996434,
+        "away": 0.21261417720792947
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49445,
+      "date": "2026-06-19",
+      "home_id": 6,
+      "away_id": 20,
+      "home": "Brazil",
+      "away": "Haiti",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5036,
+      "history_index": 5037,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.5236612479028466,
+        "home_defence": 1.749225318296974,
+        "away_attack": -0.2109377393539668,
+        "away_defence": -0.0804667454193545
+      },
+      "posterior_means": {
+        "home_attack": 0.5697622136640867,
+        "home_defence": 1.7764720303601929,
+        "away_attack": -0.23593402144382697,
+        "away_defence": -0.08432530106061396
+      },
+      "total_strength_difference": {
+        "mean": 2.5642910509731416,
+        "q05": 1.5348051815064296,
+        "q50": 2.702903171301821,
+        "q95": 3.232129108705507,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 501.7889504869512,
+      "ess_after_update": 490.4416843586435,
+      "raw_grid_mass": 0.9972533093895621,
+      "outcome_probabilities": {
+        "home": 0.8557215931375323,
+        "draw": 0.11950662484881612,
+        "away": 0.02477178201365107
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49446,
+      "date": "2026-06-19",
+      "home_id": 45,
+      "away_id": 2,
+      "home": "United States",
+      "away": "Australia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5037,
+      "history_index": 5038,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.0511758479731341,
+        "home_defence": 0.17380095914307037,
+        "away_attack": 0.5418182774816073,
+        "away_defence": 1.9454002341778351
+      },
+      "posterior_means": {
+        "home_attack": 1.0724664670191908,
+        "home_defence": 0.19883267698916496,
+        "away_attack": 0.47574713608342445,
+        "away_defence": 1.8660127813949632
+      },
+      "total_strength_difference": {
+        "mean": -1.2622417045432384,
+        "q05": -1.7126769817897411,
+        "q50": -1.3005187636609978,
+        "q95": -0.7208447855729332,
+        "fraction_positive": 0.001953125
+      },
+      "ess_before_resampling": 490.4416843586435,
+      "ess_after_update": 361.4469275790913,
+      "raw_grid_mass": 0.9996026657120859,
+      "outcome_probabilities": {
+        "home": 0.10168666767850897,
+        "draw": 0.2002342613515523,
+        "away": 0.6980790709699385
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49447,
+      "date": "2026-06-19",
+      "home_id": 44,
+      "away_id": 32,
+      "home": "Turkey",
+      "away": "Paraguay",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5038,
+      "history_index": 5039,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.682187679942988,
+        "home_defence": -0.17638978804546088,
+        "away_attack": -0.5118466823562307,
+        "away_defence": 0.21688758372506262
+      },
+      "posterior_means": {
+        "home_attack": 0.3638130577604002,
+        "home_defence": -0.12331267981458663,
+        "away_attack": -0.5002868903779544,
+        "away_defence": 0.23892559978292563
+      },
+      "total_strength_difference": {
+        "mean": 0.8007569905286952,
+        "q05": 0.11418498771432165,
+        "q50": 0.7946107241174147,
+        "q95": 1.5711259944122424,
+        "fraction_positive": 0.98046875
+      },
+      "ess_before_resampling": 361.4469275790913,
+      "ess_after_update": 325.0874915728155,
+      "raw_grid_mass": 0.9937082175862252,
+      "outcome_probabilities": {
+        "home": 0.6339162395713254,
+        "draw": 0.19699257291543937,
+        "away": 0.169091187513236
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49448,
+      "date": "2026-06-20",
+      "home_id": 18,
+      "away_id": 23,
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5039,
+      "history_index": 5040,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.81331281640123,
+        "home_defence": 1.4663156487093814,
+        "away_attack": 1.0935425604507174,
+        "away_defence": 1.0313270632004437
+      },
+      "posterior_means": {
+        "home_attack": 1.7879556519050854,
+        "home_defence": 1.467852175736959,
+        "away_attack": 1.1008774263686099,
+        "away_defence": 1.0557040906892654
+      },
+      "total_strength_difference": {
+        "mean": 1.1547588414594498,
+        "q05": 0.5816177859097189,
+        "q50": 1.1363529995765325,
+        "q95": 1.819875339703049,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 325.0874915728155,
+      "ess_after_update": 488.1189791419013,
+      "raw_grid_mass": 0.9910962541490093,
+      "outcome_probabilities": {
+        "home": 0.7625518080700849,
+        "draw": 0.1364760686871068,
+        "away": 0.100972123242808
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49449,
+      "date": "2026-06-20",
+      "home_id": 14,
+      "away_id": 11,
+      "home": "Ecuador",
+      "away": "Cura\u00e7ao",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5040,
+      "history_index": 5041,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.430892443755817,
+        "home_defence": 1.507412528439411,
+        "away_attack": -0.4378955805961281,
+        "away_defence": 0.08695398923561759
+      },
+      "posterior_means": {
+        "home_attack": -0.44456015574832625,
+        "home_defence": 1.5105316017859318,
+        "away_attack": -0.44327894727878286,
+        "away_defence": 0.10308737732266784
+      },
+      "total_strength_difference": {
+        "mean": 1.4274616760441048,
+        "q05": 0.8546127483854759,
+        "q50": 1.4416837834624932,
+        "q95": 1.9497685692552351,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 488.1189791419013,
+      "ess_after_update": 499.5534665107296,
+      "raw_grid_mass": 0.9999992667894692,
+      "outcome_probabilities": {
+        "home": 0.4815565738345039,
+        "draw": 0.43168388715292866,
+        "away": 0.08675953901256744
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49450,
+      "date": "2026-06-20",
+      "home_id": 28,
+      "away_id": 41,
+      "home": "Netherlands",
+      "away": "Sweden",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5041,
+      "history_index": 5042,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.3644004745301743,
+        "home_defence": 0.4430922083765249,
+        "away_attack": 1.2481392829955171,
+        "away_defence": 1.2441785958195715
+      },
+      "posterior_means": {
+        "home_attack": 1.4769325099796553,
+        "home_defence": 0.5021625778917121,
+        "away_attack": 1.1727931899711934,
+        "away_defence": 1.111218041599871
+      },
+      "total_strength_difference": {
+        "mean": -0.6848251959083895,
+        "q05": -1.2507753186814126,
+        "q50": -0.7308447205781734,
+        "q95": -0.02391480296862415,
+        "fraction_positive": 0.044921875
+      },
+      "ess_before_resampling": 499.5534665107296,
+      "ess_after_update": 218.3113371493103,
+      "raw_grid_mass": 0.991023425524865,
+      "outcome_probabilities": {
+        "home": 0.18651024387232779,
+        "draw": 0.15315058021794617,
+        "away": 0.6603391759097259
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49451,
+      "date": "2026-06-20",
+      "home_id": 43,
+      "away_id": 24,
+      "home": "Tunisia",
+      "away": "Japan",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5042,
+      "history_index": 5043,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.0067313369013848,
+        "home_defence": -0.3937533707113261,
+        "away_attack": 1.4232554144716334,
+        "away_defence": 0.3675167502306903
+      },
+      "posterior_means": {
+        "home_attack": 0.9579945058434192,
+        "home_defence": -0.3438496781082691,
+        "away_attack": 1.2029439067802696,
+        "away_defence": 0.40737693324090785
+      },
+      "total_strength_difference": {
+        "mean": -1.177794198512265,
+        "q05": -1.7979949679351206,
+        "q50": -1.2184589647867956,
+        "q95": -0.4863904707224971,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 218.3113371493103,
+      "ess_after_update": 231.79321611087676,
+      "raw_grid_mass": 0.5295766606839862,
+      "outcome_probabilities": {
+        "home": 0.09034786108303633,
+        "draw": 0.07094497340132755,
+        "away": 0.8387071655156362
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49452,
+      "date": "2026-06-21",
+      "home_id": 4,
+      "away_id": 21,
+      "home": "Belgium",
+      "away": "Iran",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5043,
+      "history_index": 5044,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.1475628549496577,
+        "home_defence": 0.3733108320945688,
+        "away_attack": 0.27922774258625277,
+        "away_defence": 1.0544071760903067
+      },
+      "posterior_means": {
+        "home_attack": 1.158241320273553,
+        "home_defence": 0.3761292646222975,
+        "away_attack": 0.0800717899367479,
+        "away_defence": 1.1761813518102602
+      },
+      "total_strength_difference": {
+        "mean": 0.1872387683676669,
+        "q05": -0.7309383641268328,
+        "q50": 0.010888567746955402,
+        "q95": 1.536452943821435,
+        "fraction_positive": 0.505859375
+      },
+      "ess_before_resampling": 231.79321611087676,
+      "ess_after_update": 355.32155530718916,
+      "raw_grid_mass": 0.9991967571551192,
+      "outcome_probabilities": {
+        "home": 0.4253335584670811,
+        "draw": 0.22643369255231488,
+        "away": 0.34823274898060447
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49453,
+      "date": "2026-06-21",
+      "home_id": 29,
+      "away_id": 15,
+      "home": "New Zealand",
+      "away": "Egypt",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5044,
+      "history_index": 5045,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.12909726532789578,
+        "home_defence": 0.8923385871936975,
+        "away_attack": 0.49536949496975835,
+        "away_defence": 0.6671430423069898
+      },
+      "posterior_means": {
+        "home_attack": -0.11304014494773505,
+        "home_defence": 0.8362583756405286,
+        "away_attack": 0.5606828513877606,
+        "away_defence": 0.7023816726788403
+      },
+      "total_strength_difference": {
+        "mean": -0.3992712154109465,
+        "q05": -1.0770404045585393,
+        "q50": -0.433060773990121,
+        "q95": 0.5094973190504979,
+        "fraction_positive": 0.154296875
+      },
+      "ess_before_resampling": 355.32155530718916,
+      "ess_after_update": 415.00770183522053,
+      "raw_grid_mass": 0.9999938736983773,
+      "outcome_probabilities": {
+        "home": 0.24150737966455832,
+        "draw": 0.3525016260816313,
+        "away": 0.40599099425381147
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49454,
+      "date": "2026-06-21",
+      "home_id": 40,
+      "away_id": 35,
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5045,
+      "history_index": 5046,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.29554708823099884,
+        "home_defence": 0.6287633706138185,
+        "away_attack": 0.45071951228670004,
+        "away_defence": 1.0083090201400453
+      },
+      "posterior_means": {
+        "home_attack": 0.3973575595924955,
+        "home_defence": 0.6716382570573426,
+        "away_attack": 0.42161912806329066,
+        "away_defence": 0.9564775747000344
+      },
+      "total_strength_difference": {
+        "mean": -0.5347180735819284,
+        "q05": -1.0895480963377278,
+        "q50": -0.5170621668901114,
+        "q95": -0.04202442929460207,
+        "fraction_positive": 0.04296875
+      },
+      "ess_before_resampling": 415.00770183522053,
+      "ess_after_update": 301.96426261830004,
+      "raw_grid_mass": 0.9999859586778446,
+      "outcome_probabilities": {
+        "home": 0.21863758843054176,
+        "draw": 0.31580488622038555,
+        "away": 0.4655575253490728
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49455,
+      "date": "2026-06-21",
+      "home_id": 46,
+      "away_id": 8,
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5046,
+      "history_index": 5047,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.2698075638890307,
+        "home_defence": 0.25143329420615373,
+        "away_attack": -0.03433430096857036,
+        "away_defence": -0.29156977159490904
+      },
+      "posterior_means": {
+        "home_attack": 0.9725779217148108,
+        "home_defence": -0.016184831194934756,
+        "away_attack": 0.12284156563595333,
+        "away_defence": -0.11854614558697515
+      },
+      "total_strength_difference": {
+        "mean": 1.847144930658664,
+        "q05": 0.5915690590410292,
+        "q50": 1.6206697062353554,
+        "q95": 3.531998185979932,
+        "fraction_positive": 0.994140625
+      },
+      "ess_before_resampling": 301.96426261830004,
+      "ess_after_update": 189.50012569343738,
+      "raw_grid_mass": 0.7212850783448232,
+      "outcome_probabilities": {
+        "home": 0.8757804579213927,
+        "draw": 0.06169317329627437,
+        "away": 0.06252636878233328
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49456,
+      "date": "2026-06-22",
+      "home_id": 17,
+      "away_id": 22,
+      "home": "France",
+      "away": "Iraq",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5047,
+      "history_index": 5048,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.882533672033959,
+        "home_defence": -0.2582248444895355,
+        "away_attack": -0.14962961161235855,
+        "away_defence": 0.03440291472700591
+      },
+      "posterior_means": {
+        "home_attack": 0.8823965853884478,
+        "home_defence": -0.24332031610311658,
+        "away_attack": -0.19501779295224733,
+        "away_defence": 0.0045357612832293585
+      },
+      "total_strength_difference": {
+        "mean": 0.7395355244297761,
+        "q05": 0.14015421356904909,
+        "q50": 0.806183297347308,
+        "q95": 1.2373135950719778,
+        "fraction_positive": 0.9765625
+      },
+      "ess_before_resampling": 189.50012569343738,
+      "ess_after_update": 468.94856304876066,
+      "raw_grid_mass": 0.9904708859757374,
+      "outcome_probabilities": {
+        "home": 0.689093320272837,
+        "draw": 0.1427557393500091,
+        "away": 0.16815094037715408
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49457,
+      "date": "2026-06-22",
+      "home_id": 30,
+      "away_id": 37,
+      "home": "Norway",
+      "away": "Senegal",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5048,
+      "history_index": 5049,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.4932498633122822,
+        "home_defence": 1.1299092720051795,
+        "away_attack": 0.6576155682022836,
+        "away_defence": 1.4443135707616503
+      },
+      "posterior_means": {
+        "home_attack": 1.510292023547848,
+        "home_defence": 1.1145000978338326,
+        "away_attack": 0.6657108718432926,
+        "away_defence": 1.42444265470319
+      },
+      "total_strength_difference": {
+        "mean": 0.5212299963535283,
+        "q05": 0.11289766412511991,
+        "q50": 0.5242799906528363,
+        "q95": 0.9182618039970649,
+        "fraction_positive": 0.9765625
+      },
+      "ess_before_resampling": 468.94856304876066,
+      "ess_after_update": 475.10021798428346,
+      "raw_grid_mass": 0.999959718233014,
+      "outcome_probabilities": {
+        "home": 0.5018287046543387,
+        "draw": 0.27212225845846766,
+        "away": 0.2260490368871939
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49458,
+      "date": "2026-06-22",
+      "home_id": 1,
+      "away_id": 3,
+      "home": "Argentina",
+      "away": "Austria",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5049,
+      "history_index": 5050,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.42765884268238,
+        "home_defence": 1.1739674632293216,
+        "away_attack": 1.0823670345834342,
+        "away_defence": -0.0878069438560115
+      },
+      "posterior_means": {
+        "home_attack": 0.38466764114209484,
+        "home_defence": 1.6348805203736034,
+        "away_attack": 1.0399766704768625,
+        "away_defence": -0.10302438865074648
+      },
+      "total_strength_difference": {
+        "mean": 0.6070662151842786,
+        "q05": -0.8112548946610423,
+        "q50": 0.8457656989835713,
+        "q95": 1.5563443902249408,
+        "fraction_positive": 0.75390625
+      },
+      "ess_before_resampling": 475.10021798428346,
+      "ess_after_update": 341.0860807286261,
+      "raw_grid_mass": 0.9921919993201926,
+      "outcome_probabilities": {
+        "home": 0.5638348761455917,
+        "draw": 0.17204500722429591,
+        "away": 0.26412011663011287
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49459,
+      "date": "2026-06-22",
+      "home_id": 25,
+      "away_id": 0,
+      "home": "Jordan",
+      "away": "Algeria",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5050,
+      "history_index": 5051,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.055556915087662063,
+        "home_defence": 0.5216573217413307,
+        "away_attack": 0.020431034470800434,
+        "away_defence": 0.9927224147390279
+      },
+      "posterior_means": {
+        "home_attack": 0.0597472226698793,
+        "home_defence": 0.5057887936286563,
+        "away_attack": 0.04291348241916575,
+        "away_defence": 0.9982744723857022
+      },
+      "total_strength_difference": {
+        "mean": -0.4359392123808356,
+        "q05": -1.1778728666597997,
+        "q50": -0.39732989926164985,
+        "q95": 0.06199908439483276,
+        "fraction_positive": 0.078125
+      },
+      "ess_before_resampling": 341.0860807286261,
+      "ess_after_update": 492.66505201998297,
+      "raw_grid_mass": 0.9999986940512923,
+      "outcome_probabilities": {
+        "home": 0.22233621546313742,
+        "draw": 0.3841528286426592,
+        "away": 0.3935109558942034
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49460,
+      "date": "2026-06-23",
+      "home_id": 33,
+      "away_id": 47,
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5051,
+      "history_index": 5052,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.5492170560719059,
+        "home_defence": 0.5560312283889984,
+        "away_attack": -0.403335059984396,
+        "away_defence": 0.32870838906698874
+      },
+      "posterior_means": {
+        "home_attack": 0.6830386188503568,
+        "home_defence": 0.5752241104720057,
+        "away_attack": -0.47615432261191126,
+        "away_defence": 0.235506194915202
+      },
+      "total_strength_difference": {
+        "mean": 1.1798749553783114,
+        "q05": 0.44315349343290295,
+        "q50": 1.2238977378543645,
+        "q95": 1.857558908768297,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 492.66505201998297,
+      "ess_after_update": 277.2664292137571,
+      "raw_grid_mass": 0.9996103877322828,
+      "outcome_probabilities": {
+        "home": 0.6494082344058829,
+        "draw": 0.23166072930119863,
+        "away": 0.11893103629291857
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49461,
+      "date": "2026-06-23",
+      "home_id": 9,
+      "away_id": 13,
+      "home": "Colombia",
+      "away": "DR Congo",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5052,
+      "history_index": 5053,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.13990291725834536,
+        "home_defence": 0.12320463507875398,
+        "away_attack": 0.19506974699435953,
+        "away_defence": 0.420458024412226
+      },
+      "posterior_means": {
+        "home_attack": 0.1468639822430627,
+        "home_defence": 0.1261106902471829,
+        "away_attack": 0.037262083927280816,
+        "away_defence": 0.4382745442462218
+      },
+      "total_strength_difference": {
+        "mean": -0.3524202190694862,
+        "q05": -1.1484655198125824,
+        "q50": -0.27859598344945935,
+        "q95": 0.23651001543057734,
+        "fraction_positive": 0.1875
+      },
+      "ess_before_resampling": 277.2664292137571,
+      "ess_after_update": 425.84323916639005,
+      "raw_grid_mass": 0.999315247234863,
+      "outcome_probabilities": {
+        "home": 0.27022916385067997,
+        "draw": 0.25817892226827677,
+        "away": 0.47159191388104377
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49462,
+      "date": "2026-06-23",
+      "home_id": 16,
+      "away_id": 19,
+      "home": "England",
+      "away": "Ghana",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5053,
+      "history_index": 5054,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.2296903740586001,
+        "home_defence": 1.9790908980666304,
+        "away_attack": 0.20856302681416344,
+        "away_defence": 0.3440395853602703
+      },
+      "posterior_means": {
+        "home_attack": 0.20260558183072686,
+        "home_defence": 1.9756998433583537,
+        "away_attack": 0.19506821788539355,
+        "away_defence": 0.37857400400892494
+      },
+      "total_strength_difference": {
+        "mean": 1.6561786599507968,
+        "q05": 1.231729861099843,
+        "q50": 1.6333240399908648,
+        "q95": 2.164438120186507,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 425.84323916639005,
+      "ess_after_update": 477.93811060375447,
+      "raw_grid_mass": 0.9999708162394372,
+      "outcome_probabilities": {
+        "home": 0.6132598248202693,
+        "draw": 0.3153494319660392,
+        "away": 0.0713907432136915
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49463,
+      "date": "2026-06-23",
+      "home_id": 31,
+      "away_id": 10,
+      "home": "Panama",
+      "away": "Croatia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5054,
+      "history_index": 5055,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -1.076110248207799,
+        "home_defence": -0.4174274007406406,
+        "away_attack": 1.6818252399169966,
+        "away_defence": -0.18470309140778784
+      },
+      "posterior_means": {
+        "home_attack": -0.9588897410615289,
+        "home_defence": -0.2384324213829008,
+        "away_attack": 1.5197094959173953,
+        "away_defence": -0.15159775748794158
+      },
+      "total_strength_difference": {
+        "mean": -2.9906597974576483,
+        "q05": -3.40923737898325,
+        "q50": -3.025890055444724,
+        "q95": -2.458478953586664,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 477.93811060375447,
+      "ess_after_update": 70.09279911258926,
+      "raw_grid_mass": 0.27286910950174914,
+      "outcome_probabilities": {
+        "home": 0.0010328710848451126,
+        "draw": 0.0033411058952151364,
+        "away": 0.9956260230199397
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49464,
+      "date": "2026-06-24",
+      "home_id": 26,
+      "away_id": 12,
+      "home": "Mexico",
+      "away": "Czech Republic",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5055,
+      "history_index": 5056,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.5361298154536492,
+        "home_defence": 0.8687460641032417,
+        "away_attack": 1.3684641524723111,
+        "away_defence": -0.225918457917652
+      },
+      "posterior_means": {
+        "home_attack": -0.4975903997831253,
+        "home_defence": 0.9409675453112971,
+        "away_attack": 1.321462154405803,
+        "away_defence": -0.25873202521717825
+      },
+      "total_strength_difference": {
+        "mean": -0.8099294459050665,
+        "q05": -1.5282261664794932,
+        "q50": -0.7509798216298322,
+        "q95": -0.35155459452886295,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 70.09279911258926,
+      "ess_after_update": 381.4667048212963,
+      "raw_grid_mass": 0.9975270618954,
+      "outcome_probabilities": {
+        "home": 0.16594250247787268,
+        "draw": 0.19214026371071893,
+        "away": 0.6419172338114089
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49465,
+      "date": "2026-06-24",
+      "home_id": 38,
+      "away_id": 39,
+      "home": "South Africa",
+      "away": "South Korea",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5056,
+      "history_index": 5057,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6369938992066035,
+        "home_defence": 0.48170022681393676,
+        "away_attack": -0.45276868002858117,
+        "away_defence": 0.5013497474763621
+      },
+      "posterior_means": {
+        "home_attack": 0.6292950027397964,
+        "home_defence": 0.48824273340892654,
+        "away_attack": -0.45507353113207594,
+        "away_defence": 0.5076348945520041
+      },
+      "total_strength_difference": {
+        "mean": 1.0701130585727592,
+        "q05": 0.5160742703193436,
+        "q50": 1.0938197922214288,
+        "q95": 1.5442719194046897,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 381.4667048212963,
+      "ess_after_update": 505.2818132029163,
+      "raw_grid_mass": 0.9999039315595523,
+      "outcome_probabilities": {
+        "home": 0.6168356423334407,
+        "draw": 0.2532586908486189,
+        "away": 0.12990566681794005
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49466,
+      "date": "2026-06-24",
+      "home_id": 7,
+      "away_id": 42,
+      "home": "Canada",
+      "away": "Switzerland",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5057,
+      "history_index": 5058,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.3898480059488478,
+        "home_defence": 0.9255226208542983,
+        "away_attack": 1.2184160388239438,
+        "away_defence": 0.8285077774056552
+      },
+      "posterior_means": {
+        "home_attack": 1.3438390923200574,
+        "home_defence": 0.8898411943777418,
+        "away_attack": 1.2064068593989137,
+        "away_defence": 0.8555469135486679
+      },
+      "total_strength_difference": {
+        "mean": 0.26844681057354675,
+        "q05": -0.25101950660801153,
+        "q50": 0.23714149792811534,
+        "q95": 0.8259049316010608,
+        "fraction_positive": 0.775390625
+      },
+      "ess_before_resampling": 505.2818132029163,
+      "ess_after_update": 466.5164756610317,
+      "raw_grid_mass": 0.9975948125696202,
+      "outcome_probabilities": {
+        "home": 0.505269388246875,
+        "draw": 0.18906725049069026,
+        "away": 0.3056633612624345
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49467,
+      "date": "2026-06-24",
+      "home_id": 5,
+      "away_id": 34,
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5058,
+      "history_index": 5059,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.4865857116964014,
+        "home_defence": 0.17502989031005292,
+        "away_attack": -0.857693223976322,
+        "away_defence": 0.8205150429940014
+      },
+      "posterior_means": {
+        "home_attack": 0.5070472258534579,
+        "home_defence": 0.17103663587791273,
+        "away_attack": -0.8554583294139204,
+        "away_defence": 0.8001435423156047
+      },
+      "total_strength_difference": {
+        "mean": 0.6987937829887747,
+        "q05": 0.3300086177169636,
+        "q50": 0.7030383449106807,
+        "q95": 1.0474731439244533,
+        "fraction_positive": 0.998046875
+      },
+      "ess_before_resampling": 466.5164756610317,
+      "ess_after_update": 474.73546410303493,
+      "raw_grid_mass": 0.9999981866085905,
+      "outcome_probabilities": {
+        "home": 0.45954188870903895,
+        "draw": 0.36127838543921703,
+        "away": 0.17917972585174397
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49468,
+      "date": "2026-06-24",
+      "home_id": 36,
+      "away_id": 6,
+      "home": "Scotland",
+      "away": "Brazil",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5059,
+      "history_index": 5060,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.3848815863047261,
+        "home_defence": 0.6443047818589145,
+        "away_attack": 0.7352965978670664,
+        "away_defence": 2.009340235320283
+      },
+      "posterior_means": {
+        "home_attack": 0.3729257519982174,
+        "home_defence": 0.6286628760636546,
+        "away_attack": 0.7547189016167929,
+        "away_defence": 2.0269509146477387
+      },
+      "total_strength_difference": {
+        "mean": -1.7154504650237092,
+        "q05": -2.172526722615238,
+        "q50": -1.7785558101050196,
+        "q95": -1.0832066059398104,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 474.73546410303493,
+      "ess_after_update": 483.1896280984281,
+      "raw_grid_mass": 0.9999559653504518,
+      "outcome_probabilities": {
+        "home": 0.06793949934265615,
+        "draw": 0.25641983215796205,
+        "away": 0.675640668499382
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49469,
+      "date": "2026-06-24",
+      "home_id": 27,
+      "away_id": 20,
+      "home": "Morocco",
+      "away": "Haiti",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5060,
+      "history_index": 5061,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.6218813294656463,
+        "home_defence": 1.4800443403202006,
+        "away_attack": -0.5036832961903994,
+        "away_defence": -0.084028593315677
+      },
+      "posterior_means": {
+        "home_attack": -0.5809784578060431,
+        "home_defence": 1.466439786110755,
+        "away_attack": -0.4936874710842838,
+        "away_defence": -0.11144091503416995
+      },
+      "total_strength_difference": {
+        "mean": 1.4458749003606308,
+        "q05": 0.8876526522688479,
+        "q50": 1.4635732054767319,
+        "q95": 1.8835715878436474,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 483.1896280984281,
+      "ess_after_update": 419.4834532239031,
+      "raw_grid_mass": 0.9999995393598807,
+      "outcome_probabilities": {
+        "home": 0.47741563168339846,
+        "draw": 0.43870983085883214,
+        "away": 0.08387453745776986
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49470,
+      "date": "2026-06-25",
+      "home_id": 45,
+      "away_id": 44,
+      "home": "United States",
+      "away": "Turkey",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5061,
+      "history_index": 5062,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.0184835443335942,
+        "home_defence": 0.16666099504891485,
+        "away_attack": 0.12736665580917178,
+        "away_defence": -0.06289346118641762
+      },
+      "posterior_means": {
+        "home_attack": 0.9881166975922774,
+        "home_defence": 0.13576196125406073,
+        "away_attack": 0.15250770908417882,
+        "away_defence": -0.0373727594365696
+      },
+      "total_strength_difference": {
+        "mean": 1.120671344759755,
+        "q05": 0.7096789784266969,
+        "q50": 1.1074388620048676,
+        "q95": 1.5541973736729329,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 419.4834532239031,
+      "ess_after_update": 427.8134908346681,
+      "raw_grid_mass": 0.9730609398402613,
+      "outcome_probabilities": {
+        "home": 0.8158635905982025,
+        "draw": 0.09973937988780184,
+        "away": 0.0843970295139963
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49471,
+      "date": "2026-06-25",
+      "home_id": 32,
+      "away_id": 2,
+      "home": "Paraguay",
+      "away": "Australia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5062,
+      "history_index": 5063,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.5922181348124618,
+        "home_defence": 0.30990278447479513,
+        "away_attack": 0.4810090763482895,
+        "away_defence": 2.0942951831879624
+      },
+      "posterior_means": {
+        "home_attack": -0.5974573870885186,
+        "home_defence": 0.3294417216698486,
+        "away_attack": 0.4498265017644976,
+        "away_defence": 2.0926760553990302
+      },
+      "total_strength_difference": {
+        "mean": -2.857619609873918,
+        "q05": -3.2629704477410435,
+        "q50": -2.88547136890016,
+        "q95": -2.229539228869433,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 427.8134908346681,
+      "ess_after_update": 475.1935524997242,
+      "raw_grid_mass": 0.9999005774185405,
+      "outcome_probabilities": {
+        "home": 0.02007980282489932,
+        "draw": 0.22083670348069334,
+        "away": 0.7590834936944071
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49472,
+      "date": "2026-06-25",
+      "home_id": 11,
+      "away_id": 23,
+      "home": "Cura\u00e7ao",
+      "away": "Ivory Coast",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5063,
+      "history_index": 5064,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.6351075460844715,
+        "home_defence": 0.03523780923188752,
+        "away_attack": 1.1501735158674393,
+        "away_defence": 1.1566064046386697
+      },
+      "posterior_means": {
+        "home_attack": -0.6486252223297686,
+        "home_defence": 0.07840735863343391,
+        "away_attack": 1.1240129249346602,
+        "away_defence": 1.1595164099766424
+      },
+      "total_strength_difference": {
+        "mean": -2.9066496573586935,
+        "q05": -3.308989143211197,
+        "q50": -2.929321939072199,
+        "q95": -2.4985897417134084,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 475.1935524997242,
+      "ess_after_update": 452.92550295488235,
+      "raw_grid_mass": 0.9644113368733108,
+      "outcome_probabilities": {
+        "home": 0.00652540262818946,
+        "draw": 0.035858078077156255,
+        "away": 0.9576165192946539
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49473,
+      "date": "2026-06-25",
+      "home_id": 14,
+      "away_id": 18,
+      "home": "Ecuador",
+      "away": "Germany",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5064,
+      "history_index": 5065,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.3935033069821349,
+        "home_defence": 1.5291674807677489,
+        "away_attack": 1.8429964147870908,
+        "away_defence": 1.7591349924139639
+      },
+      "posterior_means": {
+        "home_attack": -0.36902572259102634,
+        "home_defence": 1.536643147690932,
+        "away_attack": 1.824104988769086,
+        "away_defence": 1.733903699343678
+      },
+      "total_strength_difference": {
+        "mean": -2.46646723341544,
+        "q05": -2.8373156306311307,
+        "q50": -2.482032738035598,
+        "q95": -2.0805482506336483,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 452.92550295488235,
+      "ess_after_update": 458.1601711209643,
+      "raw_grid_mass": 0.9997829940003758,
+      "outcome_probabilities": {
+        "home": 0.02751264923428475,
+        "draw": 0.1844634126443827,
+        "away": 0.7880239381213325
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49474,
+      "date": "2026-06-25",
+      "home_id": 24,
+      "away_id": 41,
+      "home": "Japan",
+      "away": "Sweden",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5065,
+      "history_index": 5066,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.2616516959040358,
+        "home_defence": 0.2908918530767155,
+        "away_attack": 1.305482580877982,
+        "away_defence": 1.4381018349208765
+      },
+      "posterior_means": {
+        "home_attack": 1.2669807493147256,
+        "home_defence": 0.31778646075863676,
+        "away_attack": 1.2753755234045134,
+        "away_defence": 1.433693755411215
+      },
+      "total_strength_difference": {
+        "mean": -1.1910408668181072,
+        "q05": -1.5777733576077926,
+        "q50": -1.1886271440605936,
+        "q95": -0.8011363174599757,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 458.1601711209643,
+      "ess_after_update": 448.8794097901373,
+      "raw_grid_mass": 0.9816497139925235,
+      "outcome_probabilities": {
+        "home": 0.07806214976066525,
+        "draw": 0.10239680324959755,
+        "away": 0.8195410469897367
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49475,
+      "date": "2026-06-25",
+      "home_id": 43,
+      "away_id": 28,
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5066,
+      "history_index": 5067,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6460343273085133,
+        "home_defence": -0.3376308663653052,
+        "away_attack": 1.4606323924006703,
+        "away_defence": 0.6875608465248874
+      },
+      "posterior_means": {
+        "home_attack": 0.685417046493767,
+        "home_defence": -0.2514205891567131,
+        "away_attack": 1.3934684452564376,
+        "away_defence": 0.6809591388780107
+      },
+      "total_strength_difference": {
+        "mean": -1.8397897779823493,
+        "q05": -2.2552238606993185,
+        "q50": -1.8680660408522352,
+        "q95": -1.2758081196372446,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 448.8794097901373,
+      "ess_after_update": 299.84640753696596,
+      "raw_grid_mass": 0.5729948867761929,
+      "outcome_probabilities": {
+        "home": 0.016288799119521857,
+        "draw": 0.023694158695289732,
+        "away": 0.9600170421851887
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49476,
+      "date": "2026-06-26",
+      "home_id": 15,
+      "away_id": 21,
+      "home": "Egypt",
+      "away": "Iran",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5067,
+      "history_index": 5068,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6750630586664871,
+        "home_defence": 0.8240612915539874,
+        "away_attack": -0.6532840341326496,
+        "away_defence": 0.8701398856586898
+      },
+      "posterior_means": {
+        "home_attack": 0.6721236948799411,
+        "home_defence": 0.8173207637224964,
+        "away_attack": -0.6438981061480732,
+        "away_defence": 0.8762574952639944
+      },
+      "total_strength_difference": {
+        "mean": 1.282268498694434,
+        "q05": 0.8699307169000224,
+        "q50": 1.2603039543339247,
+        "q95": 1.745449787373395,
+        "fraction_positive": 0.99609375
+      },
+      "ess_before_resampling": 299.84640753696596,
+      "ess_after_update": 505.9005855430998,
+      "raw_grid_mass": 0.9999890466897682,
+      "outcome_probabilities": {
+        "home": 0.560265501686768,
+        "draw": 0.3357925687155406,
+        "away": 0.10394192959769165
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49477,
+      "date": "2026-06-26",
+      "home_id": 29,
+      "away_id": 4,
+      "home": "New Zealand",
+      "away": "Belgium",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5068,
+      "history_index": 5069,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.19776594497797792,
+        "home_defence": 0.9111500444352361,
+        "away_attack": 1.19727503163531,
+        "away_defence": 0.5315956175449343
+      },
+      "posterior_means": {
+        "home_attack": 0.18047698721863653,
+        "home_defence": 0.8506615294324734,
+        "away_attack": 1.2369526273037397,
+        "away_defence": 0.5340321552572662
+      },
+      "total_strength_difference": {
+        "mean": -0.6199546597670307,
+        "q05": -1.0711503166865022,
+        "q50": -0.637619349546509,
+        "q95": -0.14842366054469422,
+        "fraction_positive": 0.017578125
+      },
+      "ess_before_resampling": 505.9005855430998,
+      "ess_after_update": 387.73201819856627,
+      "raw_grid_mass": 0.9997613068546678,
+      "outcome_probabilities": {
+        "home": 0.20646671300092473,
+        "draw": 0.22994033178967077,
+        "away": 0.5635929552094039
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49478,
+      "date": "2026-06-26",
+      "home_id": 8,
+      "away_id": 35,
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5069,
+      "history_index": 5070,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.09352999823174356,
+        "home_defence": -0.13529519696675,
+        "away_attack": 0.2964377878495412,
+        "away_defence": 0.906522105968701
+      },
+      "posterior_means": {
+        "home_attack": 0.06943412033832054,
+        "home_defence": -0.09992999912092487,
+        "away_attack": 0.25326089572494026,
+        "away_defence": 0.9240233176313868
+      },
+      "total_strength_difference": {
+        "mean": -1.2447250925532485,
+        "q05": -1.6699608883159316,
+        "q50": -1.2608664384972958,
+        "q95": -0.7582607631313173,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 387.73201819856627,
+      "ess_after_update": 435.00742271436224,
+      "raw_grid_mass": 0.9992473199300865,
+      "outcome_probabilities": {
+        "home": 0.1001456763936755,
+        "draw": 0.18993100311786634,
+        "away": 0.7099233204884583
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49479,
+      "date": "2026-06-26",
+      "home_id": 46,
+      "away_id": 40,
+      "home": "Uruguay",
+      "away": "Spain",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5070,
+      "history_index": 5071,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.924365488779181,
+        "home_defence": -0.07623585540800343,
+        "away_attack": 0.3680202468579007,
+        "away_defence": 0.7939388924274607
+      },
+      "posterior_means": {
+        "home_attack": 0.8951894558404024,
+        "home_defence": -0.057357067716742864,
+        "away_attack": 0.34403999471800484,
+        "away_defence": 0.8113928744769677
+      },
+      "total_strength_difference": {
+        "mean": -0.31382950591418374,
+        "q05": -0.830447836754997,
+        "q50": -0.3248298117911371,
+        "q95": 0.17813737248860903,
+        "fraction_positive": 0.140625
+      },
+      "ess_before_resampling": 435.00742271436224,
+      "ess_after_update": 456.3465606840938,
+      "raw_grid_mass": 0.9988569639456033,
+      "outcome_probabilities": {
+        "home": 0.28725426213896615,
+        "draw": 0.20454913779332112,
+        "away": 0.5081966000677125
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49480,
+      "date": "2026-06-26",
+      "home_id": 30,
+      "away_id": 17,
+      "home": "Norway",
+      "away": "France",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5071,
+      "history_index": 5072,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.4851441981025617,
+        "home_defence": 1.1943220476141652,
+        "away_attack": 0.9187857533851463,
+        "away_defence": -0.22717625409618347
+      },
+      "posterior_means": {
+        "home_attack": 1.3744879466182862,
+        "home_defence": 1.125418862709143,
+        "away_attack": 0.9642264709121822,
+        "away_defence": -0.13053585503710677
+      },
+      "total_strength_difference": {
+        "mean": 1.987856746427764,
+        "q05": 1.5605539963159156,
+        "q50": 1.986686554325804,
+        "q95": 2.419175694879291,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 456.3465606840938,
+      "ess_after_update": 151.56781541646868,
+      "raw_grid_mass": 0.6561996308057477,
+      "outcome_probabilities": {
+        "home": 0.9689057745660125,
+        "draw": 0.020405907951782903,
+        "away": 0.01068831748220466
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49481,
+      "date": "2026-06-26",
+      "home_id": 37,
+      "away_id": 22,
+      "home": "Senegal",
+      "away": "Iraq",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5072,
+      "history_index": 5073,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6610976292485694,
+        "home_defence": 1.5117199200607636,
+        "away_attack": -0.28631288820471124,
+        "away_defence": -0.02834347307181633
+      },
+      "posterior_means": {
+        "home_attack": 0.6963420942664309,
+        "home_defence": 1.5234203654001963,
+        "away_attack": -0.2978598804607414,
+        "away_defence": -0.054305037401361306
+      },
+      "total_strength_difference": {
+        "mean": 2.4874739105858605,
+        "q05": 2.0547966387861893,
+        "q50": 2.4871759026454283,
+        "q95": 2.9351500456887636,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 151.56781541646868,
+      "ess_after_update": 449.5818098843134,
+      "raw_grid_mass": 0.9970665280862376,
+      "outcome_probabilities": {
+        "home": 0.8798587673102247,
+        "draw": 0.10007800611882553,
+        "away": 0.020063226570950048
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49482,
+      "date": "2026-06-27",
+      "home_id": 0,
+      "away_id": 3,
+      "home": "Algeria",
+      "away": "Austria",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5073,
+      "history_index": 5074,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.010207396702059775,
+        "home_defence": 0.9145304984324687,
+        "away_attack": 1.0858358104395354,
+        "away_defence": -0.05271923019292074
+      },
+      "posterior_means": {
+        "home_attack": 0.008885942526124666,
+        "home_defence": 0.9004011564632058,
+        "away_attack": 1.0975652597605938,
+        "away_defence": -0.06516941370939605
+      },
+      "total_strength_difference": {
+        "mean": -0.12879347851620568,
+        "q05": -0.5265849293596517,
+        "q50": -0.14140062344069276,
+        "q95": 0.30249026934306156,
+        "fraction_positive": 0.3046875
+      },
+      "ess_before_resampling": 449.5818098843134,
+      "ess_after_update": 473.97972951130237,
+      "raw_grid_mass": 0.9998798015880611,
+      "outcome_probabilities": {
+        "home": 0.3391211097431592,
+        "draw": 0.23925927558434473,
+        "away": 0.4216196146724959
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49483,
+      "date": "2026-06-27",
+      "home_id": 25,
+      "away_id": 1,
+      "home": "Jordan",
+      "away": "Argentina",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5074,
+      "history_index": 5075,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.07068990144361972,
+        "home_defence": 0.5020892012097964,
+        "away_attack": 0.3719137814193548,
+        "away_defence": 1.8667339145544832
+      },
+      "posterior_means": {
+        "home_attack": -0.056511038072552124,
+        "home_defence": 0.4756580560394456,
+        "away_attack": 0.39811371896867076,
+        "away_defence": 1.8390758600252337
+      },
+      "total_strength_difference": {
+        "mean": -1.8072483962076613,
+        "q05": -2.276214143269252,
+        "q50": -1.8356796489002711,
+        "q95": -1.3251402154963248,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 473.97972951130237,
+      "ess_after_update": 462.77107160307185,
+      "raw_grid_mass": 0.9999869137184687,
+      "outcome_probabilities": {
+        "home": 0.06331068789508296,
+        "draw": 0.3192998466029948,
+        "away": 0.6173894655019216
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49484,
+      "date": "2026-06-27",
+      "home_id": 9,
+      "away_id": 33,
+      "home": "Colombia",
+      "away": "Portugal",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5075,
+      "history_index": 5076,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.1860721113445181,
+        "home_defence": 0.2643966638270412,
+        "away_attack": 0.5763778411515972,
+        "away_defence": 0.6970085225903077
+      },
+      "posterior_means": {
+        "home_attack": 0.17958171041784932,
+        "home_defence": 0.31631713916743265,
+        "away_attack": 0.5265034089145679,
+        "away_defence": 0.7282948025671193
+      },
+      "total_strength_difference": {
+        "mean": -0.8229175885703457,
+        "q05": -1.3644443770833046,
+        "q50": -0.7810458786139061,
+        "q95": -0.36000250566016806,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 462.77107160307185,
+      "ess_after_update": 421.68390118109255,
+      "raw_grid_mass": 0.9996116480238519,
+      "outcome_probabilities": {
+        "home": 0.16582503187566378,
+        "draw": 0.22317353567732792,
+        "away": 0.6110014324470078
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49485,
+      "date": "2026-06-27",
+      "home_id": 13,
+      "away_id": 47,
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5076,
+      "history_index": 5077,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.16999849462584138,
+        "home_defence": 0.4081167196847789,
+        "away_attack": -0.37524124492330485,
+        "away_defence": 0.2846715021433321
+      },
+      "posterior_means": {
+        "home_attack": -0.12573615755903989,
+        "home_defence": 0.419020335625286,
+        "away_attack": -0.41922544319924543,
+        "away_defence": 0.21047367641211778
+      },
+      "total_strength_difference": {
+        "mean": 0.32868796783891024,
+        "q05": -0.2702821334099656,
+        "q50": 0.2139986836158674,
+        "q95": 1.1060516225651529,
+        "fraction_positive": 0.736328125
+      },
+      "ess_before_resampling": 421.68390118109255,
+      "ess_after_update": 414.77272953008986,
+      "raw_grid_mass": 0.9999971951259493,
+      "outcome_probabilities": {
+        "home": 0.3876657525412714,
+        "draw": 0.36067537922537907,
+        "away": 0.25165886823334904
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49486,
+      "date": "2026-06-27",
+      "home_id": 31,
+      "away_id": 16,
+      "home": "Panama",
+      "away": "England",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5077,
+      "history_index": 5078,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.9481932145038892,
+        "home_defence": -0.25094542490602817,
+        "away_attack": 0.2725518865181559,
+        "away_defence": 2.0709693629686647
+      },
+      "posterior_means": {
+        "home_attack": -0.9474047199988402,
+        "home_defence": -0.24785878057971863,
+        "away_attack": 0.26887880276442805,
+        "away_defence": 2.0735961919139902
+      },
+      "total_strength_difference": {
+        "mean": -3.542659888896738,
+        "q05": -3.952177136074479,
+        "q50": -3.531594959574238,
+        "q95": -3.157314025836597,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 414.77272953008986,
+      "ess_after_update": 510.25756481205013,
+      "raw_grid_mass": 0.9989725946533056,
+      "outcome_probabilities": {
+        "home": 0.007608262730174558,
+        "draw": 0.11965337195463603,
+        "away": 0.8727383653151906
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49487,
+      "date": "2026-06-27",
+      "home_id": 10,
+      "away_id": 19,
+      "home": "Croatia",
+      "away": "Ghana",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5078,
+      "history_index": 5079,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.5615136286997988,
+        "home_defence": -0.10028966321717926,
+        "away_attack": 0.2065817831516422,
+        "away_defence": 0.3195474225371606
+      },
+      "posterior_means": {
+        "home_attack": 1.53288790192956,
+        "home_defence": -0.11317806393638005,
+        "away_attack": 0.18485597458742736,
+        "away_defence": 0.361321153650656
+      },
+      "total_strength_difference": {
+        "mean": 0.9350947597938165,
+        "q05": 0.4523398669806824,
+        "q50": 0.9594746827437005,
+        "q95": 1.3423945743784709,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 510.25756481205013,
+      "ess_after_update": 435.3666507624558,
+      "raw_grid_mass": 0.9382228123344818,
+      "outcome_probabilities": {
+        "home": 0.7951904561089086,
+        "draw": 0.09729699243168963,
+        "away": 0.10751255145940238
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49488,
+      "date": "2026-06-28",
+      "home_id": 38,
+      "away_id": 7,
+      "home": "South Africa",
+      "away": "Canada",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5079,
+      "history_index": 5080,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.6114856895420462,
+        "home_defence": 0.49506029772460386,
+        "away_attack": 1.4523658880554946,
+        "away_defence": 0.9847524017198832
+      },
+      "posterior_means": {
+        "home_attack": 0.5990490635196919,
+        "home_defence": 0.5236211035011545,
+        "away_attack": 1.4080562220604331,
+        "away_defence": 0.9919865699941848
+      },
+      "total_strength_difference": {
+        "mean": -1.330572302508728,
+        "q05": -1.805499908706951,
+        "q50": -1.3752566098995778,
+        "q95": -0.6365471002722131,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 435.3666507624558,
+      "ess_after_update": 430.08784304246666,
+      "raw_grid_mass": 0.9840779991904891,
+      "outcome_probabilities": {
+        "home": 0.07193322250607241,
+        "draw": 0.10236207447976087,
+        "away": 0.8257047030141667
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49489,
+      "date": "2026-06-29",
+      "home_id": 6,
+      "away_id": 24,
+      "home": "Brazil",
+      "away": "Japan",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5080,
+      "history_index": 5081,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.7533563105334169,
+        "home_defence": 1.9263489021157478,
+        "away_attack": 1.2774236401504717,
+        "away_defence": 0.3337155656196195
+      },
+      "posterior_means": {
+        "home_attack": 0.7512516291000754,
+        "home_defence": 1.9157227404156076,
+        "away_attack": 1.2822912782311366,
+        "away_defence": 0.33415324236467997
+      },
+      "total_strength_difference": {
+        "mean": 1.0685660068790734,
+        "q05": 0.5818952372684504,
+        "q50": 1.0660814991306715,
+        "q95": 1.5755545522881391,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 430.08784304246666,
+      "ess_after_update": 508.7103658229095,
+      "raw_grid_mass": 0.9994106243201242,
+      "outcome_probabilities": {
+        "home": 0.6781725689836742,
+        "draw": 0.19766160828302334,
+        "away": 0.1241658227333024
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49490,
+      "date": "2026-06-29",
+      "home_id": 18,
+      "away_id": 32,
+      "home": "Germany",
+      "away": "Paraguay",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5081,
+      "history_index": 5082,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.7631046221361701,
+        "home_defence": 1.7226666397547916,
+        "away_attack": -0.5608835973459549,
+        "away_defence": 0.370662161498354
+      },
+      "posterior_means": {
+        "home_attack": 1.6796217638088748,
+        "home_defence": 1.701514002614272,
+        "away_attack": -0.5260729778167373,
+        "away_defence": 0.43811430857785827
+      },
+      "total_strength_difference": {
+        "mean": 3.6759926977385624,
+        "q05": 3.156071649850788,
+        "q50": 3.6614753040046626,
+        "q95": 4.23047922928348,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 508.7103658229095,
+      "ess_after_update": 306.0835483205408,
+      "raw_grid_mass": 0.8768453435481703,
+      "outcome_probabilities": {
+        "home": 0.9859359941400737,
+        "draw": 0.01258430625485332,
+        "away": 0.001479699605073022
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49491,
+      "date": "2026-06-29",
+      "home_id": 28,
+      "away_id": 27,
+      "home": "Netherlands",
+      "away": "Morocco",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5082,
+      "history_index": 5083,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.3778160937720498,
+        "home_defence": 0.7311146674609862,
+        "away_attack": -0.5886487302938859,
+        "away_defence": 1.4791351624100644
+      },
+      "posterior_means": {
+        "home_attack": 1.3712800713809312,
+        "home_defence": 0.7156265813232641,
+        "away_attack": -0.5649100870996138,
+        "away_defence": 1.4850366465935925
+      },
+      "total_strength_difference": {
+        "mean": 1.2184443291168578,
+        "q05": 0.7288252944707839,
+        "q50": 1.2084462836425685,
+        "q95": 1.7748679520482635,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 306.0835483205408,
+      "ess_after_update": 498.85878665596607,
+      "raw_grid_mass": 0.9999816760070861,
+      "outcome_probabilities": {
+        "home": 0.5759108377175103,
+        "draw": 0.3108076474513476,
+        "away": 0.1132815148311427
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49492,
+      "date": "2026-06-30",
+      "home_id": 23,
+      "away_id": 30,
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5083,
+      "history_index": 5084,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.1769547943548238,
+        "home_defence": 1.192946249282679,
+        "away_attack": 1.386658237444896,
+        "away_defence": 1.1492205723385787
+      },
+      "posterior_means": {
+        "home_attack": 1.167642332437557,
+        "home_defence": 1.1830641682935972,
+        "away_attack": 1.3968392706040766,
+        "away_defence": 1.1583645373981317
+      },
+      "total_strength_difference": {
+        "mean": -0.1659777661459713,
+        "q05": -0.6630217661989364,
+        "q50": -0.18844506671054595,
+        "q95": 0.4179953967710338,
+        "fraction_positive": 0.306640625
+      },
+      "ess_before_resampling": 498.85878665596607,
+      "ess_after_update": 503.46406692142006,
+      "raw_grid_mass": 0.9997833609662081,
+      "outcome_probabilities": {
+        "home": 0.3291778358328908,
+        "draw": 0.23457829939001473,
+        "away": 0.4362438647770946
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49493,
+      "date": "2026-06-30",
+      "home_id": 17,
+      "away_id": 41,
+      "home": "France",
+      "away": "Sweden",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5084,
+      "history_index": 5085,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.9419317711348174,
+        "home_defence": -0.10603272491737795,
+        "away_attack": 1.2549383149059279,
+        "away_defence": 1.4793871182689957
+      },
+      "posterior_means": {
+        "home_attack": 0.9826479798038283,
+        "home_defence": -0.024232257598895707,
+        "away_attack": 1.177188845761356,
+        "away_defence": 1.4473080591129057
+      },
+      "total_strength_difference": {
+        "mean": -1.8984263869574844,
+        "q05": -2.3041714737069503,
+        "q50": -1.9132756480848236,
+        "q95": -1.4654660356017182,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 503.46406692142006,
+      "ess_after_update": 222.8959090220439,
+      "raw_grid_mass": 0.8945318100631066,
+      "outcome_probabilities": {
+        "home": 0.01826538157638777,
+        "draw": 0.03815740634781056,
+        "away": 0.9435772120758018
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49494,
+      "date": "2026-06-30",
+      "home_id": 26,
+      "away_id": 14,
+      "home": "Mexico",
+      "away": "Ecuador",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5085,
+      "history_index": 5086,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.4777103887014679,
+        "home_defence": 0.9815394082789195,
+        "away_attack": -0.3495597537044958,
+        "away_defence": 1.5683519054130843
+      },
+      "posterior_means": {
+        "home_attack": -0.4316932306786419,
+        "home_defence": 0.981161264084516,
+        "away_attack": -0.35100627399277873,
+        "away_defence": 1.5246591756828705
+      },
+      "total_strength_difference": {
+        "mean": -0.7149631321311369,
+        "q05": -1.2666815058683427,
+        "q50": -0.6916800709070074,
+        "q95": -0.2643762276985747,
+        "fraction_positive": 0.001953125
+      },
+      "ess_before_resampling": 222.8959090220439,
+      "ess_after_update": 442.6877222921718,
+      "raw_grid_mass": 0.9999999960671098,
+      "outcome_probabilities": {
+        "home": 0.11564513988699672,
+        "draw": 0.6262413231276758,
+        "away": 0.2581135369853275
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49495,
+      "date": "2026-07-01",
+      "home_id": 16,
+      "away_id": 13,
+      "home": "England",
+      "away": "DR Congo",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5086,
+      "history_index": 5087,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.24553912766078143,
+        "home_defence": 2.060445032871819,
+        "away_attack": -0.11389335261959777,
+        "away_defence": 0.4348695792409013
+      },
+      "posterior_means": {
+        "home_attack": 0.25363830461475656,
+        "home_defence": 2.0528841793932098,
+        "away_attack": -0.0946307204352775,
+        "away_defence": 0.4258069474414205
+      },
+      "total_strength_difference": {
+        "mean": 1.9850079339112976,
+        "q05": 1.1681563680351434,
+        "q50": 2.037375203752857,
+        "q95": 2.7224737393098613,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 442.6877222921718,
+      "ess_after_update": 497.5236578196375,
+      "raw_grid_mass": 0.9999864244173838,
+      "outcome_probabilities": {
+        "home": 0.6101479163965303,
+        "draw": 0.3349496896481213,
+        "away": 0.054902393955348607
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49496,
+      "date": "2026-07-01",
+      "home_id": 4,
+      "away_id": 37,
+      "home": "Belgium",
+      "away": "Senegal",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5087,
+      "history_index": 5088,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.1720937208031135,
+        "home_defence": 0.5789164298872357,
+        "away_attack": 0.7109314573027274,
+        "away_defence": 1.5148565626363106
+      },
+      "posterior_means": {
+        "home_attack": 1.2049636935233283,
+        "home_defence": 0.5751100872485737,
+        "away_attack": 0.7073017582590038,
+        "away_defence": 1.4863157589185079
+      },
+      "total_strength_difference": {
+        "mean": -0.4747778692486887,
+        "q05": -0.9535905272561449,
+        "q50": -0.4785224796865084,
+        "q95": 0.009026354754927975,
+        "fraction_positive": 0.052734375
+      },
+      "ess_before_resampling": 497.5236578196375,
+      "ess_after_update": 456.92299696798955,
+      "raw_grid_mass": 0.9998988864535028,
+      "outcome_probabilities": {
+        "home": 0.23947389466475885,
+        "draw": 0.2550371691569419,
+        "away": 0.5054889361782986
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49497,
+      "date": "2026-07-01",
+      "home_id": 45,
+      "away_id": 5,
+      "home": "United States",
+      "away": "Bosnia and Herzegovina",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5088,
+      "history_index": 5089,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.0486811432313843,
+        "home_defence": 0.3455104697662091,
+        "away_attack": 0.4450042784758127,
+        "away_defence": 0.21173004117964697
+      },
+      "posterior_means": {
+        "home_attack": 1.0219184090825482,
+        "home_defence": 0.39346028723124804,
+        "away_attack": 0.4066797813746529,
+        "away_defence": 0.2264837371333593
+      },
+      "total_strength_difference": {
+        "mean": 0.7374572933421337,
+        "q05": 0.19551854800075769,
+        "q50": 0.7352749800615244,
+        "q95": 1.3279332312184748,
+        "fraction_positive": 0.986328125
+      },
+      "ess_before_resampling": 456.92299696798955,
+      "ess_after_update": 436.4243716148224,
+      "raw_grid_mass": 0.9905413420306396,
+      "outcome_probabilities": {
+        "home": 0.6811522595771541,
+        "draw": 0.14888401692608708,
+        "away": 0.16996372349675884
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49498,
+      "date": "2026-07-02",
+      "home_id": 40,
+      "away_id": 3,
+      "home": "Spain",
+      "away": "Austria",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5089,
+      "history_index": 5090,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.39024547136580884,
+        "home_defence": 0.8427504349619213,
+        "away_attack": 1.076804845766767,
+        "away_defence": -0.035268683161390944
+      },
+      "posterior_means": {
+        "home_attack": 0.43479523529791786,
+        "home_defence": 0.8876299323060245,
+        "away_attack": 1.0345069375880702,
+        "away_defence": -0.059848645518191655
+      },
+      "total_strength_difference": {
+        "mean": 0.19145974372235403,
+        "q05": -0.32795563590015864,
+        "q50": 0.16929362688777314,
+        "q95": 0.8356715711203127,
+        "fraction_positive": 0.68359375
+      },
+      "ess_before_resampling": 436.4243716148224,
+      "ess_after_update": 426.0095634691125,
+      "raw_grid_mass": 0.9987831987015321,
+      "outcome_probabilities": {
+        "home": 0.46439903504471075,
+        "draw": 0.20301479720254817,
+        "away": 0.3325861677527408
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49499,
+      "date": "2026-07-02",
+      "home_id": 33,
+      "away_id": 10,
+      "home": "Portugal",
+      "away": "Croatia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5090,
+      "history_index": 5091,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.5134245501144264,
+        "home_defence": 0.7700036000350341,
+        "away_attack": 1.5182501197774645,
+        "away_defence": -0.1733999611403316
+      },
+      "posterior_means": {
+        "home_attack": 0.47535156492417047,
+        "home_defence": 0.8053521726871609,
+        "away_attack": 1.4622584493978603,
+        "away_defence": -0.16031047587228003
+      },
+      "total_strength_difference": {
+        "mean": -0.06142200848767224,
+        "q05": -0.5114796837485609,
+        "q50": -0.03976125065268919,
+        "q95": 0.3936509770442592,
+        "fraction_positive": 0.439453125
+      },
+      "ess_before_resampling": 426.0095634691125,
+      "ess_after_update": 432.5108706755357,
+      "raw_grid_mass": 0.9891123928639298,
+      "outcome_probabilities": {
+        "home": 0.3903785253872301,
+        "draw": 0.16907729894085988,
+        "away": 0.4405441756719098
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49500,
+      "date": "2026-07-02",
+      "home_id": 42,
+      "away_id": 0,
+      "home": "Switzerland",
+      "away": "Algeria",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5091,
+      "history_index": 5092,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.1974569398312445,
+        "home_defence": 0.7108447892099162,
+        "away_attack": 0.03085058117009997,
+        "away_defence": 0.8932427437559156
+      },
+      "posterior_means": {
+        "home_attack": 1.200712655650774,
+        "home_defence": 0.727552706943845,
+        "away_attack": 0.015392552177767383,
+        "away_defence": 0.8847142258656531
+      },
+      "total_strength_difference": {
+        "mean": 0.9842084041151453,
+        "q05": 0.39659767132446755,
+        "q50": 0.9975891922348578,
+        "q95": 1.5040246508293285,
+        "fraction_positive": 0.99609375
+      },
+      "ess_before_resampling": 432.5108706755357,
+      "ess_after_update": 498.9008607206182,
+      "raw_grid_mass": 0.9996301005610949,
+      "outcome_probabilities": {
+        "home": 0.6392970120984468,
+        "draw": 0.2205704455007327,
+        "away": 0.14013254240081993
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49501,
+      "date": "2026-07-03",
+      "home_id": 2,
+      "away_id": 15,
+      "home": "Australia",
+      "away": "Egypt",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5092,
+      "history_index": 5093,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.36816687382773366,
+        "home_defence": 1.988777801247305,
+        "away_attack": 0.7182270398516077,
+        "away_defence": 0.8753197199341642
+      },
+      "posterior_means": {
+        "home_attack": 0.355482072499427,
+        "home_defence": 1.9709066851324577,
+        "away_attack": 0.732175557058947,
+        "away_defence": 0.8821652721294727
+      },
+      "total_strength_difference": {
+        "mean": 0.7633979152892668,
+        "q05": 0.08320429375353731,
+        "q50": 0.6600875653964868,
+        "q95": 1.6864641469737736,
+        "fraction_positive": 0.96484375
+      },
+      "ess_before_resampling": 498.9008607206182,
+      "ess_after_update": 502.30648227538876,
+      "raw_grid_mass": 0.9999936485237682,
+      "outcome_probabilities": {
+        "home": 0.435258339822308,
+        "draw": 0.39923889187077616,
+        "away": 0.16550276830691577
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49502,
+      "date": "2026-07-03",
+      "home_id": 1,
+      "away_id": 8,
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5093,
+      "history_index": 5094,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.38021950556275524,
+        "home_defence": 1.9039896503150666,
+        "away_attack": -0.0013526055515956548,
+        "away_defence": -0.12151213521040916
+      },
+      "posterior_means": {
+        "home_attack": 0.378511689759771,
+        "home_defence": 1.8718607072087468,
+        "away_attack": 0.054513400588322075,
+        "away_defence": -0.1121613561700633
+      },
+      "total_strength_difference": {
+        "mean": 2.407073896639827,
+        "q05": 1.7931611677490826,
+        "q50": 2.3813206132669507,
+        "q95": 3.062989812283179,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 502.30648227538876,
+      "ess_after_update": 446.4480423420953,
+      "raw_grid_mass": 0.9986180185145818,
+      "outcome_probabilities": {
+        "home": 0.8295856264630038,
+        "draw": 0.14244807985894706,
+        "away": 0.02796629367804908
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49503,
+      "date": "2026-07-03",
+      "home_id": 9,
+      "away_id": 19,
+      "home": "Colombia",
+      "away": "Ghana",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5094,
+      "history_index": 5095,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.16084214646757428,
+        "home_defence": 0.2901242257782969,
+        "away_attack": 0.13625877383220011,
+        "away_defence": 0.37983113224341003
+      },
+      "posterior_means": {
+        "home_attack": 0.15254937868928414,
+        "home_defence": 0.3165968234894616,
+        "away_attack": 0.09794011904515272,
+        "away_defence": 0.37843720166181305
+      },
+      "total_strength_difference": {
+        "mean": -0.06512353382973893,
+        "q05": -0.7145661458317353,
+        "q50": -0.06322512616342607,
+        "q95": 0.5837004972976962,
+        "fraction_positive": 0.4375
+      },
+      "ess_before_resampling": 446.4480423420953,
+      "ess_after_update": 476.05480403097357,
+      "raw_grid_mass": 0.9999523305436429,
+      "outcome_probabilities": {
+        "home": 0.3432020065565912,
+        "draw": 0.2819349206050006,
+        "away": 0.37486307283840786
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49504,
+      "date": "2026-07-04",
+      "home_id": 7,
+      "away_id": 27,
+      "home": "Canada",
+      "away": "Morocco",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5095,
+      "history_index": 5096,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.45087174968343,
+        "home_defence": 1.0121053045557964,
+        "away_attack": -0.6974383327761284,
+        "away_defence": 1.5058444775412632
+      },
+      "posterior_means": {
+        "home_attack": 1.3069995391573275,
+        "home_defence": 0.8949575645924992,
+        "away_attack": -0.486511154973316,
+        "away_defence": 1.5724082043584406
+      },
+      "total_strength_difference": {
+        "mean": 1.6545709094740921,
+        "q05": 0.7405017108853892,
+        "q50": 1.7230461892361122,
+        "q95": 2.431756768722552,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 476.05480403097357,
+      "ess_after_update": 204.03613092760293,
+      "raw_grid_mass": 0.9999392524656383,
+      "outcome_probabilities": {
+        "home": 0.6277259713194059,
+        "draw": 0.29484675127420895,
+        "away": 0.07742727740638496
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49505,
+      "date": "2026-07-04",
+      "home_id": 32,
+      "away_id": 17,
+      "home": "Paraguay",
+      "away": "France",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5096,
+      "history_index": 5097,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.5684770145173802,
+        "home_defence": 0.44125148814191617,
+        "away_attack": 0.9701952867644619,
+        "away_defence": -0.020794734873168262
+      },
+      "posterior_means": {
+        "home_attack": -0.5883019479975047,
+        "home_defence": 0.46013383387501183,
+        "away_attack": 0.9360545780703757,
+        "away_defence": -0.00035080300432891766
+      },
+      "total_strength_difference": {
+        "mean": -1.0766260782667576,
+        "q05": -1.6528654694534097,
+        "q50": -1.0847059386973767,
+        "q95": -0.43037655493448423,
+        "fraction_positive": 0.001953125
+      },
+      "ess_before_resampling": 204.03613092760293,
+      "ess_after_update": 467.42512147066714,
+      "raw_grid_mass": 0.9982253551345588,
+      "outcome_probabilities": {
+        "home": 0.12255476737368037,
+        "draw": 0.17743373089678643,
+        "away": 0.7000115017295335
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49506,
+      "date": "2026-07-05",
+      "home_id": 6,
+      "away_id": 30,
+      "home": "Brazil",
+      "away": "Norway",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5097,
+      "history_index": 5098,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.7462018393827843,
+        "home_defence": 2.0081727928320503,
+        "away_attack": 1.368056355262687,
+        "away_defence": 1.1435046138100176
+      },
+      "posterior_means": {
+        "home_attack": 0.7498603714846654,
+        "home_defence": 1.9517615873235805,
+        "away_attack": 1.4044371109088583,
+        "away_defence": 1.1527841416494353
+      },
+      "total_strength_difference": {
+        "mean": 0.2428136631421301,
+        "q05": -0.44013253817968334,
+        "q50": 0.29061378357697176,
+        "q95": 0.7608249299945492,
+        "fraction_positive": 0.755859375
+      },
+      "ess_before_resampling": 467.42512147066714,
+      "ess_after_update": 461.7191792564865,
+      "raw_grid_mass": 0.9999965940762728,
+      "outcome_probabilities": {
+        "home": 0.3792246885739643,
+        "draw": 0.34550289610414325,
+        "away": 0.2752724153218931
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49507,
+      "date": "2026-07-05",
+      "home_id": 26,
+      "away_id": 16,
+      "home": "Mexico",
+      "away": "England",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5098,
+      "history_index": 5099,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": -0.4496460751904284,
+        "home_defence": 1.0194463407410264,
+        "away_attack": 0.2662557733738901,
+        "away_defence": 2.095682848680308
+      },
+      "posterior_means": {
+        "home_attack": -0.43290816150583517,
+        "home_defence": 0.9932636614116894,
+        "away_attack": 0.28283522403526745,
+        "away_defence": 2.0752926024638003
+      },
+      "total_strength_difference": {
+        "mean": -1.7921383565035995,
+        "q05": -2.407122441316232,
+        "q50": -1.7585461526647852,
+        "q95": -1.2107820348262142,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 461.7191792564865,
+      "ess_after_update": 469.62666585488734,
+      "raw_grid_mass": 0.999999863910023,
+      "outcome_probabilities": {
+        "home": 0.056449411301393485,
+        "draw": 0.5116827208559563,
+        "away": 0.43186786784265085
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49508,
+      "date": "2026-07-06",
+      "home_id": 33,
+      "away_id": 40,
+      "home": "Portugal",
+      "away": "Spain",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5099,
+      "history_index": 5100,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.5192590436205533,
+        "home_defence": 0.803977732265402,
+        "away_attack": 0.40803509265499494,
+        "away_defence": 0.8702521682040201
+      },
+      "posterior_means": {
+        "home_attack": 0.4853524513178917,
+        "home_defence": 0.8071676200851271,
+        "away_attack": 0.41464270221349114,
+        "away_defence": 0.8970988933930705
+      },
+      "total_strength_difference": {
+        "mean": 0.044949515026940313,
+        "q05": -0.5318978154228999,
+        "q50": 0.039091548429904865,
+        "q95": 0.6505037441017518,
+        "fraction_positive": 0.546875
+      },
+      "ess_before_resampling": 469.62666585488734,
+      "ess_after_update": 484.36061349184536,
+      "raw_grid_mass": 0.9999891807019233,
+      "outcome_probabilities": {
+        "home": 0.3513029166250148,
+        "draw": 0.3193732384569882,
+        "away": 0.3293238449179972
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49509,
+      "date": "2026-07-06",
+      "home_id": 45,
+      "away_id": 4,
+      "home": "United States",
+      "away": "Belgium",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5100,
+      "history_index": 5101,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.0278008821886138,
+        "home_defence": 0.34489934156169283,
+        "away_attack": 1.20041283332556,
+        "away_defence": 0.5411181506909888
+      },
+      "posterior_means": {
+        "home_attack": 0.9823483721615147,
+        "home_defence": 0.33410771074223744,
+        "away_attack": 1.2078564294943464,
+        "away_defence": 0.5684794547129919
+      },
+      "total_strength_difference": {
+        "mean": -0.36883076026624206,
+        "q05": -0.8734284457823955,
+        "q50": -0.380589778263592,
+        "q95": 0.15034285704743783,
+        "fraction_positive": 0.12109375
+      },
+      "ess_before_resampling": 484.36061349184536,
+      "ess_after_update": 461.09536010970874,
+      "raw_grid_mass": 0.9862007468200943,
+      "outcome_probabilities": {
+        "home": 0.2729255487596427,
+        "draw": 0.16070901863286682,
+        "away": 0.5663654326074898
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49510,
+      "date": "2026-07-07",
+      "home_id": 1,
+      "away_id": 15,
+      "home": "Argentina",
+      "away": "Egypt",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5101,
+      "history_index": 5102,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.3747856398056143,
+        "home_defence": 1.8933770585488123,
+        "away_attack": 0.7158592479437931,
+        "away_defence": 0.8706005949942541
+      },
+      "posterior_means": {
+        "home_attack": 0.4303750022760585,
+        "home_defence": 1.857913941867126,
+        "away_attack": 0.7335758274760588,
+        "away_defence": 0.827631015138636
+      },
+      "total_strength_difference": {
+        "mean": 0.6817028554163795,
+        "q05": 0.1267101091080679,
+        "q50": 0.6747567207038148,
+        "q95": 1.2862541563564969,
+        "fraction_positive": 0.984375
+      },
+      "ess_before_resampling": 461.09536010970874,
+      "ess_after_update": 402.72134591599126,
+      "raw_grid_mass": 0.9999982975043402,
+      "outcome_probabilities": {
+        "home": 0.42516902858171857,
+        "draw": 0.398140296496987,
+        "away": 0.17669067492129417
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49511,
+      "date": "2026-07-07",
+      "home_id": 42,
+      "away_id": 9,
+      "home": "Switzerland",
+      "away": "Colombia",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5102,
+      "history_index": 5103,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.1979548814066636,
+        "home_defence": 0.7469429947968401,
+        "away_attack": 0.22597898628038882,
+        "away_defence": 0.3316128374203786
+      },
+      "posterior_means": {
+        "home_attack": 1.1041517101407616,
+        "home_defence": 0.7915233913051891,
+        "away_attack": 0.26372584934610693,
+        "away_defence": 0.46849747904586275
+      },
+      "total_strength_difference": {
+        "mean": 1.387306052502736,
+        "q05": 0.6947826357235318,
+        "q50": 1.3693529311778563,
+        "q95": 2.1262838470088474,
+        "fraction_positive": 1.0
+      },
+      "ess_before_resampling": 402.72134591599126,
+      "ess_after_update": 297.2677848660075,
+      "raw_grid_mass": 0.9820570055764714,
+      "outcome_probabilities": {
+        "home": 0.8091439805935837,
+        "draw": 0.11574105875049961,
+        "away": 0.0751149606559165
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49512,
+      "date": "2026-07-09",
+      "home_id": 17,
+      "away_id": 27,
+      "home": "France",
+      "away": "Morocco",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5103,
+      "history_index": 5104,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.9427673501665206,
+        "home_defence": 0.024909883916274696,
+        "away_attack": -0.4805702035806925,
+        "away_defence": 1.581428287756181
+      },
+      "posterior_means": {
+        "home_attack": 0.9859445387224843,
+        "home_defence": 0.05463489446982685,
+        "away_attack": -0.5239102123172337,
+        "away_defence": 1.5386501218111477
+      },
+      "total_strength_difference": {
+        "mean": -0.133180850092693,
+        "q05": -0.7828656491185176,
+        "q50": -0.13533101022320448,
+        "q95": 0.5491405419593604,
+        "fraction_positive": 0.357421875
+      },
+      "ess_before_resampling": 297.2677848660075,
+      "ess_after_update": 440.00445489816116,
+      "raw_grid_mass": 0.9999972037187149,
+      "outcome_probabilities": {
+        "home": 0.290543197683439,
+        "draw": 0.35846916999017564,
+        "away": 0.35098763232638497
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49513,
+      "date": "2026-07-10",
+      "home_id": 40,
+      "away_id": 4,
+      "home": "Spain",
+      "away": "Belgium",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5104,
+      "history_index": 5105,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.3867432656349829,
+        "home_defence": 0.9129506707017909,
+        "away_attack": 1.2265591765397248,
+        "away_defence": 0.5738412381018057
+      },
+      "posterior_means": {
+        "home_attack": 0.4189205502673108,
+        "home_defence": 0.9409635209642532,
+        "away_attack": 1.2123372139618191,
+        "away_defence": 0.5505887763186678
+      },
+      "total_strength_difference": {
+        "mean": -0.500706478304757,
+        "q05": -1.0739034061541524,
+        "q50": -0.49885157658073837,
+        "q95": 0.03437369275533497,
+        "fraction_positive": 0.068359375
+      },
+      "ess_before_resampling": 440.00445489816116,
+      "ess_after_update": 473.7200283125336,
+      "raw_grid_mass": 0.999568500641781,
+      "outcome_probabilities": {
+        "home": 0.23814912600500684,
+        "draw": 0.22430794910514124,
+        "away": 0.5375429248898518
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49514,
+      "date": "2026-07-11",
+      "home_id": 30,
+      "away_id": 16,
+      "home": "Norway",
+      "away": "England",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5105,
+      "history_index": 5106,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.3888176935842624,
+        "home_defence": 1.1503009514432065,
+        "away_attack": 0.313176718414697,
+        "away_defence": 2.101610709214877
+      },
+      "posterior_means": {
+        "home_attack": 1.3911835396823913,
+        "home_defence": 1.1137503728205782,
+        "away_attack": 0.36071598722738185,
+        "away_defence": 2.1132904540025392
+      },
+      "total_strength_difference": {
+        "mean": 0.12433121739789527,
+        "q05": -0.5615191981638104,
+        "q50": 0.12100185923129281,
+        "q95": 0.8368459272130578,
+        "fraction_positive": 0.578125
+      },
+      "ess_before_resampling": 473.7200283125336,
+      "ess_after_update": 464.46545957327936,
+      "raw_grid_mass": 0.9999994537044536,
+      "outcome_probabilities": {
+        "home": 0.32095320738352096,
+        "draw": 0.40538528536237073,
+        "away": 0.27366150725410826
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49515,
+      "date": "2026-07-11",
+      "home_id": 1,
+      "away_id": 42,
+      "home": "Argentina",
+      "away": "Switzerland",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5106,
+      "history_index": 5107,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.4101843922576146,
+        "home_defence": 1.8879372257009985,
+        "away_attack": 1.1082275333807654,
+        "away_defence": 0.7929120094401856
+      },
+      "posterior_means": {
+        "home_attack": 0.48303852782937506,
+        "home_defence": 1.8706384676516752,
+        "away_attack": 1.1157961723735486,
+        "away_defence": 0.7182564583189187
+      },
+      "total_strength_difference": {
+        "mean": 0.39698207513766226,
+        "q05": -0.17578415154517277,
+        "q50": 0.4058172241715707,
+        "q95": 0.9801263273156393,
+        "fraction_positive": 0.87890625
+      },
+      "ess_before_resampling": 464.46545957327936,
+      "ess_after_update": 393.8816622758864,
+      "raw_grid_mass": 0.9999939952228026,
+      "outcome_probabilities": {
+        "home": 0.4093846212119571,
+        "draw": 0.3545850432399477,
+        "away": 0.23603033554809488
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49516,
+      "date": "2026-07-14",
+      "home_id": 17,
+      "away_id": 40,
+      "home": "France",
+      "away": "Spain",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5107,
+      "history_index": 5108,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 1.0139276417391605,
+        "home_defence": 0.05353506431442379,
+        "away_attack": 0.4187332611397341,
+        "away_defence": 0.916374024358404
+      },
+      "posterior_means": {
+        "home_attack": 0.9537672972478753,
+        "home_defence": 0.0559563883125916,
+        "away_attack": 0.42704840153071383,
+        "away_defence": 0.9620899906935043
+      },
+      "total_strength_difference": {
+        "mean": -0.267644579444554,
+        "q05": -1.0732130420609343,
+        "q50": -0.2497669047507236,
+        "q95": 0.40143788747207976,
+        "fraction_positive": 0.287109375
+      },
+      "ess_before_resampling": 393.8816622758864,
+      "ess_after_update": 439.44835403138615,
+      "raw_grid_mass": 0.9980862090738514,
+      "outcome_probabilities": {
+        "home": 0.3076123493070939,
+        "draw": 0.20960794605635094,
+        "away": 0.4827797046365558
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49517,
+      "date": "2026-07-15",
+      "home_id": 16,
+      "away_id": 1,
+      "home": "England",
+      "away": "Argentina",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5108,
+      "history_index": 5109,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.3279238867749284,
+        "home_defence": 2.0807928830115205,
+        "away_attack": 0.4552736682540294,
+        "away_defence": 1.882228519998697
+      },
+      "posterior_means": {
+        "home_attack": 0.3303296169031201,
+        "home_defence": 2.0285434147815917,
+        "away_attack": 0.5113505743320896,
+        "away_defence": 1.8678123203576358
+      },
+      "total_strength_difference": {
+        "mean": 0.07121458153372248,
+        "q05": -0.5655905005725927,
+        "q50": 0.009401253860471748,
+        "q95": 0.8007498933144475,
+        "fraction_positive": 0.509765625
+      },
+      "ess_before_resampling": 439.44835403138615,
+      "ess_after_update": 443.11148990219294,
+      "raw_grid_mass": 0.9999999989557573,
+      "outcome_probabilities": {
+        "home": 0.19854032578443676,
+        "draw": 0.6178070827021994,
+        "away": 0.18365259151336386
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49518,
+      "date": "2026-07-18",
+      "home_id": 17,
+      "away_id": 16,
+      "home": "France",
+      "away": "England",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5109,
+      "history_index": 5110,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.9645570127646926,
+        "home_defence": 0.049586136807446966,
+        "away_attack": 0.33190251215899164,
+        "away_defence": 2.028008665924335
+      },
+      "posterior_means": {
+        "home_attack": 1.1202901362568654,
+        "home_defence": -0.09834396456895347,
+        "away_attack": 0.49014291323417003,
+        "away_defence": 1.9296601218136333
+      },
+      "total_strength_difference": {
+        "mean": -1.3457680285111868,
+        "q05": -1.9799945279672082,
+        "q50": -1.328447051507608,
+        "q95": -0.7537260062071839,
+        "fraction_positive": 0.0
+      },
+      "ess_before_resampling": 443.11148990219294,
+      "ess_after_update": 109.87695061969005,
+      "raw_grid_mass": 0.9992646993026643,
+      "outcome_probabilities": {
+        "home": 0.09578467455032942,
+        "draw": 0.2186585326745087,
+        "away": 0.6855567927751609
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    },
+    {
+      "fixture_id": 49520,
+      "date": "2026-07-19",
+      "home_id": 40,
+      "away_id": 1,
+      "home": "Spain",
+      "away": "Argentina",
+      "tournament": "FIFA World Cup",
+      "full_sequence_match_index": 5110,
+      "history_index": 5111,
+      "current_scale": 1.0,
+      "label": "predictive",
+      "predictive_means": {
+        "home_attack": 0.5431461606441255,
+        "home_defence": 0.9641015397634314,
+        "away_attack": 0.546973085903943,
+        "away_defence": 1.875958108176486
+      },
+      "posterior_means": {
+        "home_attack": 0.5946281767294681,
+        "home_defence": 1.020268205660743,
+        "away_attack": 0.505617546895998,
+        "away_defence": 1.8688157001199988
+      },
+      "total_strength_difference": {
+        "mean": -0.9156834936728723,
+        "q05": -1.713347208149869,
+        "q50": -0.8419622789179176,
+        "q95": -0.20316540459380256,
+        "fraction_positive": 0.01171875
+      },
+      "ess_before_resampling": 109.87695061969005,
+      "ess_after_update": 459.0088476861635,
+      "raw_grid_mass": 0.9999873462666319,
+      "outcome_probabilities": {
+        "home": 0.14628095362090085,
+        "draw": 0.3842188084331393,
+        "away": 0.46950023794595996
+      },
+      "n_particles": 512,
+      "max_goals": 8
+    }
+  ]
+}

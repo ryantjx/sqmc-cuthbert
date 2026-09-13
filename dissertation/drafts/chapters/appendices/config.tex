@@ -1,0 +1,53 @@
+\chapter{Configuration}
+\label{app:config}
+
+This appendix records the exact configuration used for the performance comparison in Section~\ref{sec:performance-comparison}. Both methods consume the same frozen, chronologically ordered data set and the same optimiser. The comparison is end to end: the two pipelines differ in prior dependence, posterior factorisation, likelihood integration and stochastic versus deterministic objective as well as in the correlated Rao-Blackwellised construction, so any difference between them is interpreted as a difference between complete pipelines and is not attributed to a single component.
+
+\section{Data and split}
+
+The data set is the frozen international football results file \texttt{results.csv} from \texttt{martj42/international-results} (licence CC-BY 4.0, retrieved 9 September 2026), containing $49{,}521$ rows with one row per match; the frozen file's SHA-256 checksum is recorded in the repository's data-preparation module at commit \texttt{336842f}. The rows are split chronologically into a training period $[1980\text{-}01\text{-}01, 2024\text{-}01\text{-}01)$, a test period $[2024\text{-}01\text{-}01, 2026\text{-}06\text{-}11)$, and a prediction period from 11 June 2026. The training set contains $4{,}702$ matches, the test set $305$, and the prediction set $104$. Matches with scores exceeding the truncation threshold \texttt{max\_goals} $= 8$ are excluded before the split, and same-day repeats are retained as separate rows with zero elapsed time. The historical rows are restricted to matches involving the 48 tournament teams, a deliberate selection decision documented in Section~\ref{sec:performance-comparison}.
+
+\section{Model parameters}
+
+The static parameters are $\Theta = (\Gamma_0, B, \kappa, \alpha, \beta)$, with $\Gamma_0 \in \mathbb{R}^{K \times K}$, $B \in \mathbb{R}^{2 \times 2}$, $\kappa > 0$, $\alpha \in \mathbb{R}$ and $\beta \in \mathbb{R}$, subject to $\Gamma_0 \succ 0$, $B \succ 0$ and $\det(B) = 1$. The number of teams is $K = 48$. The initial mean is $\mu_0 = \mathbf{0}_{2K}$.
+
+\section{Optimisation}
+
+Both methods use Adam with a cosine-decay learning-rate schedule, learning rate $0.02$, seed $0$ and exactly $50$ updates, with the final-epoch checkpoint pre-specified. The SQMC log-likelihood gradient is averaged over $15$ independently randomised RQMC replicas at each update; the EKF gradient is deterministic. The EKF integrates the bivariate-Poisson likelihood under the predictive Gaussian by Gauss--Hermite quadrature of degree $32$. The unconstrained-to-constrained parameterisation maps $\Gamma_0$ and $B$ through Cholesky factors with a fixed jitter floor on the diagonal, $\kappa$ through a softplus transform, and $\alpha$, $\beta$ as unconstrained; initial values are zeros for the unconstrained parameters. The epoch count was fixed in advance rather than chosen by a convergence criterion.
+
+\section{Software environment}
+
+The reported runs used Python 3.13 with \texttt{jax} and \texttt{jaxlib} built for CUDA 12 on the A100 host, and the CPU build on the Intel Xeon host; the exact package versions, CUDA and XLA versions, operating system, floating-point precision (\texttt{float64} for the football comparison), compilation policy (\texttt{jax.jit} with warm-up calls excluded from timing), device-synchronisation call, host--device placement and thread settings are recorded in the provenance metadata written by every run directory, as described in Appendix~\ref{app:code}. CPU and GPU runs were executed in the same process for the shared-implementation benchmarks of Chapter~\ref{ch:sqmc}.
+
+\section{Full configuration}
+
+Table~\ref{tab:config} lists the complete configuration. The values correspond to the authoritative comparison run \texttt{09092026\_1431} at source commit \texttt{336842f}, which is the run reported in Section~\ref{sec:performance-comparison}.
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+Setting & Value & Description \\
+\midrule
+Number of teams $K$ & $48$ & Teams in the World Cup 2026 model \\
+Particles $N$ & $512$ & SQMC particle count \\
+Epochs & $50$ & Optimisation updates \\
+Learning rate & $0.02$ & Adam step size \\
+Learning-rate schedule & cosine decay & Decay of the learning rate over epochs \\
+Seed & $0$ & Random seed for optimisation and RQMC \\
+SQMC gradient replicas & $15$ & RQMC replicas averaged per gradient \\
+Gauss--Hermite degree & $32$ & Quadrature degree for the EKF likelihood \\
+$\texttt{max\_goals}$ & $8$ & Score truncation threshold \\
+$\texttt{match\_scale}$ & $1$ & Observation scale for non-friendly matches \\
+Include friendlies & yes & Friendly fixtures retained in training \\
+Training start & $1980\text{-}01\text{-}01$ & Start of the training period \\
+Test start & $2024\text{-}01\text{-}01$ & Start of the test period \\
+Prediction start & $2026\text{-}06\text{-}11$ & Start of the prediction period \\
+GPU & A100 & Hardware for the SQMC run \\
+Source commit & \texttt{336842f} & Repository revision of the run \\
+Run ID & \texttt{09092026\_1431} & Identifier of the authoritative run \\
+\bottomrule
+\end{tabularx}
+\caption{Configuration for the performance comparison of Section~\ref{sec:performance-comparison}.}
+\label{tab:config}
+\end{table}

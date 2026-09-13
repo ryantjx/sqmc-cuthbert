@@ -1,0 +1,16 @@
+{
+  "run_id": "07092026_1002",
+  "source_commit": "308348a726dbdb67a97a445732b1cbbf2072c92f",
+  "input_sha256": {
+    "comparison_config.json": "0d2f2f2a001a843f4f2a4bf67fee11e1bdb725687e8ac82be0f13601d54eaaa7",
+    "qmc/cpu_gpu_comparison.json": "52a503d7cdec0ba273799b1b389cc557a560492da79a7fa3edb711c24825f0dd",
+    "hilbert_sort/cpu_gpu_comparison.json": "d9a362f3cfd5cb323c85836a46c2ca2adf62361572958dea72b1e2561c455024",
+    "sqmc/results.json": "8c550834d99844c72521c847a88d385e3cd33335487f1794b8819b3c9a4d07fa",
+    "sqmc/budget_summary.json": "e5c7484e0942322f4a8a9924e181105226f2622229033bf84a1eec907131854f"
+  },
+  "figures": [
+    "comparison_microbenchmarks_07092026_1002.pdf",
+    "comparison_sqmc_runtime_07092026_1002.pdf",
+    "comparison_sqmc_budget_07092026_1002.pdf"
+  ]
+}

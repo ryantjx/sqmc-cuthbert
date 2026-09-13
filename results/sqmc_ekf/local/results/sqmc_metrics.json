@@ -1,0 +1,26 @@
+{
+  "all": {
+    "n_predictions": 104,
+    "n_scored": 104,
+    "brier_score_definition": "sum_over_home_draw_away",
+    "mean_brier_score": 0.6877644027648591,
+    "uniform_reference_brier_score": 0.6666666666666666,
+    "brier_skill_score_vs_uniform": -0.031646604147288704,
+    "total_log_likelihood": -381.10697697504213,
+    "mean_log_likelihood": -3.6644901632215587,
+    "exact_score_accuracy": 0.04807692307692308,
+    "outcome_accuracy": 0.47115384615384615
+  },
+  "worldcup": {
+    "n_predictions": 104,
+    "n_scored": 104,
+    "brier_score_definition": "sum_over_home_draw_away",
+    "mean_brier_score": 0.6877644027648591,
+    "uniform_reference_brier_score": 0.6666666666666666,
+    "brier_skill_score_vs_uniform": -0.031646604147288704,
+    "total_log_likelihood": -381.10697697504213,
+    "mean_log_likelihood": -3.6644901632215587,
+    "exact_score_accuracy": 0.04807692307692308,
+    "outcome_accuracy": 0.47115384615384615
+  }
+}

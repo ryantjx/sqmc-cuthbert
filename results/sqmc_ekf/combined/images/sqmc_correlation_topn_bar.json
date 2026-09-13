@@ -1,0 +1,46 @@
+{
+  "positive": [
+    {
+      "pair": "England - France",
+      "correlation": 0.42126590213313053
+    },
+    {
+      "pair": "Argentina - Colombia",
+      "correlation": 0.4395617396560077
+    },
+    {
+      "pair": "Canada - Cura\u00e7ao",
+      "correlation": 0.46627772108316135
+    },
+    {
+      "pair": "Cura\u00e7ao - Haiti",
+      "correlation": 0.4767506403375854
+    },
+    {
+      "pair": "Cape Verde - Cura\u00e7ao",
+      "correlation": 0.5376266211454577
+    }
+  ],
+  "negative": [
+    {
+      "pair": "England - Haiti",
+      "correlation": -0.26456721647055165
+    },
+    {
+      "pair": "Brazil - Cura\u00e7ao",
+      "correlation": -0.27558674444425224
+    },
+    {
+      "pair": "Brazil - Cape Verde",
+      "correlation": -0.3054514445243489
+    },
+    {
+      "pair": "France - Haiti",
+      "correlation": -0.32651668257700023
+    },
+    {
+      "pair": "France - New Zealand",
+      "correlation": -0.3414686064635967
+    }
+  ]
+}

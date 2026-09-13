@@ -1,0 +1,113 @@
+{
+  "gpu": "A100",
+  "colab_timeout": 3600,
+  "setup_timeout": 900,
+  "transfer_timeout": 600,
+  "session": "comparison",
+  "repo_url": "https://github.com/ryantjx/rbsqmc.git",
+  "qmc": {
+    "platforms": [
+      "cpu",
+      "gpu"
+    ],
+    "dimensions": [
+      2,
+      5,
+      10,
+      30,
+      60
+    ],
+    "n_values": [
+      128,
+      256,
+      512,
+      2048,
+      8192,
+      32768
+    ],
+    "sequences": [
+      "sobol",
+      "halton"
+    ],
+    "modes": [
+      "fresh"
+    ],
+    "scramble": true,
+    "repeats": 10,
+    "warmups": 2,
+    "seed": 42,
+    "implementations": [
+      "jax",
+      "scipy"
+    ]
+  },
+  "hilbert_sort": {
+    "platforms": [
+      "cpu",
+      "gpu"
+    ],
+    "dimensions": [
+      2,
+      5,
+      10,
+      30,
+      60
+    ],
+    "n_values": [
+      128,
+      256,
+      512,
+      2048,
+      8192,
+      32768
+    ],
+    "sequences": [
+      "sobol",
+      "halton"
+    ],
+    "distribution": "normal",
+    "repeats": 10,
+    "warmups": 2,
+    "seed": 42
+  },
+  "sqmc": {
+    "platforms": [
+      "cpu",
+      "gpu"
+    ],
+    "dimensions": [
+      2,
+      5,
+      10,
+      30,
+      60
+    ],
+    "particle_counts": [
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "budget_seconds": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "n_steps": 100,
+    "datasets": 1,
+    "selection_reps": 8,
+    "validation_reps": 16,
+    "bootstrap_reps": 500,
+    "repeats": 10,
+    "warmups": 2,
+    "seed": 42
+  },
+  "source_commit": "95f4412d2fe9faba8defec4a330713f61a793511",
+  "repo_branch": "main",
+  "run_id": "13092026_1304",
+  "session_name": "comparison_13092026_1304_23126b4660",
+  "resolved_utc": "2026-09-13T13:04:34.248609+00:00",
+  "source_transport": "colab_git_bundle",
+  "source_bundle_sha256": "6e0994a45dc6f30cc08e215a756394f8116cbc73f63b6cbd780a3c9cff831bd0"
+}

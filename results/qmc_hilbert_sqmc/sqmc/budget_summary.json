@@ -1,0 +1,372 @@
+[
+  {
+    "dimension": 2,
+    "budget_seconds": 0.01,
+    "backend": "cpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 2,
+    "budget_seconds": 0.01,
+    "backend": "gpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 2,
+    "budget_seconds": 0.05,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 128,
+    "median_seconds": 0.03434113699995578,
+    "q75_seconds": 0.03453772074988137,
+    "selection_rmse": 0.1130675753734897,
+    "validation_rmse": 0.13007515406376371,
+    "validation_ci95": [
+      0.12273537218071016,
+      0.13759683092610336
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 2,
+    "budget_seconds": 0.05,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 512,
+    "median_seconds": 0.04795844000022953,
+    "q75_seconds": 0.051358396000296125,
+    "selection_rmse": 0.04881146273830523,
+    "validation_rmse": 0.06300644020632246,
+    "validation_ci95": [
+      0.054636734918704785,
+      0.07118830296378387
+    ],
+    "measured_fraction_within_budget": 0.5
+  },
+  {
+    "dimension": 2,
+    "budget_seconds": 0.1,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 256,
+    "median_seconds": 0.06435221700007787,
+    "q75_seconds": 0.06452476475010371,
+    "selection_rmse": 0.08633001082022813,
+    "validation_rmse": 0.09013960707123002,
+    "validation_ci95": [
+      0.0820165008701638,
+      0.09795447686110907
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 2,
+    "budget_seconds": 0.1,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.06938587399986318,
+    "q75_seconds": 0.06965436525001678,
+    "selection_rmse": 0.022213897390964892,
+    "validation_rmse": 0.02418054059359805,
+    "validation_ci95": [
+      0.020228266343964012,
+      0.029009546975964254
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.01,
+    "backend": "cpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.01,
+    "backend": "gpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.05,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 256,
+    "median_seconds": 0.049891276000153084,
+    "q75_seconds": 0.051060912500020095,
+    "selection_rmse": 0.24653679560534467,
+    "validation_rmse": 0.2536174674203268,
+    "validation_ci95": [
+      0.2441950713352889,
+      0.264466436167064
+    ],
+    "measured_fraction_within_budget": 0.7
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.05,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.04711836299975403,
+    "q75_seconds": 0.04719308425012514,
+    "selection_rmse": 0.11301838953594265,
+    "validation_rmse": 0.10313637346676585,
+    "validation_ci95": [
+      0.09633812739364145,
+      0.11149208288555389
+    ],
+    "measured_fraction_within_budget": 0.9
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.1,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 512,
+    "median_seconds": 0.09190596899998127,
+    "q75_seconds": 0.09199841800000286,
+    "selection_rmse": 0.19011206316857107,
+    "validation_rmse": 0.19570441190543092,
+    "validation_ci95": [
+      0.18875972187017698,
+      0.20256783442150803
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 5,
+    "budget_seconds": 0.1,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.04711836299975403,
+    "q75_seconds": 0.04719308425012514,
+    "selection_rmse": 0.11301838953594265,
+    "validation_rmse": 0.10313637346676585,
+    "validation_ci95": [
+      0.09633812739364145,
+      0.11149208288555389
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.01,
+    "backend": "cpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.01,
+    "backend": "gpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.05,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 128,
+    "median_seconds": 0.029017509499908556,
+    "q75_seconds": 0.029931107999914275,
+    "selection_rmse": 0.7220247819923548,
+    "validation_rmse": 0.7365986881520519,
+    "validation_ci95": [
+      0.7232031797755989,
+      0.7500317229706709
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.05,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.0403178554997794,
+    "q75_seconds": 0.04491761450003651,
+    "selection_rmse": 0.29749849057275585,
+    "validation_rmse": 0.29818962725691467,
+    "validation_ci95": [
+      0.2918485327308549,
+      0.3047192792768512
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.1,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 256,
+    "median_seconds": 0.05372327650002262,
+    "q75_seconds": 0.053997148749999724,
+    "selection_rmse": 0.576437622240384,
+    "validation_rmse": 0.5816067111445262,
+    "validation_ci95": [
+      0.5683722689309927,
+      0.5925204438123484
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 10,
+    "budget_seconds": 0.1,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.0403178554997794,
+    "q75_seconds": 0.04491761450003651,
+    "selection_rmse": 0.29749849057275585,
+    "validation_rmse": 0.29818962725691467,
+    "validation_ci95": [
+      0.2918485327308549,
+      0.3047192792768512
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.01,
+    "backend": "cpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.01,
+    "backend": "gpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.05,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 128,
+    "median_seconds": 0.0389266460001636,
+    "q75_seconds": 0.03910336149988325,
+    "selection_rmse": 1.5369784650646985,
+    "validation_rmse": 1.5709026333370244,
+    "validation_ci95": [
+      1.5438605186857872,
+      1.6007737337443537
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.05,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.034987337000529806,
+    "q75_seconds": 0.03500969724973402,
+    "selection_rmse": 1.064557272601128,
+    "validation_rmse": 1.031287114485816,
+    "validation_ci95": [
+      1.016805916224632,
+      1.0467408141632166
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.1,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 256,
+    "median_seconds": 0.0684294789998603,
+    "q75_seconds": 0.06871731949968307,
+    "selection_rmse": 1.3954852257643622,
+    "validation_rmse": 1.386782425346532,
+    "validation_ci95": [
+      1.3643464291255922,
+      1.410107912590709
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 30,
+    "budget_seconds": 0.1,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.034987337000529806,
+    "q75_seconds": 0.03500969724973402,
+    "selection_rmse": 1.064557272601128,
+    "validation_rmse": 1.031287114485816,
+    "validation_ci95": [
+      1.016805916224632,
+      1.0467408141632166
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.01,
+    "backend": "cpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.01,
+    "backend": "gpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.05,
+    "backend": "cpu",
+    "status": "no_measured_configuration_within_budget"
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.05,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.03247813349980788,
+    "q75_seconds": 0.03254161500012742,
+    "selection_rmse": 1.7880993358602306,
+    "validation_rmse": 1.791981127781043,
+    "validation_ci95": [
+      1.7739622235089323,
+      1.810532748008791
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.1,
+    "backend": "cpu",
+    "status": "selected",
+    "n": 128,
+    "median_seconds": 0.06421571550026783,
+    "q75_seconds": 0.06535288725058308,
+    "selection_rmse": 2.4443096606576007,
+    "validation_rmse": 2.4607890258072707,
+    "validation_ci95": [
+      2.4179819521432977,
+      2.5046697038716683
+    ],
+    "measured_fraction_within_budget": 1.0
+  },
+  {
+    "dimension": 60,
+    "budget_seconds": 0.1,
+    "backend": "gpu",
+    "status": "selected",
+    "n": 2048,
+    "median_seconds": 0.03247813349980788,
+    "q75_seconds": 0.03254161500012742,
+    "selection_rmse": 1.7880993358602306,
+    "validation_rmse": 1.791981127781043,
+    "validation_ci95": [
+      1.7739622235089323,
+      1.810532748008791
+    ],
+    "measured_fraction_within_budget": 1.0
+  }
+]

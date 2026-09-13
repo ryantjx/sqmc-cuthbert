@@ -1,0 +1,34 @@
+{
+  "platforms": [
+    "cpu",
+    "gpu"
+  ],
+  "dimensions": [
+    2,
+    5,
+    10,
+    30,
+    60
+  ],
+  "repeats": 10,
+  "warmups": 2,
+  "seed": 42,
+  "output_dir": "/content/sqmc-comparison-13092026_1304/sqmc",
+  "particle_counts": [
+    128,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "budget_seconds": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "n_steps": 100,
+  "datasets": 1,
+  "selection_reps": 8,
+  "validation_reps": 16,
+  "bootstrap_reps": 500
+}

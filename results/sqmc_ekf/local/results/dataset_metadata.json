@@ -1,0 +1,14 @@
+{
+  "source_sha256": "4db1d359d1438a23918df4af217da09b72dd92bb638f2a393d49d91616c92ce3",
+  "source_rows": 49521,
+  "max_goals_exclusions": [
+    23433
+  ],
+  "train_count": 4702,
+  "test_count": 305,
+  "prediction_count": 104,
+  "worldcup_count": 104,
+  "chronological_order": "date, then original source row",
+  "score_grid": "0..max_goals, normalized within grid; raw mass reported",
+  "smoke": false
+}

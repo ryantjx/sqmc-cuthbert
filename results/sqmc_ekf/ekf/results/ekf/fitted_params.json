@@ -1,0 +1,93 @@
+{
+  "method": "ekf",
+  "checkpoint_policy": "final_epoch",
+  "checkpoint_epoch": 50,
+  "raw": {
+    "alpha": 0.21938629666334505,
+    "beta": -3.5020707591347,
+    "friendly_scale": 2.151394873526907,
+    "init_corr": 0.7135442465551693,
+    "init_sd": 0.7614221764391823,
+    "kappa": -7.395658972273227
+  },
+  "constrained": {
+    "init_mean": [
+      0.0,
+      0.0
+    ],
+    "init_cov": [
+      [
+        1.3102096568143697,
+        0.794990125580679
+      ],
+      [
+        0.794990125580679,
+        1.3102096568143697
+      ]
+    ],
+    "init_chol_cov": [
+      [
+        1.1446438995663104,
+        0.0
+      ],
+      [
+        0.6945305224462295,
+        0.9098554886381338
+      ]
+    ],
+    "kappa": 0.0006147236271612383,
+    "alpha": 0.21938629666334505,
+    "beta": -3.5020707591347,
+    "friendly_scale": 2.2614350385512685
+  },
+  "team_id_to_name": {
+    "0": "Algeria",
+    "1": "Argentina",
+    "2": "Australia",
+    "3": "Austria",
+    "4": "Belgium",
+    "5": "Bosnia and Herzegovina",
+    "6": "Brazil",
+    "7": "Canada",
+    "8": "Cape Verde",
+    "9": "Colombia",
+    "10": "Croatia",
+    "11": "Cura\u00e7ao",
+    "12": "Czech Republic",
+    "13": "DR Congo",
+    "14": "Ecuador",
+    "15": "Egypt",
+    "16": "England",
+    "17": "France",
+    "18": "Germany",
+    "19": "Ghana",
+    "20": "Haiti",
+    "21": "Iran",
+    "22": "Iraq",
+    "23": "Ivory Coast",
+    "24": "Japan",
+    "25": "Jordan",
+    "26": "Mexico",
+    "27": "Morocco",
+    "28": "Netherlands",
+    "29": "New Zealand",
+    "30": "Norway",
+    "31": "Panama",
+    "32": "Paraguay",
+    "33": "Portugal",
+    "34": "Qatar",
+    "35": "Saudi Arabia",
+    "36": "Scotland",
+    "37": "Senegal",
+    "38": "South Africa",
+    "39": "South Korea",
+    "40": "Spain",
+    "41": "Sweden",
+    "42": "Switzerland",
+    "43": "Tunisia",
+    "44": "Turkey",
+    "45": "United States",
+    "46": "Uruguay",
+    "47": "Uzbekistan"
+  }
+}

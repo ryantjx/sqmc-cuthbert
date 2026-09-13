@@ -1,0 +1,111 @@
+{
+  "kind": "run",
+  "source_commit": "336842f0e8739071141928486f54db1d08175f0c",
+  "config_sha256": "2b2c1daf7f1ee43366ba09e66596600d05227074e8a9bd174f20f03a46907b43",
+  "files": {
+    "images/json/sqmc_post_worldcup_rankings.json": {
+      "sha256": "9470dd6b1c6a4d99ea5437c77a82520ce9d257600f148d53376e59f25b55b93f",
+      "size": 4732
+    },
+    "images/json/sqmc_pre_worldcup_rankings.json": {
+      "sha256": "d99a92dea66339ea990dd81abc918a2baaf384e8342f06727b983004b9e02d7a",
+      "size": 4751
+    },
+    "images/json/sqmc_timeseries_states.json": {
+      "sha256": "6de6edc9a82da0498095b0823677b67529bc5329788e4939e8c4a6150377db64",
+      "size": 1423929
+    },
+    "images/sqmc_correlation_topn_bar.png": {
+      "sha256": "1f34515be86bddc849763180c007e79bf33600262b8b60f8ddf352bc65f8094a",
+      "size": 70894
+    },
+    "images/sqmc_post_worldcup_rankings.png": {
+      "sha256": "240ae77674eff6075898f16ba1fb7e69e563b34d3c507f0b41cc68c776d78d5a",
+      "size": 182787
+    },
+    "images/sqmc_pre_worldcup_rankings.png": {
+      "sha256": "45c8c309f6701484d9106115e9b8011d8284a3eb7baa658e113007894ca74ebc",
+      "size": 183254
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-10_Spain_vs_Belgium.png": {
+      "sha256": "d585e93316226822f35f9fe5473a49ebb837b22eb9cb9dbb403f209de83dfc17",
+      "size": 113272
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-11_Argentina_vs_Switzerland.png": {
+      "sha256": "2a89218dd3c76df48975eebce988e487141735e0ef52799cb11e9e6ad9d9b77f",
+      "size": 108677
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-11_Norway_vs_England.png": {
+      "sha256": "e3bba509fe046f5a07d0de495e6fdd7b5a5b36f50750fedb5a5d716ae71bf096",
+      "size": 96679
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-14_France_vs_Spain.png": {
+      "sha256": "3f88acdc13d1782bb55b6352afb55b967527496703dad4cc26965c590b69caad",
+      "size": 122735
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-15_England_vs_Argentina.png": {
+      "sha256": "2582e979e58932fe17386db10cf04413adc0e48f4e9546bd6474d760e698beb1",
+      "size": 91565
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-18_France_vs_England.png": {
+      "sha256": "2546e25bcfe38f22ab7da5a9ad2cb2a8095ffa5ac86d3858703a676c685cbb4b",
+      "size": 106713
+    },
+    "images/sqmc_predictions/prediction_plots/2026-07-19_Spain_vs_Argentina.png": {
+      "sha256": "dfceb350f4d5b61b39feff47915bba27995de4d5719258b53494de898f08df10",
+      "size": 99121
+    },
+    "images/sqmc_timeseries_states.png": {
+      "sha256": "ff2ba1a056bfbe7fa6a0307da64f10254bf9c18c51b201ea2a0bdebf3eea55aa",
+      "size": 595357
+    },
+    "images/sqmc_top5_strengths.png": {
+      "sha256": "2fb34514d5417a66f58cdcf75d1145ff0c90bc035ad9b0c29ebdc367f532175f",
+      "size": 62199
+    },
+    "results/comparison_config.json": {
+      "sha256": "f9ecd7f1e9704fe61025efe37299d6db15141cce0d26b3f0f6c759ef0aaf0411",
+      "size": 870
+    },
+    "results/dataset_metadata.json": {
+      "sha256": "131a58a35599d625c74ccb4903271c8b114510d0ad9dd7277a9010b1f49452fd",
+      "size": 404
+    },
+    "results/run_config.json": {
+      "sha256": "aba5e3880c6e92f03a2c60db94b0ecd99e6792a373cf00c6735d5f244b2cb855",
+      "size": 23995
+    },
+    "results/sqmc/final_scalar_params.json": {
+      "sha256": "e73b94d4df87939c4f2c805770f85f83e247ace69a30ea9818220c928f945bfe",
+      "size": 541
+    },
+    "results/sqmc/fitted_params.json": {
+      "sha256": "b701f8d832c4103a31152f2c15358b84e461f2c0d2822dce3b5236ea7643557b",
+      "size": 131151
+    },
+    "results/sqmc/summary.json": {
+      "sha256": "2bc0a93bd048b1a154263ff0b3256a3edae3b4eb5061e0483db57c90e336e396",
+      "size": 528
+    },
+    "results/sqmc_final_fixture.npz": {
+      "sha256": "0b621b0ab3c374c50bba6b3497a6c508d915fc84c939126a7538a2f2a211db4c",
+      "size": 403770
+    },
+    "results/sqmc_history.json": {
+      "sha256": "ffec254a645474b0f6a524eba94d9e9d135df928657e6e8e2389ce2bbce09f87",
+      "size": 11142
+    },
+    "results/sqmc_metrics.json": {
+      "sha256": "ed14501fd45a965426946bbf9494957913810dea6067c24162c35deb0bc0b9df",
+      "size": 945
+    },
+    "results/sqmc_prediction_diagnostics.json": {
+      "sha256": "fc55fe2ea04dd9d14dcd173fcdd7db7d9b226dcc27c9accfc29c59feb51fbd20",
+      "size": 136698
+    },
+    "results/sqmc_predictions.json": {
+      "sha256": "b7a212d05dfa889848984e5a16b9efc93317037cb330b82283b3e0d9907f3512",
+      "size": 888099
+    }
+  }
+}

@@ -1,0 +1,120 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{ghahramanijordan1995factorialhmm,ghahramanijordan1997factorialhmm}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Rao-Blackwellised SQMC for Football Matches}{17}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ch:model}{{3}{17}{Rao-Blackwellised SQMC for Football Matches}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Background}{17}{section.3.1}\protected@file@percent }
+\newlabel{sec:rb-sqmc-background}{{3.1}{17}{Background}{section.3.1}{}}
+\citation{duffieldpowerrimella2024factorialssm}
+\newlabel{eq:factorial-joint}{{3.1}{18}{Background}{equation.3.1}{}}
+\newlabel{eq:factorial-filter}{{3.2}{18}{Background}{equation.3.2}{}}
+\citation{duffieldpowerrimella2024factorialssm}
+\citation{duffieldpowerrimella2024factorialssm}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Conditional independence structure of a general state-space model (left) and of a factorial state-space model with a pairwise observation model (right), reproduced from \citet  {duffieldpowerrimella2024factorialssm}. In the fSSM, each component evolves independently and the observation at time $t$ couples only the components in $\mathcal  {O}_t$.}}{19}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:fssm-independence}{{3.1}{19}{Conditional independence structure of a general state-space model (left) and of a factorial state-space model with a pairwise observation model (right), reproduced from \citet {duffieldpowerrimella2024factorialssm}. In the fSSM, each component evolves independently and the observation at time $t$ couples only the components in $\mathcal {O}_t$}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Model}{20}{section.3.2}\protected@file@percent }
+\newlabel{sec:model}{{3.2}{20}{Model}{section.3.2}{}}
+\citation{karlisntzoufras2003bivariatepoisson}
+\citation{doucetdefreitasmurphyrussell2000rbpf}
+\newlabel{eq:likelihood}{{3.8}{21}{Model}{equation.3.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Rao-Blackwellised SMC (RB-SMC)}{21}{section.3.3}\protected@file@percent }
+\newlabel{sec:rb-smc}{{3.3}{21}{Rao-Blackwellised SMC (RB-SMC)}{section.3.3}{}}
+\citation{godsilldoucetwest2004montecarlosmoothing}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}RB-SMC Smoothing}{25}{section.3.4}\protected@file@percent }
+\newlabel{sec:rb-smc-smoothing}{{3.4}{25}{RB-SMC Smoothing}{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Deriving the one-step backward kernel}{26}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}The RB-SMC smoothing algorithm}{27}{subsection.3.4.2}\protected@file@percent }
+\citation{godsilldoucetwest2004montecarlosmoothing}
+\citation{sarkkabunchgodsill2012rbpsmoother}
+\citation{lindstenschonbunchgodsill2012rbpsmoother}
+\citation{lindstenschon2011backwardsimulation}
+\citation{chopingerber2017sqmcintroduction}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Rao-Blackwellised SQMC (RB-SQMC)}{28}{section.3.5}\protected@file@percent }
+\newlabel{sec:rb-sqmc}{{3.5}{28}{Rao-Blackwellised SQMC (RB-SQMC)}{section.3.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Parameter Estimation}{30}{section.3.6}\protected@file@percent }
+\newlabel{sec:parameter-estimation}{{3.6}{30}{Parameter Estimation}{section.3.6}{}}
+\citation{delmoral2004feynman,delmoraldoucetsingh2010forwardsmoothing}
+\citation{poyiadjisdoucetsingh2011particlescore}
+\citation{scibior2021differentiableparticlefiltering}
+\citation{poyiadjisdoucetsingh2011particlescore}
+\newlabel{eq:score-estimator}{{3.17}{31}{Parameter Estimation}{equation.3.17}{}}
+\citation{cuthbertocarlos2026}
+\citation{ghq}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Performance comparison}{32}{section.3.7}\protected@file@percent }
+\newlabel{sec:performance-comparison}{{3.7}{32}{Performance comparison}{section.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}Experimental design}{32}{subsection.3.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Training: marginal log-likelihood}{32}{subsection.3.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Training and test log-likelihoods for the EKF and RB-SQMC at the pre-specified final epoch. Higher (less negative) values indicate a better fit.}}{33}{table.caption.17}\protected@file@percent }
+\newlabel{tab:logz}{{3.1}{33}{Training and test log-likelihoods for the EKF and RB-SQMC at the pre-specified final epoch. Higher (less negative) values indicate a better fit}{table.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Training and test log-likelihood against epoch for the EKF and RB-SQMC. The EKF value is a Gaussian-approximate normalising constant; the SQMC value is a particle estimate.}}{33}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:logz-overlay}{{3.2}{33}{Training and test log-likelihood against epoch for the EKF and RB-SQMC. The EKF value is a Gaussian-approximate normalising constant; the SQMC value is a particle estimate}{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Prediction outputs}{34}{subsection.3.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces One-step-ahead prediction metrics on the 104 World Cup 2026 fixtures. The Brier skill score is relative to the uniform reference $2/3$ and lower Brier scores indicate better prediction on Home Win/Draw/Away Win. The predictive log-score is the mean scoreline log-probability over the truncated score grid.}}{34}{table.caption.19}\protected@file@percent }
+\newlabel{tab:prediction}{{3.2}{34}{One-step-ahead prediction metrics on the 104 World Cup 2026 fixtures. The Brier skill score is relative to the uniform reference $2/3$ and lower Brier scores indicate better prediction on Home Win/Draw/Away Win. The predictive log-score is the mean scoreline log-probability over the truncated score grid}{table.caption.19}{}}
+\newlabel{fig:prediction-final-ekf}{{3.3a}{36}{EKF predicted score grid}{figure.caption.20}{}}
+\newlabel{sub@fig:prediction-final-ekf}{{a}{36}{EKF predicted score grid}{figure.caption.20}{}}
+\newlabel{fig:prediction-final-sqmc}{{3.3b}{36}{RB-SQMC predicted score grid}{figure.caption.20}{}}
+\newlabel{sub@fig:prediction-final-sqmc}{{b}{36}{RB-SQMC predicted score grid}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Predicted score grids for the final match, Spain vs.\ Argentina, under the EKF and RB-SQMC. The actual result is marked by a red outline.}}{36}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:prediction-final}{{3.3}{36}{Predicted score grids for the final match, Spain vs.\ Argentina, under the EKF and RB-SQMC. The actual result is marked by a red outline}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}Evaluation}{36}{subsection.3.7.4}\protected@file@percent }
+\newlabel{fig:timeseries-ekf}{{3.4a}{37}{EKF filtered states}{figure.caption.21}{}}
+\newlabel{sub@fig:timeseries-ekf}{{a}{37}{EKF filtered states}{figure.caption.21}{}}
+\newlabel{fig:timeseries-sqmc}{{3.4b}{37}{RB-SQMC filtered states}{figure.caption.21}{}}
+\newlabel{sub@fig:timeseries-sqmc}{{b}{37}{RB-SQMC filtered states}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Filtered attacking and defensive strengths over time for the final top-five teams under the EKF and RB-SQMC.}}{37}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:timeseries}{{3.4}{37}{Filtered attacking and defensive strengths over time for the final top-five teams under the EKF and RB-SQMC}{figure.caption.21}{}}
+\citation{fifaworldranking2026}
+\citation{elo1978rating}
+\citation{fifaworldranking2026}
+\citation{fifaworldranking2026}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Strongest positive and negative between-team correlations carried by the prior filter covariance $\Gamma _0$ under RB-SQMC.}}{38}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:topn-correlation}{{3.5}{38}{Strongest positive and negative between-team correlations carried by the prior filter covariance $\Gamma _0$ under RB-SQMC}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.5}Comparison with the FIFA ranking}{38}{subsection.3.7.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Post-tournament top-ten team rankings under the EKF and RB-SQMC, compared with the FIFA Men's World Ranking of 20 July 2026 \citep  {fifaworldranking2026}.}}{39}{table.caption.23}\protected@file@percent }
+\newlabel{tab:fifa-comparison}{{3.3}{39}{Post-tournament top-ten team rankings under the EKF and RB-SQMC, compared with the FIFA Men's World Ranking of 20 July 2026 \citep {fifaworldranking2026}}{table.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.6}Discussion}{39}{subsection.3.7.6}\protected@file@percent }
+\newlabel{sec:performance-comparison-limitations}{{3.7.6}{39}{Discussion}{subsection.3.7.6}{}}
+\@setckpt{chapters/3_football_model_with_sqmc}{
+\setcounter{page}{41}
+\setcounter{equation}{17}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{7}
+\setcounter{subsection}{6}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{5}
+\setcounter{table}{3}
+\setcounter{parentequation}{0}
+\setcounter{theorem}{0}
+\setcounter{float@type}{16}
+\setcounter{caption@flags}{2}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{algorithm}{3}
+\setcounter{ALG@line}{10}
+\setcounter{ALG@rem}{0}
+\setcounter{ALG@nested}{0}
+\setcounter{ALG@Lnr}{2}
+\setcounter{ALG@blocknr}{10}
+\setcounter{ALG@storecount}{0}
+\setcounter{ALG@tmpcounter}{0}
+\setcounter{lstnumber}{1}
+\setcounter{NAT@ctr}{0}
+\setcounter{section@level}{2}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{2}
+\setcounter{bookmark@seq@number}{30}
+\setcounter{lstlisting}{0}
+}

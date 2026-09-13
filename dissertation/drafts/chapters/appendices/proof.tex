@@ -1,0 +1,74 @@
+\chapter{Proofs}
+\label{app:proofs}
+
+This appendix contains the proofs deferred from Chapter~\ref{ch:model}.
+
+\section{Kronecker structure reduces the inference dimension}
+\label{app:kronecker-proof}
+
+This appendix proves the claim underlying the Kronecker parameterisation of the initial covariance in Section~\ref{sec:model}. The result is referenced in the model section of Chapter~\ref{ch:model}.
+
+\begin{proposition}
+\label{prop:kronecker-dim}
+Let $\Sigma_0 = \Gamma_0 \otimes B$ with $\Gamma_0 \in \mathbb{R}^{K \times K}$, $B \in \mathbb{R}^{2 \times 2}$ symmetric and positive definite, and $\det(B) = 1$. Then the Kronecker parameterisation reduces the number of free parameters of the initial covariance from $K(2K+1)$ for a general symmetric $2K \times 2K$ matrix to $K(K+1)/2 + 2$. The reduction is a factor of approximately four, but remains of order $\mathcal{O}(K^2)$.
+\end{proposition}
+
+\begin{proof}
+A general symmetric $2K \times 2K$ covariance matrix has $2K(2K+1)/2 = K(2K+1)$ free entries. Under the Kronecker form $\Sigma_0 = \Gamma_0 \otimes B$, the parameterisation is determined by the symmetric matrix $\Gamma_0 \in \mathbb{R}^{K \times K}$, which contributes $K(K+1)/2$ free entries, together with the $2 \times 2$ symmetric matrix $B$, which contributes $3$ entries subject to the single constraint $\det(B) = 1$, i.e.\ $2$ free parameters. The total is therefore $K(K+1)/2 + 2$. The main benefit is computational rather than parametric: in Chapter~\ref{ch:model}, the Kalman recursions are carried out on the $K \times K$ matrix $\Gamma$ rather than the full $2K \times 2K$ matrix $\Sigma$. Distinguishing the costs: the shared covariance requires $\mathcal{O}(K^2)$ storage; the per-observation update performs a $2 \times 2$ Schur solve, dense rank-two products of order $\mathcal{O}(K^2)$ for the covariance update, and $N$ particle-mean updates of order $\mathcal{O}(NK)$; no $2K \times 2K$ solve is ever formed.
+\end{proof}
+
+\section{The deterministic inverse-CDF transform in RB-SQMC}
+\label{app:inv-cdf-proof}
+
+This appendix proves the claim underlying the propagation step of RB-SQMC (Section~\ref{sec:rb-sqmc}). Under the Ornstein--Uhlenbeck dynamics of Section~\ref{sec:model}, each Rao-Blackwellised component is first advanced by the deterministic mean-reverting prediction, and the playing-team block is then drawn from its predictive marginal by the inverse-CDF transform
+\begin{equation}
+x_t^{\mathcal{O}_t,(i)} = \mu_{t \mid t-1}^{\mathcal{O}_t,(b_i)} + L_{t \mid t-1}\, \Phi^{-1}\!\left( v_t^{(i)} \right),
+\end{equation}
+where $\mu_{t \mid t-1}^{\mathcal{O}_t,(b_i)} = \mu_0^{\mathcal{O}_t} + \phi_t(\mu_{t-1}^{\mathcal{O}_t,(b_i)} - \mu_0^{\mathcal{O}_t})$, $L_{t \mid t-1}$ is the Cholesky factor of the predictive covariance $\Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t}$, and $v_t^{(i)} \in [0,1]^4$ is a quasi-random point.
+
+\begin{proposition}
+\label{prop:invcdf}
+Let $v \sim \mathrm{Unif}([0,1]^4)$ with independent coordinates, let $\Phi$ denote the standard normal CDF, and let $\Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t}$ be symmetric positive definite with Cholesky factor $L_{t \mid t-1}$, i.e.\ $L_{t \mid t-1} L_{t \mid t-1}^{\top} = \Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t}$. Let $\mu_{t \mid t-1}^{\mathcal{O}_t,(b)}$ be the predictive mean of the playing-team block for ancestor mean $\mu_{t-1}^{\mathcal{O}_t,(b)}$, given by
+\begin{equation}
+\mu_{t \mid t-1}^{\mathcal{O}_t,(b)} = \mu_0^{\mathcal{O}_t} + \phi_t \!\left( \mu_{t-1}^{\mathcal{O}_t,(b)} - \mu_0^{\mathcal{O}_t} \right),
+\end{equation}
+with the predictive covariance
+\begin{equation}
+\Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t} = \phi_t^2 \Sigma_{t-1}^{\mathcal{O}_t \mathcal{O}_t} + (1 - \phi_t^2) \Sigma_0^{\mathcal{O}_t \mathcal{O}_t}.
+\end{equation}
+Then
+\begin{equation}
+x = \mu_{t \mid t-1}^{\mathcal{O}_t,(b)} + L_{t \mid t-1}\, \Phi^{-1}(v)
+\end{equation}
+is distributed as $\mathcal{N}\!\left( \mu_{t \mid t-1}^{\mathcal{O}_t,(b)}, \Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t} \right)$, the predictive marginal of the playing-team block under the bootstrap proposal.
+\end{proposition}
+
+\begin{proof}
+The argument proceeds in two steps: the probability integral transform, followed by an affine transformation of a standard Gaussian vector.
+
+\textbf{Step 1: coordinatewise quantile transform.} By definition of the distribution function, the random variable $\Phi(Z_j)$ with $Z_j \sim \mathcal{N}(0,1)$ is uniformly distributed on $[0,1]$, since
+\[
+\mathbb{P}\big( \Phi(Z_j) \le u \big) = \mathbb{P}\big( Z_j \le \Phi^{-1}(u) \big) = \Phi\big( \Phi^{-1}(u) \big) = u, \qquad u \in [0,1].
+\]
+Because $\Phi$ is strictly increasing and continuous, the same argument in reverse gives the probability integral transform: if $V_j \sim \mathrm{Unif}([0,1])$, then
+\[
+Z_j := \Phi^{-1}(V_j) \sim \mathcal{N}(0,1).
+\]
+Applying this coordinatewise to the independent coordinates of $v$, the vector
+\[
+Z := \Phi^{-1}(v) = \big( \Phi^{-1}(v_1), \ldots, \Phi^{-1}(v_4) \big)
+\]
+has independent standard normal components, so $Z \sim \mathcal{N}(0, I_4)$.
+
+\textbf{Step 2: affine transformation.} For any matrix $A$ and any vector $c$, the affine map $Z \mapsto c + AZ$ sends a standard Gaussian vector to $\mathcal{N}(c, AA^{\top})$. Taking $c = \mu_{t \mid t-1}^{\mathcal{O}_t,(b)}$ and $A = L_{t \mid t-1}$, and using $L_{t \mid t-1} L_{t \mid t-1}^{\top} = \Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t}$, we obtain
+\[
+x = \mu_{t \mid t-1}^{\mathcal{O}_t,(b)} + L_{t \mid t-1} Z \sim \mathcal{N}\!\left( \mu_{t \mid t-1}^{\mathcal{O}_t,(b)},\; L_{t \mid t-1} L_{t \mid t-1}^{\top} \right) = \mathcal{N}\!\left( \mu_{t \mid t-1}^{\mathcal{O}_t,(b)},\; \Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t} \right).
+\]
+
+It remains to justify the two moments. The mean $\mu_{t \mid t-1}^{\mathcal{O}_t,(b)}$ is the deterministic OU prediction of the playing-team block, as stated. The covariance is the sum of the OU transition noise and the propagated uncertainty of the carried component: the OU update in Section~\ref{sec:model} contributes $(1-\phi_t^2)\Sigma_0$ (whose playing-team block is $(1-\phi_t^2)\Sigma_0^{\mathcal{O}_t\mathcal{O}_t}$), while the prior component covariance $\Sigma_{t-1}$ is carried forward by the mean-reverting factor, contributing $\phi_t^2\Sigma_{t-1}$, with playing-team block $\phi_t^2\Sigma_{t-1}^{\mathcal{O}_t\mathcal{O}_t}$. Their sum is exactly the stated $\Sigma_{t \mid t-1}^{\mathcal{O}_t \mathcal{O}_t}$. Hence the transform samples the predictive marginal under the bootstrap proposal. 
+\end{proof}
+
+A remark on the Monte Carlo analogue is in order. When the $v_t^{(i)}$ are IID uniform draws, this transform is merely the usual reparameterisation of the bootstrap proposal, and the resulting $x_t^{\mathcal{O}_t,(i)}$ are an exact Monte Carlo sample from the playing-team marginal $q_t^{(b)}$ defined in Section~\ref{sec:rb-smc}. In RB-SQMC the same map is applied to a quasi-random point set $v_t^{(1:N)}$ instead. Since the map is deterministic and invertible, the low-discrepancy structure of the point set carries over to the playing-team coordinates; this is the sense in which the effective propagation dimension is the dimension of $v$, namely four. The transform is exact in distribution; the only approximation in RB-SQMC is the finite quasi-Monte Carlo error in the resampling step, not this propagation map.
+
+
+% A remark on the Monte Carlo analogue is in order. When the $v_t^{(i)}$ are IID uniform draws, this transform is merely the usual reparameterisation of the bootstrap proposal, and the resulting $x_t^{\mathcal{O}_t,(i)}$ are an exact Monte Carlo sample from the playing-team marginal $q_t^{(b)}$ defined in Section~\ref{sec:rb-smc}. In RB-SQMC the same map is applied to a quasi-random point set $v_t^{(1:N)}$ instead. The proposition establishes the exactness of the Gaussian transformation of a uniform vector; it does not establish that a deterministic QMC point is itself a random uniform vector, nor that low discrepancy is preserved under the unbounded Gaussian inverse CDF in any discrepancy sense. The claim in this dissertation is therefore limited to the correctness of the Gaussian inverse-CDF propagation conditional on an ancestor; the projected ordering, finite-particle filtering error, parameter-estimation error, numerical quantisation and model misspecification are separate approximations documented in Section~\ref{sec:performance-comparison-limitations}.

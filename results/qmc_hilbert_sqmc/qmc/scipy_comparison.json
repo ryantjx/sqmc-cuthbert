@@ -1,0 +1,1202 @@
+[
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0004720354997971299,
+    "jax_seconds": 6.808299986005295e-05,
+    "scipy_over_jax": 6.933235914507525
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0004720354997971299,
+    "jax_seconds": 0.00016438550005659636,
+    "scipy_over_jax": 2.8715154294911205
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0004522004999216733,
+    "jax_seconds": 9.128250007961469e-05,
+    "scipy_over_jax": 4.953857525016005
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0004522004999216733,
+    "jax_seconds": 0.00015805199996066222,
+    "scipy_over_jax": 2.8610868577064648
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.00047665649981354363,
+    "jax_seconds": 7.271299978128809e-05,
+    "scipy_over_jax": 6.5553133723992785
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.00047665649981354363,
+    "jax_seconds": 0.00018685999998524494,
+    "scipy_over_jax": 2.550874985824585
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0004720864999399055,
+    "jax_seconds": 0.00010742049994405534,
+    "scipy_over_jax": 4.3947524000146005
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0004720864999399055,
+    "jax_seconds": 0.00018270049986313097,
+    "scipy_over_jax": 2.5839365535045955
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0005329349999101396,
+    "jax_seconds": 0.00022934299977350747,
+    "scipy_over_jax": 2.323746530029043
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0005329349999101396,
+    "jax_seconds": 0.000228592999974353,
+    "scipy_over_jax": 2.3313706017679117
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0007558759998573805,
+    "jax_seconds": 0.0006849500000498665,
+    "scipy_over_jax": 1.1035491638840067
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 2,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0007558759998573805,
+    "jax_seconds": 0.0002761829998689791,
+    "scipy_over_jax": 2.736866498719933
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0006633484999838402,
+    "jax_seconds": 0.00014261099977375125,
+    "scipy_over_jax": 4.651453962430849
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0006633484999838402,
+    "jax_seconds": 0.00016060049983934732,
+    "scipy_over_jax": 4.130426123501509
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0006686159999844676,
+    "jax_seconds": 7.876850008869951e-05,
+    "scipy_over_jax": 8.48836780225031
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0006686159999844676,
+    "jax_seconds": 0.00015496400010306388,
+    "scipy_over_jax": 4.314653723056856
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0006643709998570557,
+    "jax_seconds": 0.00010054950007543084,
+    "scipy_over_jax": 6.607402317849952
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0006643709998570557,
+    "jax_seconds": 0.00017635049971431727,
+    "scipy_over_jax": 3.7673326751742557
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0006946835001144791,
+    "jax_seconds": 0.00012757649983541341,
+    "scipy_over_jax": 5.445230908597517
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0006946835001144791,
+    "jax_seconds": 0.00018183199995291943,
+    "scipy_over_jax": 3.8204688959828244
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0007765859998016822,
+    "jax_seconds": 0.0002923399999872345,
+    "scipy_over_jax": 2.6564479709776054
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0007765859998016822,
+    "jax_seconds": 0.0002793224998640653,
+    "scipy_over_jax": 2.780248637970856
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.001110774499920808,
+    "jax_seconds": 0.0008287314999506634,
+    "scipy_over_jax": 1.3403309756983237
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 5,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.001110774499920808,
+    "jax_seconds": 0.00026375350012131094,
+    "scipy_over_jax": 4.211411410312727
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0009863549998954113,
+    "jax_seconds": 0.00015918450003482576,
+    "scipy_over_jax": 6.196300517196212
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0009863549998954113,
+    "jax_seconds": 0.00016681800025253324,
+    "scipy_over_jax": 5.912761203240913
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0010429859999021573,
+    "jax_seconds": 0.00011176749990227108,
+    "scipy_over_jax": 9.33174671361656
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0010429859999021573,
+    "jax_seconds": 0.00019891200008714804,
+    "scipy_over_jax": 5.243454389102721
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0009923879997586482,
+    "jax_seconds": 0.0001153569999132742,
+    "scipy_over_jax": 8.602754930387658
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0009923879997586482,
+    "jax_seconds": 0.00023230900001180999,
+    "scipy_over_jax": 4.2718448261074595
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0010292415001913469,
+    "jax_seconds": 0.0002408130001185782,
+    "scipy_over_jax": 4.2740279789070375
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0010292415001913469,
+    "jax_seconds": 0.00020821699990847264,
+    "scipy_over_jax": 4.943119440985979
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.001171281000097224,
+    "jax_seconds": 0.0005597114998181496,
+    "scipy_over_jax": 2.092651304248302
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.001171281000097224,
+    "jax_seconds": 0.00026182050009992963,
+    "scipy_over_jax": 4.473603096969788
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0017543424999075796,
+    "jax_seconds": 0.0018122615001630038,
+    "scipy_over_jax": 0.9680404840856496
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 10,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0017543424999075796,
+    "jax_seconds": 0.0004083445001015207,
+    "scipy_over_jax": 4.2962314895178535
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0022730475000116712,
+    "jax_seconds": 0.00018308649987375247,
+    "scipy_over_jax": 12.41515623259527
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0022730475000116712,
+    "jax_seconds": 0.00015429099994435092,
+    "scipy_over_jax": 14.732210568545835
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0022719820001384505,
+    "jax_seconds": 0.00020119699979659345,
+    "scipy_over_jax": 11.29232544439223
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0022719820001384505,
+    "jax_seconds": 0.00016231499989771692,
+    "scipy_over_jax": 13.997363161569442
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0022936580000987306,
+    "jax_seconds": 0.00023393500009660784,
+    "scipy_over_jax": 9.804680783771225
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0022936580000987306,
+    "jax_seconds": 0.00016803549988253508,
+    "scipy_over_jax": 13.64984185902448
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.002360637499805307,
+    "jax_seconds": 0.00040598850000606035,
+    "scipy_over_jax": 5.814542775891605
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.002360637499805307,
+    "jax_seconds": 0.00024577299996053625,
+    "scipy_over_jax": 9.604950503856625
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.002740051500040863,
+    "jax_seconds": 0.0009215059997131902,
+    "scipy_over_jax": 2.9734494413424084
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.002740051500040863,
+    "jax_seconds": 0.0003229685000860627,
+    "scipy_over_jax": 8.483958959807879
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0040298214998983894,
+    "jax_seconds": 0.0024707415000193578,
+    "scipy_over_jax": 1.6310170448291805
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 30,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0040298214998983894,
+    "jax_seconds": 0.00034837500015783007,
+    "scipy_over_jax": 11.5674818746256
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0041483145000711374,
+    "jax_seconds": 0.0003298514998277824,
+    "scipy_over_jax": 12.576309345984479
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0041483145000711374,
+    "jax_seconds": 0.000167847500051721,
+    "scipy_over_jax": 24.714782756924375
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.004213669499904427,
+    "jax_seconds": 0.0003318245001082687,
+    "scipy_over_jax": 12.698488202437066
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.004213669499904427,
+    "jax_seconds": 0.00019276749981145258,
+    "scipy_over_jax": 21.858816989512498
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.00419703849979669,
+    "jax_seconds": 0.0003539164999892819,
+    "scipy_over_jax": 11.85883817206543
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.00419703849979669,
+    "jax_seconds": 0.00017966900009014353,
+    "scipy_over_jax": 23.359836686857232
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.004364865499837833,
+    "jax_seconds": 0.0006046069997864834,
+    "scipy_over_jax": 7.219343311240663
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.004364865499837833,
+    "jax_seconds": 0.00022969799988459272,
+    "scipy_over_jax": 19.00262737172668
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.004979525500175441,
+    "jax_seconds": 0.001370756000142137,
+    "scipy_over_jax": 3.632685539701524
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.004979525500175441,
+    "jax_seconds": 0.00027344499994796934,
+    "scipy_over_jax": 18.21033663487333
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.00873173450008835,
+    "jax_seconds": 0.004566633499962336,
+    "scipy_over_jax": 1.9120725366203282
+  },
+  {
+    "sequence": "sobol",
+    "dimension": 60,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.00873173450008835,
+    "jax_seconds": 0.0005844204999903013,
+    "scipy_over_jax": 14.940842253537063
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0005394229999637901,
+    "jax_seconds": 0.00020465650004553027,
+    "scipy_over_jax": 2.635748191940074
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0005394229999637901,
+    "jax_seconds": 0.0020628810000289377,
+    "scipy_over_jax": 0.26149011986451137
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0007220585000595747,
+    "jax_seconds": 0.00020565449995046947,
+    "scipy_over_jax": 3.51102699057632
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0007220585000595747,
+    "jax_seconds": 0.0016076249999059655,
+    "scipy_over_jax": 0.4491461006775896
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.001014667000163172,
+    "jax_seconds": 0.0002569104999565752,
+    "scipy_over_jax": 3.9494960320215715
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.001014667000163172,
+    "jax_seconds": 0.0016148699999121163,
+    "scipy_over_jax": 0.628327357755356
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0029087125001296954,
+    "jax_seconds": 0.0003729349998593534,
+    "scipy_over_jax": 7.7995160047372085
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0029087125001296954,
+    "jax_seconds": 0.0016549519998534379,
+    "scipy_over_jax": 1.7575811868787072
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.010417848999850321,
+    "jax_seconds": 0.001141859499966813,
+    "scipy_over_jax": 9.12358219216384
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.010417848999850321,
+    "jax_seconds": 0.0020597090001501783,
+    "scipy_over_jax": 5.057922744956074
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.04025643299996773,
+    "jax_seconds": 0.004997806500114166,
+    "scipy_over_jax": 8.054820249453064
+  },
+  {
+    "sequence": "halton",
+    "dimension": 2,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.04025643299996773,
+    "jax_seconds": 0.001650850999794784,
+    "scipy_over_jax": 24.38526130157838
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0007802819998232735,
+    "jax_seconds": 0.00035315050013196014,
+    "scipy_over_jax": 2.2094885878165513
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0007802819998232735,
+    "jax_seconds": 0.002614383500031181,
+    "scipy_over_jax": 0.29845736090897423
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0010246495000956202,
+    "jax_seconds": 0.0004075970002759277,
+    "scipy_over_jax": 2.513878903431505
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0010246495000956202,
+    "jax_seconds": 0.0026489050001146097,
+    "scipy_over_jax": 0.3868200256525949
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0015541615000529418,
+    "jax_seconds": 0.00043128499987687974,
+    "scipy_over_jax": 3.603560291910484
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0015541615000529418,
+    "jax_seconds": 0.0026564999998299754,
+    "scipy_over_jax": 0.5850410314897094
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.004625944999816056,
+    "jax_seconds": 0.00077725649975946,
+    "scipy_over_jax": 5.951632442118737
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.004625944999816056,
+    "jax_seconds": 0.002599499500092861,
+    "scipy_over_jax": 1.7795521790447757
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.016957345000037094,
+    "jax_seconds": 0.002142997499959165,
+    "scipy_over_jax": 7.91290937127095
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.016957345000037094,
+    "jax_seconds": 0.002609757000072932,
+    "scipy_over_jax": 6.497672005310535
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.06628873049999129,
+    "jax_seconds": 0.008565574000158449,
+    "scipy_over_jax": 7.738971200151333
+  },
+  {
+    "sequence": "halton",
+    "dimension": 5,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.06628873049999129,
+    "jax_seconds": 0.002684047499769804,
+    "scipy_over_jax": 24.697301558812395
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0010390499999175518,
+    "jax_seconds": 0.0007429960000990832,
+    "scipy_over_jax": 1.3984597491493735
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0010390499999175518,
+    "jax_seconds": 0.0037441310000758676,
+    "scipy_over_jax": 0.2775143283972963
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0014390584999546263,
+    "jax_seconds": 0.0007683909998377203,
+    "scipy_over_jax": 1.8728206085945138
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0014390584999546263,
+    "jax_seconds": 0.0037095709999448445,
+    "scipy_over_jax": 0.387931245951627
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.002136737999990146,
+    "jax_seconds": 0.0008429710001109925,
+    "scipy_over_jax": 2.534770472185645
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.002136737999990146,
+    "jax_seconds": 0.003744126500123457,
+    "scipy_over_jax": 0.5706906537264941
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.00648696000007476,
+    "jax_seconds": 0.0013362520001010125,
+    "scipy_over_jax": 4.854593294965609
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.00648696000007476,
+    "jax_seconds": 0.003629025999998703,
+    "scipy_over_jax": 1.787520949168476
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.023881096999957663,
+    "jax_seconds": 0.0033145465001780394,
+    "scipy_over_jax": 7.204936481861063
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.023881096999957663,
+    "jax_seconds": 0.003621881499839219,
+    "scipy_over_jax": 6.593561109334411
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.09364304249970701,
+    "jax_seconds": 0.010944991500082324,
+    "scipy_over_jax": 8.555789421947258
+  },
+  {
+    "sequence": "halton",
+    "dimension": 10,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.09364304249970701,
+    "jax_seconds": 0.003754410000055941,
+    "scipy_over_jax": 24.942146035811678
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0022376900003564515,
+    "jax_seconds": 0.0027375295001093036,
+    "scipy_over_jax": 0.8174121960209398
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0022376900003564515,
+    "jax_seconds": 0.00691896800003633,
+    "scipy_over_jax": 0.3234138386454023
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.003081050499986304,
+    "jax_seconds": 0.0028890094999951543,
+    "scipy_over_jax": 1.0664729555203858
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.003081050499986304,
+    "jax_seconds": 0.008860848000267652,
+    "scipy_over_jax": 0.34771508323957684
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.004008483500001603,
+    "jax_seconds": 0.0029427209999539627,
+    "scipy_over_jax": 1.3621690605614034
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.004008483500001603,
+    "jax_seconds": 0.006858331500097847,
+    "scipy_over_jax": 0.5844691963263097
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.011855192499751865,
+    "jax_seconds": 0.004109840500177597,
+    "scipy_over_jax": 2.8845870050771
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.011855192499751865,
+    "jax_seconds": 0.0066782589997274044,
+    "scipy_over_jax": 1.7751920822830882
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.04353065600002992,
+    "jax_seconds": 0.008152404499696786,
+    "scipy_over_jax": 5.339609436902814
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.04353065600002992,
+    "jax_seconds": 0.006740649500216023,
+    "scipy_over_jax": 6.457931983948262
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.16906433899998774,
+    "jax_seconds": 0.027273124499970436,
+    "scipy_over_jax": 6.198935475844398
+  },
+  {
+    "sequence": "halton",
+    "dimension": 30,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.16906433899998774,
+    "jax_seconds": 0.0065468459999920015,
+    "scipy_over_jax": 25.823784307771145
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0038218870001855976,
+    "jax_seconds": 0.009105101500153978,
+    "scipy_over_jax": 0.41975226746466965
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 128,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0038218870001855976,
+    "jax_seconds": 0.01146568200033471,
+    "scipy_over_jax": 0.33333272282224713
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.004793366000058086,
+    "jax_seconds": 0.009768581500111395,
+    "scipy_over_jax": 0.4906921235190007
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 256,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.004793366000058086,
+    "jax_seconds": 0.011257631000034962,
+    "scipy_over_jax": 0.4257881609410718
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.006730814499860571,
+    "jax_seconds": 0.010184234999996988,
+    "scipy_over_jax": 0.6609052618937565
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 512,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.006730814499860571,
+    "jax_seconds": 0.012045343500176386,
+    "scipy_over_jax": 0.5587897513891579
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.01870715850009219,
+    "jax_seconds": 0.014062806000083583,
+    "scipy_over_jax": 1.3302578802538416
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 2048,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.01870715850009219,
+    "jax_seconds": 0.01043107600003168,
+    "scipy_over_jax": 1.7934064040982325
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.0681126444999336,
+    "jax_seconds": 0.02029938000009679,
+    "scipy_over_jax": 3.3554051650645893
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 8192,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.0681126444999336,
+    "jax_seconds": 0.010178955000128553,
+    "scipy_over_jax": 6.691516417851673
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "cpu",
+    "scipy_seconds": 0.25594043850014714,
+    "jax_seconds": 0.049395809999850826,
+    "scipy_over_jax": 5.181420013173589
+  },
+  {
+    "sequence": "halton",
+    "dimension": 60,
+    "n": 32768,
+    "mode": "fresh",
+    "jax_backend": "gpu",
+    "scipy_seconds": 0.25594043850014714,
+    "jax_seconds": 0.01046456699987175,
+    "scipy_over_jax": 24.45781449947082
+  }
+]

@@ -1,0 +1,69 @@
+% Page layout, typography, figures, tables, citations, and PDF metadata.
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=30mm,headheight=15pt]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{seqsplit}
+\usepackage[dvipsnames]{xcolor}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  tabsize=2
+}
+
+\usepackage{enumitem}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks]{hyperref}
+
+\onehalfspacing
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setlist{nosep}
+\graphicspath{{figures/}{../figures/}{../../figures/}{figures/2_high_performance_sqmc/}{figures/3_football_model_with_sqmc/}{../results/}{../../results/}{../../../results/}}
+
+\hypersetup{
+  pdftitle={\DissertationTitle},
+  pdfauthor={\StudentName},
+  pdfsubject={\Subject},
+  bookmarksnumbered=true
+}
+
+\numberwithin{equation}{chapter}
+\captionsetup{font=small,labelfont=bf}

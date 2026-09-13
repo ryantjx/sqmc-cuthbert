@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\input{utils/metadata}
+\input{utils/preamble}
+\input{utils/commands}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\makedissertationtitle
+
+% If included, a preface or acknowledgements must begin here on the second page.
+\include{chapters/abstract}
+
+\include{chapters/acknowledgements}
+
+% \include{chapters/data_and_ai_declaration}
+
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\clearpage
+\pagenumbering{arabic}
+
+% Add dissertation chapters here, for example:
+% \include{chapters/introduction}
+% \include{chapters/high-performance-sqmc}
+% \include{chapters/football-applications}
+% \include{chapters/conclusion}
+\include{chapters/1_introduction}
+\include{chapters/2_high_performance_sqmc}
+\include{chapters/3_football_model_with_sqmc}
+\include{chapters/4_discussion}
+\appendix
+\include{chapters/appendices/proof}
+\include{chapters/appendices/code}
+\include{chapters/appendices/config}
+\include{chapters/appendices/prediction}
+\include{chapters/appendices/rankings}
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{chapters/references}
+
+\end{document}

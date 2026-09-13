@@ -1,0 +1,23 @@
+{
+  "kind": "root",
+  "source_commit": "95f4412d2fe9faba8defec4a330713f61a793511",
+  "config_sha256": "114c6bd8ec3dfed08fe7fe631f275d7c8313a59ab93f807eac229b6506311fcb",
+  "files": {
+    "comparison_config.json": {
+      "sha256": "30496e251696d3b03b948c3c066d03711cf24e7e71751b73fa80824ba7f15459",
+      "size": 1849
+    },
+    "remote_logs.txt": {
+      "sha256": "ba42327c31b6e1b50af6710edfd3240e6ebec494b9c3987bce1e3a49cd4aca3d",
+      "size": 28640
+    },
+    "remote_status.json": {
+      "sha256": "b9c0b467b2ea9d50d7f562af8b074822f3c36ec47cc003512be302e365428ef9",
+      "size": 636
+    },
+    "run_config.json": {
+      "sha256": "0f47b60b56f5f5f81ae2e53d438648a8dc6802ae9bc1f8584c1bd4bd945c6d24",
+      "size": 24314
+    }
+  }
+}
