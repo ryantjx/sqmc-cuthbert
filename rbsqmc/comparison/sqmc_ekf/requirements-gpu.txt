@@ -1,5 +1,5 @@
 jax[cuda12]==0.11.0
-cuthbert==0.0.14
+cuthbert>=0.0.14
 cuthbertlib==0.0.15
 optax==0.2.8
 ghq==0.0.5
