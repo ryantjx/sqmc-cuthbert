@@ -19,11 +19,11 @@
     ],
     "n_values": [
       128,
+      256,
       512,
       2048,
       8192,
-      32768,
-      131072
+      32768
     ],
     "sequences": [
       "sobol",
@@ -33,7 +33,7 @@
       "fresh"
     ],
     "scramble": true,
-    "repeats": 7,
+    "repeats": 10,
     "warmups": 2,
     "seed": 42,
     "implementations": [
@@ -59,15 +59,14 @@
       512,
       2048,
       8192,
-      32768,
-      131072
+      32768
     ],
     "sequences": [
       "sobol",
       "halton"
     ],
     "distribution": "normal",
-    "repeats": 7,
+    "repeats": 10,
     "warmups": 2,
     "seed": 42
   },
@@ -100,7 +99,7 @@
     "selection_reps": 8,
     "validation_reps": 16,
     "bootstrap_reps": 500,
-    "repeats": 7,
+    "repeats": 10,
     "warmups": 2,
     "seed": 42
   }

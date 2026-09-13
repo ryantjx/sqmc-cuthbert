@@ -57,7 +57,7 @@ CPU smoke variants first, then the full profile (optionally on GPU).
 | 2.1.4 | `cpu_gpu_comparison.json` written | check inside the new output dir | |
 | 2.1.5 | `runtime.png` figure written | check inside the new output dir | |
 | 2.1.6 | `status.json` shows success | `cat <outdir>/status.json` | |
-| 2.1.7 | **[GPU]** Full profile runs | `python -m sqmc.comparison.benchmark_qmc --platforms cpu gpu --sequences sobol halton --dimensions 2 5 10 --n-values 128 512 2048 8192 32768 --modes fresh --scramble --implementations jax scipy --repeats 7 --warmups 2` | |
+| 2.1.7 | **[GPU]** Full profile runs | `python -m sqmc.comparison.benchmark_qmc --platforms cpu gpu --sequences sobol halton --dimensions 2 5 10 --n-values 128 256 512 2048 8192 32768 --modes fresh --scramble --implementations jax scipy --repeats 10 --warmups 2` | |
 
 ### 2.2 Hilbert sorting benchmark
 
@@ -68,7 +68,7 @@ CPU smoke variants first, then the full profile (optionally on GPU).
 | 2.2.3 | `results.json` / `results.csv` written | check inside the new output dir | |
 | 2.2.4 | `runtime.png` figure written | check inside the new output dir | |
 | 2.2.5 | `status.json` shows success | `cat <outdir>/status.json` | |
-| 2.2.6 | **[GPU]** Full profile runs | `python -m sqmc.comparison.benchmark_hilbert_sort --platforms cpu gpu --sequences sobol halton --distribution normal --dimensions 2 5 10 --n-values 128 256 512 2048 8192 --repeats 7 --warmups 2` | |
+| 2.2.6 | **[GPU]** Full profile runs | `python -m sqmc.comparison.benchmark_hilbert_sort --platforms cpu gpu --sequences sobol halton --distribution normal --dimensions 2 5 10 --n-values 128 256 512 2048 8192 32768 --repeats 10 --warmups 2` | |
 
 ### 2.3 SQMC accuracy benchmark
 
@@ -80,7 +80,7 @@ CPU smoke variants first, then the full profile (optionally on GPU).
 | 2.3.4 | `accuracy_records.json` written | check inside the new output dir | |
 | 2.3.5 | `budget_summary.json` written | check inside the new output dir | |
 | 2.3.6 | `status.json` shows success | `cat <outdir>/status.json` | |
-| 2.3.7 | **[GPU]** Full profile runs | `python -m sqmc.comparison.benchmark_sqmc --platforms cpu gpu --dimensions 2 5 --particle-counts 128 256 512 1024 2048 --n-steps 100 --budget-seconds 0.01 0.05 0.1 --datasets 1 --selection-reps 8 --validation-reps 16 --repeats 7 --warmups 2 --bootstrap-reps 500` | |
+| 2.3.7 | **[GPU]** Full profile runs | `python -m sqmc.comparison.benchmark_sqmc --platforms cpu gpu --dimensions 2 5 --particle-counts 128 256 512 1024 2048 --n-steps 100 --budget-seconds 0.01 0.05 0.1 --datasets 1 --selection-reps 8 --validation-reps 16 --repeats 10 --warmups 2 --bootstrap-reps 500` | |
 
 ### 2.4 Colab launcher (optional, full chapter profile)
 
