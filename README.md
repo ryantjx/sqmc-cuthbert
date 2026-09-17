@@ -11,10 +11,10 @@ match modelling* (ST980). It is organised as two Python packages:
   model for international football results, with RB-SMC, RB-SQMC and factorial
   EKF filters, parameter estimation, prediction, and comparison pipelines.
 
-`rbsqmc/` imports `sqmc.qmc` and `sqmc.hilbert_sort` at runtime, so both
-packages must be importable from the repository root.
+<!-- `rbsqmc/` imports `sqmc.qmc` and `sqmc.hilbert_sort` at runtime, so both
+packages must be importable from the repository root. -->
 
-## The `sqmc` package and `cuthbert`
+<!-- ## The `sqmc` package and `cuthbert`
 
 The `sqmc` package is a JAX implementation of sequential quasi-Monte Carlo
 (SQMC) that is designed to be incorporated into the `cuthbert` library
@@ -44,7 +44,7 @@ sorting (`hilbert_sort`) — are intended to be upstreamed into `cuthbert`.
 
 The SQMC filter is a work in progress towards being implemented as a
 `cuthbert.inference.Filter`; the current `build_filter` already returns a
-`Filter` and is exercised by the unit tests in `sqmc/tests/`.
+`Filter` and is exercised by the unit tests in `sqmc/tests/`. -->
 
 ## Repository structure
 
@@ -72,27 +72,28 @@ rbsqmc/
 └── tests/                # Unit tests
 ```
 
-## Installation
+## Installation and Results Replication
 
 Python 3.10+ is required. The experiments were run with Python 3.13 and the
 pinned dependencies in `requirements.txt` (JAX 0.11.0, cuthbert 0.0.14,
 cuthbertlib 0.0.15, optax 0.2.8, NumPy 2.2.6, SciPy 1.18.0).
 
 ```bash
-python -m venv .venv
+uv venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-pip install cuthbertlib==0.0.15 ghq==0.0.5 chex==0.1.92
+uv pip install -r requirements.txt
 ```
 
 For GPU runs, install the CUDA build of JAX instead of the CPU build:
 
 ```bash
-pip install "jax[cuda12]==0.11.0"
+uv pip install "jax[cuda12]==0.11.0"
 ```
 
 The football code selects its JAX platform through the `RBSQMC_PLATFORM`
 environment variable (default `cpu`; set `RBSQMC_PLATFORM=cuda` on a GPU host).
+Sanity check the installation with
+`python -m pytest sqmc/tests rbsqmc/tests sqmc/comparison/tests rbsqmc/comparison/sqmc_ekf/tests -q`.
 
 ### Data files
 
@@ -112,74 +113,60 @@ Two data files are not committed and must be created on a fresh clone:
   (`download=True` in `rbsqmc/src/data/data.py`) or copy `results.csv` to
   `results.parquet` if the frozen data set is intended.
 
-## Replication
+### Replication
 
 All commands are run from the repository root with the virtual environment
-active. Each experiment writes a timestamped directory under its `outputs/`
-folder containing `config.json`, `metadata.json`, `status.json`, results and
-figures.
+active. Each experiment is launched by a single bash script and writes a
+timestamped directory under its `outputs/` folder containing `config.json`,
+`metadata.json`, `status.json`, results and figures. Both launchers use a
+Colab GPU session by default: the `colab` CLI must be on `PATH` and the source
+commit pushed, so the local and remote branches point at the same commit.
+Where a local GPU is available, each experiment can instead be run directly.
 
-### 1. Unit tests
+#### SQMC CPU/GPU performance comparison (Chapter 2)
 
-```bash
-python -m pytest sqmc/tests -q
-python -m pytest rbsqmc/tests -q
-python -m pytest sqmc/comparison/tests -q
-python -m pytest rbsqmc/comparison/sqmc_ekf/tests -q
-```
-
-### 2. CPU/GPU performance comparison (Chapter 2)
-
-Three standalone benchmarks compare the shared algorithms on CPU and GPU.
-Full documentation is in `sqmc/comparison/COMPARISON.md`. CPU-only smoke runs:
-
-```bash
-python -m sqmc.comparison.benchmark_qmc \
-  --platforms cpu --dimensions 2 --n-values 8 16 --repeats 2 --warmups 0
-
-python -m sqmc.comparison.benchmark_hilbert_sort \
-  --platforms cpu --dimensions 2 --n-values 8 16 --repeats 2 --warmups 0
-
-python -m sqmc.comparison.benchmark_sqmc \
-  --platforms cpu --dimensions 2 --particle-counts 8 16 --n-steps 3 \
-  --selection-reps 2 --validation-reps 3 --bootstrap-reps 50 \
-  --budget-seconds 0.000000001 1 --repeats 2 --warmups 0
-```
-
-The full chapter profile (dimensions 2–60, counts up to 32768, ten timed
-repetitions, both backends) is defined in
-`sqmc/comparison/scripts/config/comparison_config.json` and is executed
-through the Colab launcher, which provisions an A100 session, runs the three
-benchmarks sequentially, and verifies each stage's artefacts:
+The Colab launcher provisions an A100 session, runs the three benchmarks
+sequentially with the full chapter profile from
+`sqmc/comparison/scripts/config/comparison_config.json`, and verifies each
+stage's artefacts:
 
 ```bash
 sqmc/comparison/scripts/run_comparison_colab.sh --dry-run
 sqmc/comparison/scripts/run_comparison_colab.sh
 ```
 
-The three benchmarks can also be run directly on a CPU/GPU host with the
-`--platforms cpu gpu` flags shown in `COMPARISON.md`.
-
-### 3. Football model: RB-SQMC vs factorial EKF (Chapter 3)
-
-The main comparison trains the correlated RB-SQMC model and the factorial EKF
-baseline on identical data splits and optimiser settings, then evaluates
-predictions. The authoritative configuration is
-`rbsqmc/comparison/sqmc_ekf/scripts/config/config_gpu.json` (512 particles,
-50 epochs, learning rate 0.02, seed 0, 15 RQMC replicas, Gauss–Hermite degree
-32).
-
-Local smoke run (CPU, small subset):
+On a local GPU host, run the three benchmarks directly with the same profile
+(full documentation in `sqmc/comparison/COMPARISON.md`):
 
 ```bash
-python -m rbsqmc.comparison.sqmc_ekf.run \
-  --config rbsqmc/comparison/sqmc_ekf/scripts/config/config_smoke.json \
-  --data rbsqmc/data/results.csv --smoke
+python -m sqmc.comparison.benchmark_qmc \
+  --platforms cpu gpu --sequences sobol halton \
+  --dimensions 2 5 10 30 60 --n-values 128 256 512 2048 8192 32768 \
+  --repeats 10 --warmups 2 --seed 42
+
+python -m sqmc.comparison.benchmark_hilbert_sort \
+  --platforms cpu gpu --sequences sobol halton \
+  --dimensions 2 5 10 30 60 --n-values 128 256 512 2048 8192 32768 \
+  --repeats 10 --warmups 2 --seed 42
+
+python -m sqmc.comparison.benchmark_sqmc \
+  --platforms cpu gpu --dimensions 2 5 10 30 60 \
+  --particle-counts 128 256 512 1024 2048 \
+  --budget-seconds 0.01 0.05 0.1 --n-steps 100 \
+  --selection-reps 8 --validation-reps 16 --bootstrap-reps 500 \
+  --repeats 10 --warmups 2 --seed 42
 ```
 
-Full run (RB-SQMC on GPU, EKF on CPU, combined and validated):
+#### Football model: RB-SQMC vs factorial EKF (Chapter 3)
+
+The default launcher trains the factorial EKF baseline on the local CPU and
+RB-SQMC on a Colab GPU under the authoritative configuration
+`rbsqmc/comparison/sqmc_ekf/scripts/config/config_gpu.json` (512 particles,
+50 epochs, learning rate 0.02, seed 0, 15 RQMC replicas, Gauss–Hermite degree
+32), then combines and validates the two partial runs:
 
 ```bash
+bash rbsqmc/comparison/sqmc_ekf/scripts/run_sqmc_ekf_colab.sh --dry-run
 bash rbsqmc/comparison/sqmc_ekf/scripts/run_sqmc_ekf_colab.sh
 ```
 
@@ -193,35 +180,26 @@ bash rbsqmc/comparison/sqmc_ekf/scripts/run_sqmc_ekf_colab.sh \
   --resume rbsqmc/comparison/sqmc_ekf/outputs/DDMMYYYY_HHMM
 ```
 
-### 4. Football model: RB-SMC vs RB-SQMC training
+On a local GPU host, run both methods directly (`run.py` requires
+`RBSQMC_PLATFORM=cuda` to match the JAX backend):
 
 ```bash
-python -m rbsqmc.comparison.sqmc_smc.compare_smc_sqmc
+RBSQMC_PLATFORM=cuda python -m rbsqmc.comparison.sqmc_ekf.run \
+  --config rbsqmc/comparison/sqmc_ekf/scripts/config/config_gpu.json \
+  --data rbsqmc/data/results.csv
 ```
 
-This runs both filters under the shared configuration in
-`rbsqmc/comparison/sqmc_smc/config/model_unbiased_gpu_config.json` and writes
-train/test log-likelihood histories, gradient norms and prediction evaluation
-to `rbsqmc/outputs/compare/`.
-
-### 5. Standalone football pipeline
-
-The RB-SMC pipeline supports `optimize`, `filter`, `predict` and `all` phases,
-with configuration from `--config`, the `RBSQMC_CONFIG` environment variable,
-or the repository default:
+Without a GPU, exercise the full pipeline on CPU with the small smoke
+configuration:
 
 ```bash
-python -m rbsqmc.src.model.rbsmc.train_model_gpu --config <config.json> all
+bash rbsqmc/comparison/sqmc_ekf/scripts/run_sqmc_ekf_colab.sh --local --smoke
 ```
 
-### 6. Verification
-
-Each run directory contains `status.json` (completion state), `config.json`
-(the effective configuration), `metadata.json` (device, software versions, git
-commit and source hashes) and the results/figures for that stage. The Colab
-launchers validate every downloaded archive (sizes, hashes, provenance and
-complete parameter grids) before proceeding. To validate an existing output
-directory:
+Each output directory contains `status.json`, the effective `config.json`,
+`metadata.json` (device, software versions, git commit and source hashes) and
+the results/figures for that stage; the launchers validate every downloaded
+archive before proceeding. An existing directory can be validated with:
 
 ```bash
 python rbsqmc/comparison/sqmc_ekf/scripts/validate_sqmc_ekf_outputs.py <output_dir>
