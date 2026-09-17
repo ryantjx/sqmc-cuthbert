@@ -236,7 +236,6 @@ python sqmc/comparison/scripts/validate_artifacts.py <output_dir>
   background, model, evaluation axes and Colab orchestration.
 - `sqmc/qmc/QMC.md` — QMC theory notes (Sobol', Halton, scrambling).
 - `sqmc/hilbert_sort/HILBERT_SORT.md` — Hilbert sorting references.
-- `rbsqmc/MODEL_OLD.md` — the RB-SQMC model specification.
 
 ## References
 
